@@ -9,21 +9,20 @@ public class BasicCameraController : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float smoothing;
 
-    void Start()
-    {
-        
-    }
+    [SerializeField] Vector2 maxPosition;
+    [SerializeField] Vector2 minPosition;
 
-    // Update is called once per frame
     void LateUpdate()
     {
-        if (transform.position != target.position)
+        if (transform.position.ToVector2() != target.position.ToVector2())
         {
             var newPos = Vector3.Lerp(
                 transform.position.ToVector2(),
                 target.position.ToVector2(),
                 smoothing
             );
+            newPos.x = Mathf.Clamp(newPos.x, minPosition.x, maxPosition.x);
+            newPos.y = Mathf.Clamp(newPos.y, minPosition.y, maxPosition.y);
             transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
         }
     }
