@@ -218,7 +218,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="12" name="CollisionMask" visible="0">
+ <objectgroup id="12" name="CollisionMask">
   <object id="39" x="-0.465724" y="-0.465724" width="157.88" height="253.82"/>
   <object id="41" x="-0.465724" y="289.215" width="158.346" height="142.977"/>
   <object id="42" x="158.346" y="0" width="320.418" height="108.514"/>
