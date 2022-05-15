@@ -8,6 +8,7 @@
    <wangcolor name="Textured Grass" color="#0000ff" tile="-1" probability="1"/>
    <wangcolor name="Inverse Textured Grass" color="#ff7700" tile="-1" probability="1"/>
    <wangcolor name="Bush wall" color="#00e9ff" tile="-1" probability="1"/>
+   <wangcolor name="Fences" color="#ff00d8" tile="-1" probability="1"/>
    <wangtile tileid="242" wangid="0,0,0,2,0,0,0,0"/>
    <wangtile tileid="243" wangid="0,0,0,2,2,2,0,0"/>
    <wangtile tileid="244" wangid="0,0,0,0,0,2,0,0"/>
