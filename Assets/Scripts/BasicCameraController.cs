@@ -9,8 +9,8 @@ public class BasicCameraController : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float smoothing;
 
-    [SerializeField] Vector2 maxPosition;
-    [SerializeField] Vector2 minPosition;
+    [SerializeField] public Vector2 maxPosition;
+    [SerializeField] public Vector2 minPosition;
 
     void LateUpdate()
     {
