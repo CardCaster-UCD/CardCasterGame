@@ -21,6 +21,13 @@ public class PlayerMovement : MonoBehaviour
     {
         change = Vector2.zero;
         change.x = Input.GetAxisRaw("Horizontal");
+
+        /*Diagonal movement limiter
+        if (change.x == 0)
+        {
+            change.y = Input.GetAxisRaw("Vertical");
+        }
+        */
         change.y = Input.GetAxisRaw("Vertical");
 
         this.UpdateAnimator();
