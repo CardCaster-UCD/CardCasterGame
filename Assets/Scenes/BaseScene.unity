@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 173348130}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,6 +346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: c7f8604e0bbb7f44a863f4538e1b614b, type: 3}
+--- !u!1 &513175704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5650899801116411658, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
+  m_PrefabInstance: {fileID: 5650899799727015836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +460,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5650899801116411658, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
       propertyPath: m_Name
-      value: Card2
+      value: Slot2
       objectReference: {fileID: 0}
     - target: {fileID: 5650899801116411659, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
       propertyPath: m_Pivot.x
@@ -3787,6 +3792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 725920876}
+  - component: {fileID: 725920877}
   m_Layer: 5
   m_Name: Hand
   m_TagString: Untagged
@@ -3816,6 +3822,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000011444, y: -155.2}
   m_SizeDelta: {x: 314.4051, y: 92.0172}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &725920877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725920875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8524b64c87105cd899e8c0478f83fd1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck: {fileID: 0}
+  discardPile: {fileID: 0}
+  slot1: {fileID: 513175704}
+  slot2: {fileID: 1166059577}
+  slot3: {fileID: 1066614685}
 --- !u!1 &782478021
 GameObject:
   m_ObjectHideFlags: 0
@@ -3861,6 +3884,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1066614685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5650899801116411658, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
+  m_PrefabInstance: {fileID: 2065706379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1166059577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5650899801116411658, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
+  m_PrefabInstance: {fileID: 522253660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1221747221
 GameObject:
   m_ObjectHideFlags: 0
@@ -5314,7 +5347,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5650899801116411658, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
       propertyPath: m_Name
-      value: Card3
+      value: Slot3
       objectReference: {fileID: 0}
     - target: {fileID: 5650899801116411659, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
       propertyPath: m_Pivot.x
@@ -5416,7 +5449,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5650899801116411658, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
       propertyPath: m_Name
-      value: Card1
+      value: Slot1
       objectReference: {fileID: 0}
     - target: {fileID: 5650899801116411659, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
       propertyPath: m_Pivot.x
