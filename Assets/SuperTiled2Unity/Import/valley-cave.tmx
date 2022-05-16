@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="35" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="14">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="35" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="15">
  <tileset firstgid="1" source="overworld.tsx"/>
  <layer id="1" name="Tile Layer 1" width="35" height="20">
   <data encoding="csv">
@@ -129,5 +129,6 @@
   <object id="8" x="282.72" y="96.738" width="85.838" height="89.9255"/>
   <object id="10" x="285.445" y="208.464" width="83.7942" height="67.4441"/>
   <object id="12" x="1.36251" y="289.533" width="557.266" height="30.6564"/>
+  <object id="14" x="412.158" y="391.721"/>
  </objectgroup>
 </map>
