@@ -4,12 +4,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D rigidBody;
     private Vector2 change;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject healthBar; // instance of the healthbar in the scene
+    private HealthBarController healthBarController;
+    private float currentCapacity = 0.0f;
+    private float capacity = 100.0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +30,14 @@ public class PlayerMovement : MonoBehaviour
         change.y = Input.GetAxisRaw("Vertical");
 
         this.UpdateAnimator();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if ("projectile" == other.tag)
+        {
+            TakeDamage();
+        }
     }
 
     void FixedUpdate()
@@ -43,4 +57,11 @@ public class PlayerMovement : MonoBehaviour
             rigidBody.position + (change * speed * Time.deltaTime).normalized
         );
     }
+    
+    void TakeDamage()
+    {
+        this.healthBarController.ChangeValue(this.currentCapacity / this.capacity)
+    }
+        
+
 }
