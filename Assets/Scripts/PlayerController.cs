@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D rigidBody;
-    private Vector2 change;
+    public Vector2 change;
+    public bool moving;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject healthBar; // instance of the healthbar in the scene
     private HealthBarController healthBarController;
@@ -25,11 +26,32 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         change = Vector2.zero;
+        
         change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
 
-        this.UpdateAnimator();
+        /*Diagonal movement limiter
+        if (change.x == 0)
+        {
+            change.y = Input.GetAxisRaw("Vertical");
+        }
+        */
+        change.y = Input.GetAxisRaw("Vertical");
+        
+        // Don't update animator if no movement has occured.
+        // This allows us to stay in the previous idle state.
+        if(change != Vector2.zero)
+        {
+            UpdateAnimator();
+        }
+        else
+        {
+            // Tell the animator that we are not moving.
+            // Can't just call UpdateAnimator() because that changes
+            // Horizontal and vertical
+            animator.SetFloat("Speed", change.sqrMagnitude);
+        }
     }
 
     void OnTriggerEnter(Collider other)
