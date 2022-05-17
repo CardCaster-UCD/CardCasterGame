@@ -15,6 +15,7 @@ public class HandController : MonoBehaviour
     private ICard card3;
     private GameObject player;
 
+    /*
     void Start()
     {
         this.player = GameObject.FindWithTag("Player");
@@ -73,4 +74,5 @@ public class HandController : MonoBehaviour
         }
 
     }
+    */
 }
