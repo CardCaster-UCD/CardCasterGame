@@ -15,6 +15,15 @@ namespace CameraControl
         [SerializeField] public Vector2 maxPosition;
         [SerializeField] public Vector2 minPosition;
 
+        void Start()
+        {
+            transform.position = new Vector3(
+                target.position.x,
+                target.position.y,
+                transform.position.z
+            );
+        }
+
         void LateUpdate()
         {
             if (transform.position.ToVector2() != target.position.ToVector2())
