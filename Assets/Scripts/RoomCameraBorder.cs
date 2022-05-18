@@ -21,6 +21,7 @@ namespace CameraControl
         {
             var camera = Camera.main;
             this.cameraController = camera.GetComponent<BasicCameraController>();
+            // Determine the dimensions of the camera
             var height = camera.orthographicSize;
             var width = height * camera.aspect;
             this.cameraSizeOffset = new Vector2(
@@ -29,9 +30,10 @@ namespace CameraControl
             );
         }
 
+        // When the camera interacts with the world border
+        // Update the camera min and max positions to the border +- the camera size offset
         void OnTriggerEnter2D(Collider2D other)
         {
-            print(other);
             if ("MainCamera" == other.tag)
             {
                 switch (this.direction)
