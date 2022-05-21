@@ -5,12 +5,22 @@ using UnityEngine;
 public class SwordController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private float reswingDelay;
+    private float reswingTimer;
+    
+    void start()
+    {
+        // Ensure no delay for first swing.
+        reswingTimer = reswingDelay;
+    }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        reswingTimer += Time.deltaTime;
+        if(Input.GetKeyDown(KeyCode.Space) && reswingTimer > reswingDelay)
         {
             animator.SetTrigger("Swing");
+            reswingTimer = 0.0f;
         }
     }
 }
