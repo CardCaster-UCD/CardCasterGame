@@ -1294,7 +1294,7 @@ PrefabInstance:
       objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 5620062226883799552, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_Name
-      value: base
+      value: OpeningSceneWorld
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -4904446374832672195, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
