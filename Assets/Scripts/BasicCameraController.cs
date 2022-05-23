@@ -2,28 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
-public class BasicCameraController : MonoBehaviour
+
+namespace CameraControl
 {
-    // Start is called before the first frame update
-
-    [SerializeField] Transform target;
-    [SerializeField] float smoothing;
-
-    [SerializeField] public Vector2 maxPosition;
-    [SerializeField] public Vector2 minPosition;
-
-    void LateUpdate()
+    public class BasicCameraController : MonoBehaviour
     {
-        if (transform.position.ToVector2() != target.position.ToVector2())
+        // Start is called before the first frame update
+
+        [SerializeField] Transform target;
+        [SerializeField] float smoothing;
+
+        [SerializeField] public Vector2 maxPosition;
+        [SerializeField] public Vector2 minPosition;
+
+        void Start()
         {
-            var newPos = Vector3.Lerp(
-                transform.position.ToVector2(),
-                target.position.ToVector2(),
-                smoothing
+            transform.position = new Vector3(
+                target.position.x,
+                target.position.y,
+                transform.position.z
             );
-            newPos.x = Mathf.Clamp(newPos.x, minPosition.x, maxPosition.x);
-            newPos.y = Mathf.Clamp(newPos.y, minPosition.y, maxPosition.y);
-            transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
+        }
+
+        void LateUpdate()
+        {
+            if (transform.position.ToVector2() != target.position.ToVector2())
+            {
+                var newPos = Vector3.Lerp(
+                    transform.position.ToVector2(),
+                    target.position.ToVector2(),
+                    smoothing
+                );
+                newPos.x = Mathf.Clamp(newPos.x, minPosition.x, maxPosition.x);
+                newPos.y = Mathf.Clamp(newPos.y, minPosition.y, maxPosition.y);
+                transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
+            }
         }
     }
 }
