@@ -123,6 +123,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &25862300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 657432470725162274, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
+  m_PrefabInstance: {fileID: 1185369470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &25862302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25862300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d950d6e79b69cb49beb4994db4ab5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraMaxPosition: {x: 58, y: -5}
+  cameraMinPosition: {x: 44, y: -27}
+  playerOffset: {x: 2, y: 0}
 --- !u!1 &158168706
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.44, y: -9.02, z: -10}
+  m_LocalPosition: {x: 49.7, y: -7.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1163,6 +1183,26 @@ MonoBehaviour:
   slot1: {fileID: 0}
   slot2: {fileID: 0}
   slot3: {fileID: 0}
+--- !u!1 &863172098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -889343317499461562, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
+  m_PrefabInstance: {fileID: 1185369470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &863172100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863172098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d950d6e79b69cb49beb4994db4ab5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraMaxPosition: {x: -9, y: -4}
+  cameraMinPosition: {x: -39, y: -21}
+  playerOffset: {x: -2, y: 0}
 --- !u!1 &1090739650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,11 +1276,19 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: -1151611698671488825, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -540901961882677636, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 606376942830289359, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058822014999846105, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -1292,6 +1340,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4179521102341159895, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5620062226883799552, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_Name
       value: OpeningSceneWorld
@@ -1626,6 +1678,26 @@ PolygonCollider2D:
       - {x: 0.38829958, y: -1.3077371}
       - {x: 0.3902092, y: -0.49778175}
       - {x: 0.01180172, y: -0.5138722}
+--- !u!1 &1524417983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4450858287321543212, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
+  m_PrefabInstance: {fileID: 1185369470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1524417984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524417983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d950d6e79b69cb49beb4994db4ab5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraMaxPosition: {x: 26, y: -4}
+  cameraMinPosition: {x: 0, y: 0}
+  playerOffset: {x: 0, y: 0}
 --- !u!1 &1554253474 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2825651928763756141, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
@@ -1884,7 +1956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraMaxPosition: {x: 26, y: -4}
   cameraMinPosition: {x: 9, y: -16}
-  playerOffset: {x: -1, y: 0}
+  playerOffset: {x: -2, y: 0}
 --- !u!224 &1926267031 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5650899801116411659, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}

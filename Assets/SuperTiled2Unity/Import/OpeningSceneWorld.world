@@ -20,13 +20,6 @@
             "width": 768,
             "x": -768,
             "y": -16
-        },
-        {
-            "fileName": "valley.tmx",
-            "height": 1024,
-            "width": 512,
-            "x": 560,
-            "y": -1024
         }
     ],
     "onlyShowAdjacentMaps": false,
