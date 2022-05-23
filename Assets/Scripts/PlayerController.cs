@@ -12,14 +12,21 @@ public class PlayerController : MonoBehaviour
     public bool moving;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject healthBar; // instance of the healthbar in the scene
+    [SerializeField] private GameObject manaBar;
     private HealthBarController healthBarController;
-    private float currentCapacity = 0.0f;
-    private float capacity = 100.0f;
+    private HealthBarController manaBarController;
+    private float currentHealth = 0.0f;
+    private float Health = 100.0f; // max capacity of the health bar
 
 
     // Start is called before the first frame update
     void Start()
     {
+        healthBarController = healthBar.GetComponent<HealthBarController>();
+        manaBarController = manaBar.GetComponent<HealthBarController>();
+        this.healthBarController.initFromPlayer(1);
+        this.manaBarController.initFromPlayer(1);
+        this.currentHealth = this.Health;
         this.rigidBody = GetComponent<Rigidbody2D>();
     }
 
@@ -52,13 +59,22 @@ public class PlayerController : MonoBehaviour
             // Horizontal and vertical
             animator.SetFloat("Speed", change.sqrMagnitude);
         }
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            this.Heal(40.0f);
+        }
+
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if ("projectile" == other.tag)
+
+        Debug.Log("hello");
+        if ("Enemy" == other.tag)
         {
-            TakeDamage();
+            float enemyDamage = other.GetComponent<EnemyController>().GetDamage();
+            this.TakeDamage(enemyDamage);
         }
     }
 
@@ -80,9 +96,35 @@ public class PlayerController : MonoBehaviour
         );
     }
     
-    void TakeDamage()
+    void Heal(float health)
     {
-        this.healthBarController.ChangeValue(this.currentCapacity / this.capacity)
+        
+        this.currentHealth += health;
+        this.currentHealth = Mathf.Clamp(this.currentHealth, 0.0f, 100.0f);
+        this.healthBarController.ChangeValue(this.currentHealth / this.Health);
+    }
+
+    void TakeDamage(float damage)
+    {
+        // this.healthBarController.ChangeValue(this.currentHealth / this.Health);
+        float oldHealth = this.currentHealth;
+        this.currentHealth -= damage;
+
+        if (this.currentHealth < 0.0f)
+        {
+            this.currentHealth = 0.0f;
+        }
+        if (this.currentHealth <= 0.0f && oldHealth > 0)
+        { 
+            // TODO: die sound effect or action
+        }
+        else if (this.currentHealth > 0)
+        {
+            // TODO: damage taken sound
+        }
+
+        this.healthBarController.ChangeValue(this.currentHealth / this.Health);
+
     }
         
 
