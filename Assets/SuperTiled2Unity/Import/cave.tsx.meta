@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b60ae656da6cd2b4fa8e8e1abde6bcb1
+guid: 14dfffd7e9b267a49b86612f5d195941
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -7,20 +7,18 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
   missingFiles: []
   errors:
-  - 'Missing tileset asset: ../../../../cave.tsx'
+  - 'Missing texture asset: ../../../../../Downloads/gfx/gfx/cave.png'
   warnings: []
   missingSortingLayers: []
   missingLayers: []
   missingTags: []
-  importerVersion: 24
+  importerVersion: 11
   pixelsPerUnit: 100
   edgesPerEllipse: 32
   numberOfObjectsImported: 2
-  tilesAsObjects: 0
-  sortingMode: 0
-  isIsometric: 0
-  customImporterClassName: 
-  internalTilesets: []
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
