@@ -10,17 +10,23 @@ public class HandController : MonoBehaviour
     private DeckController deckController;
     private DiscardController discardController;
     
-    private ICard card1;
+    public ICard card1;
     private ICard card2;
     private ICard card3;
     private GameObject player;
 
-    /*
+    
     void Start()
     {
-        this.player = GameObject.FindWithTag("Player");
-        deckController = this.deck.GetComponent<DeckController>();
-        discardController = this.discardPile.GetComponent<DiscardController>();
+        player = GameObject.FindWithTag("Player");
+        //deckController = this.deck.GetComponent<DeckController>();
+        //discardController = this.discardPile.GetComponent<DiscardController>();
+
+        //TODO reaplace this with drawing
+        card1 = ScriptableObject.CreateInstance<FireballCard>();
+        card2 = ScriptableObject.CreateInstance<FireballCard>();
+        card3 = ScriptableObject.CreateInstance<FireballCard>();
+
     }
     void Update()
     {
@@ -33,7 +39,10 @@ public class HandController : MonoBehaviour
             card1 = deckController.Draw();
             
             // Change sprite for slot.
-            slot1.GetComponent<SpriteRenderer>().sprite = card1.GetSprite();
+            if(card1.GetSprite())
+            {
+                slot1.GetComponent<SpriteRenderer>().sprite = card1.GetSprite();
+            }
         }
 
         if (!card2.GetIsActive()) {
@@ -44,7 +53,10 @@ public class HandController : MonoBehaviour
             card2 = deckController.Draw();
 
             // Change sprite for slot.
-            slot2.GetComponent<SpriteRenderer>().sprite = card2.GetSprite();
+            if(card2.GetSprite())
+            {
+                slot2.GetComponent<SpriteRenderer>().sprite = card2.GetSprite();
+            }
         }
 
         if (!card3.GetIsActive()) {
@@ -55,24 +67,28 @@ public class HandController : MonoBehaviour
             card3 = deckController.Draw();
 
             // Change sprite for slot.
-            slot3.GetComponent<SpriteRenderer>().sprite = card3.GetSprite();
+            if(card3.GetSprite())
+            {
+                slot3.GetComponent<SpriteRenderer>().sprite = card3.GetSprite();
+            }
         }
         
         // Handle inputs.
         // Call execute of card if input pressed.
-        if (Input.GetButtonDown("1"))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             this.card1.Execute(this.player);
+            Debug.Log("1");
         }
-        if (Input.GetButtonDown("2"))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             this.card2.Execute(this.player);
         }
-        if (Input.GetButtonDown("3"))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             this.card3.Execute(this.player);
         }
 
     }
-    */
+    
 }

@@ -8,13 +8,14 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D rigidBody;
-    public Vector2 change;
-    public bool moving;
+    private Vector2 change;
+    public Vector2 facing;
     [SerializeField] private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         this.rigidBody = GetComponent<Rigidbody2D>();
+        this.facing = new Vector2(0, -1);
     }
 
     // Update is called once per frame
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         // This allows us to stay in the previous idle state.
         if(change != Vector2.zero)
         {
+            facing = change;
             UpdateAnimator();
         }
         else
@@ -64,5 +66,10 @@ public class PlayerMovement : MonoBehaviour
         this.rigidBody.MovePosition(
             rigidBody.position + (change * speed * Time.deltaTime).normalized
         );
+    }
+
+    public Vector2 GetFacing()
+    {
+        return facing;
     }
 }

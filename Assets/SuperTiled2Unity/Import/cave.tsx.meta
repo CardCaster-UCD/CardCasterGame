@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ca028df9d45843c4ca6caa471c5af3ed
+guid: 14dfffd7e9b267a49b86612f5d195941
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -9,15 +9,16 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
   missingFiles: []
-  errors: []
+  errors:
+  - 'Missing texture asset: ../../../../../Downloads/gfx/gfx/cave.png'
   warnings: []
   missingSortingLayers: []
   missingLayers: []
   missingTags: []
   importerVersion: 11
-  pixelsPerUnit: 16
+  pixelsPerUnit: 100
   edgesPerEllipse: 32
-  numberOfObjectsImported: 675
+  numberOfObjectsImported: 2
   useSpriteAtlas: 1
   atlasWidth: 2048
   atlasHeight: 2048
