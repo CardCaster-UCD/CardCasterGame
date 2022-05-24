@@ -139,7 +139,6 @@
   <object id="52" x="333.924" y="225.876" width="288.283" height="137.389"/>
   <object id="53" x="497.859" y="81.036" width="124.348" height="144.374"/>
   <object id="54" x="158.812" y="385.154" width="483.422" height="47.5039"/>
-  <object id="56" x="186.29" y="-54.4897"/>
  </objectgroup>
  <objectgroup id="13" name="RoomTransitionLayer">
   <object id="57" x="766.826" y="206.13">

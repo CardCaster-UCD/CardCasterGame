@@ -330,7 +330,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &173348126
 GameObject:
@@ -342,11 +342,11 @@ GameObject:
   m_Component:
   - component: {fileID: 173348127}
   - component: {fileID: 173348129}
+  - component: {fileID: 173348128}
   - component: {fileID: 173348130}
   - component: {fileID: 173348133}
   - component: {fileID: 173348132}
   - component: {fileID: 173348131}
-  - component: {fileID: 173348128}
   - component: {fileID: 173348134}
   m_Layer: 0
   m_Name: Player
@@ -363,12 +363,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173348126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50.01, y: -15.01, z: -5}
+  m_LocalPosition: {x: 45.9, y: -15.01, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1828495945}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &173348128
 Rigidbody2D:
@@ -388,7 +388,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!212 &173348129
@@ -480,9 +480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ce9071f6cd53b4bafc017977e6b8ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  change: {x: 0, y: 0}
-  moving: 1
   animator: {fileID: 173348132}
   healthBar: {fileID: 1455224645}
   manaBar: {fileID: 1056206453}
@@ -532,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  facing: {x: 0, y: 0}
   animator: {fileID: 173348132}
 --- !u!1 &184283354
 GameObject:
@@ -996,7 +994,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.7, y: -7.7, z: -10}
+  m_LocalPosition: {x: 26.21, y: -6.11, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1216,6 +1214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1f8c64a11f3ed41be703bbdf88bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneName: 
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 0}
 --- !u!1 &653261186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,11 +1639,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3872064006018385305, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3872064006018385305, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3872064006018385305, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2034,26 +2035,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
   m_PrefabInstance: {fileID: 1816079013}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1554253474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -2825651928763756141, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
-  m_PrefabInstance: {fileID: 1185369470}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1554253476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554253474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d950d6e79b69cb49beb4994db4ab5de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraMaxPosition: {x: 0, y: 0}
-  cameraMinPosition: {x: 0, y: 0}
-  playerOffset: {x: 0, y: 2}
 --- !u!1 &1634767289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,7 +2064,7 @@ Transform:
   m_Children:
   - {fileID: 1221747225}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662548013
 GameObject:
@@ -2149,6 +2130,26 @@ PolygonCollider2D:
       - {x: 1.3026062, y: -0.21623969}
       - {x: 1.1753006, y: 0.26933193}
       - {x: 1.1254034, y: 0.36132044}
+--- !u!1 &1678441082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6545148352418354984, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
+  m_PrefabInstance: {fileID: 1185369470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1678441088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678441082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d950d6e79b69cb49beb4994db4ab5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraMaxPosition: {x: 26, y: -6}
+  cameraMinPosition: {x: 9, y: -16}
+  playerOffset: {x: -2, y: 0}
 --- !u!1001 &1816079013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2405,26 +2406,6 @@ PolygonCollider2D:
       - {x: -0.61523575, y: -0.900525}
       - {x: 0.3681656, y: -1.3397644}
       - {x: 0.41115856, y: -0.52370745}
---- !u!1 &1916614138 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3972056197010878951, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
-  m_PrefabInstance: {fileID: 1185369470}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1916614140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916614138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d950d6e79b69cb49beb4994db4ab5de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraMaxPosition: {x: 26, y: -4}
-  cameraMinPosition: {x: 9, y: -16}
-  playerOffset: {x: -2, y: 0}
 --- !u!224 &1926267031 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5650899801116411659, guid: 6cb42472f70466e23b818aada1e5440a, type: 3}
