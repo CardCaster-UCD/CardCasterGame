@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class FireballMovement : MonoBehaviour
 {
-    Vector2 velocity;
+    [SerializeField] private Vector2 velocity;
 
     public void SetVelocity(float x, float y)
     {
-        velocity = new Vector2(x, y);
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        velocity = new Vector2(0.0f, 0.0f);
+        this.velocity = new Vector2(x, y);
     }
     
     // Update is called once per frame
@@ -22,10 +16,11 @@ public class FireballMovement : MonoBehaviour
     {
         float currentX = this.transform.position.x;
         float currentY = this.transform.position.y;
+        float currentZ = this.transform.position.z;
 
         float xChange = velocity.x * Time.deltaTime;
         float yChange = velocity.y * Time.deltaTime;
 
-        this.transform.position = new Vector2(currentX + xChange, currentY + yChange);
+        this.transform.position = new Vector3(currentX + xChange, currentY + yChange, currentZ);
     }
 }

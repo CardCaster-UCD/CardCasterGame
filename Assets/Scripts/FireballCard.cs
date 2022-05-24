@@ -1,15 +1,20 @@
 using UnityEngine;
 
-public class FireballCard : MonoBehaviour, ICard
+public class FireballCard : ScriptableObject, ICard
 {
     private bool isActive = true;
+    private float speed = 5.0f;
     public void Execute(GameObject player)
     {
         var fireball = (GameObject)Resources.Load("Prefabs/Fireball", typeof(GameObject));
-        Instantiate(fireball, player.transform);
         
-        // TODO change this to fire in direction player is facing.
-        fireball.GetComponent<FireballMovement>().SetVelocity(0.0f, -1.0f);
+        // TODO decide out how to handle diagonal
+        float xVelocity = player.GetComponent<PlayerMovement>().GetFacing().x * speed;
+        float yVelocity = player.GetComponent<PlayerMovement>().GetFacing().y * speed;
+
+        fireball.GetComponent<FireballMovement>().SetVelocity(xVelocity, yVelocity);
+
+        Destroy(Instantiate(fireball, player.transform.position, Quaternion.identity), 15f);
 
     }
     public bool GetIsActive()
