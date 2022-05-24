@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="58" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="30">
- <tileset firstgid="1" source="../../../../cave.tsx"/>
+ <tileset firstgid="1" source="cave2.tsx"/>
  <tileset firstgid="337" source="cave.tsx"/>
  <layer id="1" name="Tile Layer 1" width="58" height="32">
   <data encoding="csv">
