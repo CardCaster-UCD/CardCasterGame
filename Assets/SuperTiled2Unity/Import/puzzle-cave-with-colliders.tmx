@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="58" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="33">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="58" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="103">
  <tileset firstgid="1" source="cave2.tsx"/>
  <tileset firstgid="337" source="cave.tsx"/>
  <tileset firstgid="1337" source="objects.tsx"/>
@@ -110,6 +110,7 @@
   <object id="31" x="1007.33" y="236.667" height="0.666667">
    <ellipse/>
   </object>
+  <object id="33" name="torchPlatform" x="12" y="41" width="60" height="450"/>
  </objectgroup>
  <layer id="9" name="objectLayer" width="58" height="32">
   <data encoding="csv">
@@ -219,6 +220,43 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="10" name="vectorCollisionLayer">
+  <object id="68" x="80" y="128" width="48" height="16.6667"/>
+  <object id="69" x="146" y="160" width="14.6667" height="48.6667"/>
+  <object id="70" x="80.6667" y="223.333" width="48" height="17.3333"/>
+  <object id="71" x="144" y="256" width="16" height="48.6667"/>
+  <object id="72" x="81.3333" y="320.667" width="45.3333" height="16.6667"/>
+  <object id="73" x="144" y="352.667" width="16.6667" height="47.3333"/>
+  <object id="74" x="81.3333" y="416.667" width="46" height="14.6667"/>
+  <object id="75" x="224" y="160.667" width="18" height="50.6667"/>
+  <object id="76" x="224.667" y="255.333" width="17.3333" height="50"/>
+  <object id="77" x="224" y="352.667" width="17.3333" height="50.6667"/>
+  <object id="78" x="304.667" y="160.667" width="15.3333" height="48"/>
+  <object id="79" x="304" y="256.667" width="16" height="48"/>
+  <object id="80" x="304" y="352.667" width="16.6667" height="46.6667"/>
+  <object id="81" x="384.667" y="160" width="16" height="48"/>
+  <object id="82" x="384.667" y="256" width="15.3333" height="48.6667"/>
+  <object id="83" x="382.667" y="351.333" width="18" height="50"/>
+  <object id="84" x="480" y="160" width="17.3333" height="48.6667"/>
+  <object id="85" x="480.667" y="255.333" width="14.6667" height="48.6667"/>
+  <object id="86" x="480.667" y="354" width="16" height="46.6667"/>
+  <object id="87" x="464.667" y="417.333" width="47.3333" height="15.3333"/>
+  <object id="88" x="576" y="160" width="15.3333" height="48"/>
+  <object id="89" x="672.667" y="159.333" width="14.6667" height="48"/>
+  <object id="90" x="754" y="161.333" width="13.3333" height="46.6667"/>
+  <object id="91" x="832.667" y="160" width="14.6667" height="48.6667"/>
+  <object id="92" x="866" y="225.333" width="46" height="16"/>
+  <object id="93" x="866.667" y="320.667" width="44" height="16"/>
+  <object id="94" x="864.667" y="431.333" width="46" height="16"/>
+  <object id="95" x="832.667" y="352.667" width="14.6667" height="48.6667"/>
+  <object id="96" x="834" y="256.667" width="14" height="47.3333"/>
+  <object id="97" x="751.333" y="258" width="16.6667" height="46"/>
+  <object id="98" x="751.333" y="352.667" width="17.3333" height="47.3333"/>
+  <object id="99" x="671.333" y="352" width="18" height="49.3333"/>
+  <object id="100" x="671.333" y="255.333" width="17.3333" height="50"/>
+  <object id="101" x="576.667" y="256.667" width="14.6667" height="48"/>
+  <object id="102" x="576" y="352" width="16.6667" height="49.3333"/>
+ </objectgroup>
  <layer id="8" name="disappearCloud" width="58" height="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
