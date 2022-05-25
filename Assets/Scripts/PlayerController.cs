@@ -35,11 +35,11 @@ public class PlayerController : MonoBehaviour
             this.Heal(40.0f);
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log("Hit");
+        //Debug.Log("Hit");
         if ("Enemy" == other.tag)
         {
             float enemyDamage = other.GetComponent<EnemyController>().GetDamage();

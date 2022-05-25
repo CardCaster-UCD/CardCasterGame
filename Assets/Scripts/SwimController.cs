@@ -34,7 +34,7 @@ public class SwimController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag("Player"))
+        if(collider.CompareTag("Water"))
         {
             playerInWater = true;
         }
@@ -42,7 +42,7 @@ public class SwimController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if(collider.CompareTag("Player"))
+        if(collider.CompareTag("Water"))
         {
             playerInWater = false;
         }
