@@ -835,7 +835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1225514389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,7 +1219,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: OpeningScene
   playerPosition: {fileID: 11400000, guid: fb87a428145aea34e900255ac32525ed, type: 2}
-  cameraBounds: {fileID: 0}
   nextScenePosition: {x: 7.5, y: -7.8, z: -5}
 --- !u!1 &1509953987
 GameObject:
@@ -1667,7 +1666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1796587782
 MonoBehaviour:
   m_ObjectHideFlags: 0

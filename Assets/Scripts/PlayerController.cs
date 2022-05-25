@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log("hello");
+        Debug.Log("Hit");
         if ("Enemy" == other.tag)
         {
             float enemyDamage = other.GetComponent<EnemyController>().GetDamage();
