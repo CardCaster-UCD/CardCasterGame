@@ -1600,7 +1600,7 @@ MonoBehaviour:
   startScene: OpeningScene
   UI: UI
   spawn: {x: 45.9, y: -15.01, z: -5}
-  initialPosition: {fileID: 11400000, guid: fb87a428145aea34e900255ac32525ed, type: 2}
+  player: {fileID: 299977801}
 --- !u!4 &1999705153
 Transform:
   m_ObjectHideFlags: 0

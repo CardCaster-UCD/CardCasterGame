@@ -9,13 +9,12 @@ public class SceneTransitionManger : MonoBehaviour
     [SerializeField] private string startScene;
     [SerializeField] private string UI;
     [SerializeField] private Vector3 spawn;
-    [SerializeField] private VectorValue initialPosition;
+    //[SerializeField] private VectorValue initialPosition;
+    [SerializeField] private GameObject player;
 
     void Start()
     {
-        // This is the dude that contains the coordinates of where the player should be 
-        // at the start of every scene
-        initialPosition.value = spawn;
+        player.transform.position = spawn;
         
         SceneManager.LoadSceneAsync(startScene, LoadSceneMode.Additive);
         currentScene.value = startScene;
