@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
     [SerializeField] string SceneName;
-    [SerializeField] VectorValue playerStorage;
+    [SerializeField] VectorValue playerPosition;
+    [SerializeField] CameraBounds cameraBounds = null;
+    [SerializeField] Vector3 nextScenePosition;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player" )
         {
-            playerStorage.value = other.transform.position;
+            playerPosition.value = nextScenePosition;
             SceneManager.LoadSceneAsync(SceneName);
         }
     }    

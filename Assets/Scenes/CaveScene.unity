@@ -641,7 +641,7 @@ MonoBehaviour:
   speed: 5
   facing: {x: 0, y: 0}
   animator: {fileID: 1225514391}
-  initialPosition: {fileID: 11400000, guid: c2548f0e1fd1c524a97df10b0fa948b2, type: 2}
+  initialPosition: {fileID: 11400000, guid: fb87a428145aea34e900255ac32525ed, type: 2}
 --- !u!114 &1225514390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,8 +1008,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: OpeningScene
-  playerPosition: {x: 7.5, y: -7.5}
-  playerStorage: {fileID: 11400000, guid: c2548f0e1fd1c524a97df10b0fa948b2, type: 2}
+  playerPosition: {fileID: 11400000, guid: fb87a428145aea34e900255ac32525ed, type: 2}
+  cameraBounds: {fileID: 0}
+  nextScenePosition: {x: 7.5, y: -7.8, z: -5}
 --- !u!1 &1509953987
 GameObject:
   m_ObjectHideFlags: 0
