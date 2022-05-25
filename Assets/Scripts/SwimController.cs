@@ -1,36 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PuzzleInstructions : MonoBehaviour
+public class SwimController : MonoBehaviour
 {
-    [SerializeField] private GameObject dialogBox;
-    [SerializeField] private Text dialogText;
-    [SerializeField] private string dialog;
-    private bool playerInRange;
+    [SerializeField] private Animator animator;
+    private bool playerInWater;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerInRange)
-        {
-            if(dialogBox.activeInHierarchy == false)
+        if(playerInWater)
+        {   
+            if(animator.GetBool("Swim") == false)
             {
-                dialogBox.SetActive(true);
-                dialogText.text = dialog;
+                animator.SetBool("Swim", true);
             }
         }
         else
         {
-            if(dialogBox.activeInHierarchy == true)
+            if(animator.GetBool("Swim") == true)
             {
-                dialogBox.SetActive(false);
+                animator.SetBool("Swim", false);
             }
         }
     }
@@ -39,7 +36,7 @@ public class PuzzleInstructions : MonoBehaviour
     {
         if(collider.CompareTag("Player"))
         {
-            playerInRange = true;
+            playerInWater = true;
         }
     }
 
@@ -47,7 +44,7 @@ public class PuzzleInstructions : MonoBehaviour
     {
         if(collider.CompareTag("Player"))
         {
-            playerInRange = false;
+            playerInWater = false;
         }
     }
 }

@@ -254,6 +254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3150995533108412084, guid: df2aff455cc998045aa3d1b82e3ca970, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: df2aff455cc998045aa3d1b82e3ca970, type: 3}
 --- !u!1 &230076135 stripped
@@ -302,7 +306,6 @@ MonoBehaviour:
   dialogBox: {fileID: 7328962}
   dialogText: {fileID: 1782349907}
   dialog: Here is the Puzzle!
-  dialogActive: 0
 --- !u!1 &236669341
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +565,24 @@ Transform:
   m_Father: {fileID: 431343565}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &642899918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2679216827079683862, guid: df2aff455cc998045aa3d1b82e3ca970, type: 3}
+  m_PrefabInstance: {fileID: 230076134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &642899924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642899918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be69e6ce14cc85143991c59dbc6fe675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1225514391}
 --- !u!1 &759933690
 GameObject:
   m_ObjectHideFlags: 0
