@@ -7,6 +7,7 @@ public class SceneTransitionManger : MonoBehaviour
     // if cameraBounds is not null, the camera already has its bounds set when the scene is loaded
     [SerializeField] public StringValue currentScene;
     [SerializeField] private string startScene;
+    [SerializeField] private string UI;
     [SerializeField] private Vector3 spawn;
     [SerializeField] private VectorValue initialPosition;
 
@@ -18,5 +19,7 @@ public class SceneTransitionManger : MonoBehaviour
         
         SceneManager.LoadSceneAsync(startScene, LoadSceneMode.Additive);
         currentScene.value = startScene;
+
+        SceneManager.LoadSceneAsync(UI, LoadSceneMode.Additive);
     }
 }
