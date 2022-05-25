@@ -11,19 +11,32 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 change;
     public Vector2 facing;
     [SerializeField] private Animator animator;
+    [SerializeField] private VectorValue initialPosition;
+    [SerializeField] private VectorValue lastScenePosition;
     // Start is called before the first frame update
     void Start()
     {
         this.rigidBody = GetComponent<Rigidbody2D>();
         this.facing = new Vector2(0, -1);
+
+        // Last scene position is only zero when the game starts
+        if (this.lastScenePosition.value == Vector3.zero)
+        {
+            this.transform.position = this.initialPosition.value;
+        }
+        else
+        {
+            this.transform.position = this.lastScenePosition.value;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         change = Vector2.zero;
-        
+
         change.x = Input.GetAxisRaw("Horizontal");
 
         /*Diagonal movement limiter
@@ -33,10 +46,10 @@ public class PlayerMovement : MonoBehaviour
         }
         */
         change.y = Input.GetAxisRaw("Vertical");
-        
+
         // Don't update animator if no movement has occured.
         // This allows us to stay in the previous idle state.
-        if(change != Vector2.zero)
+        if (change != Vector2.zero)
         {
             facing = change;
             UpdateAnimator();
