@@ -2,21 +2,21 @@
     <ui:VisualElement name="Root" style="width: 100%; height: 100%;">
         <ui:VisualElement name="Hand" style="width: 50%; height: 40%; position: relative; left: 10%; top: 60%; background-color: rgba(45, 45, 45, 0);">
             <ui:VisualElement name="Hand-Container" style="width: 100%; height: 100%; justify-content: center; flex-direction: row; flex-wrap: wrap;">
-                <ui:VisualElement name="Card-Slot1" style="width: 30%; height: 80%; justify-content: space-around; background-color: rgba(45, 45, 45, 0); margin-right: 3%; bottom: 10%; top: 10%; -unity-background-scale-mode: stretch-to-fill; opacity: 1; background-image: url(&apos;/Assets/Art/Card_Assets/Card_Template.png&apos;); align-items: stretch; flex-direction: row-reverse; flex-wrap: wrap-reverse;">
-                    <ui:VisualElement name="Card-Container" style="width: 100%; height: 100%;">
+                <ui:VisualElement name="Card-Slot1" style="width: 30%; height: 80%; justify-content: space-around; background-color: rgba(45, 45, 45, 0); margin-right: 3%; bottom: 10%; top: 10%; -unity-background-scale-mode: stretch-to-fill; opacity: 1; background-image: url(&apos;/Assets/Art/Card_Template.png&apos;); align-items: stretch; flex-direction: row-reverse; flex-wrap: wrap-reverse;">
+                    <ui:VisualElement name="Card-Container" style="width: 100%; height: 100%; background-image: none;">
                         <ui:Label text="5" display-tooltip-when-elided="true" name="Mana-Cost" style="left: 7px; top: 3px; width: 13px;" />
                         <ui:VisualElement name="Card-Art" style="width: 88px; height: 81px; left: 13%; top: 10px; background-image: url(&apos;/Assets/Art/Top Down Adventure Assets/Visuals/CHARACTERS/npc/dog/1.png&apos;);" />
                         <ui:Label text="Fire Ball" display-tooltip-when-elided="true" name="Card-Description" style="left: 13px; width: 91px; -unity-text-align: upper-center; height: 35px; top: 20px; white-space: normal;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="Card-Slot2" style="width: 30%; height: 80%; justify-content: space-around; background-color: rgba(45, 45, 45, 0); margin-right: 3%; bottom: 10%; top: 10%; -unity-background-scale-mode: stretch-to-fill; opacity: 1; background-image: url(&apos;/Assets/Art/Card_Assets/Card_Template.png&apos;); align-items: stretch; flex-direction: row-reverse; flex-wrap: wrap-reverse;">
+                <ui:VisualElement name="Card-Slot2" style="width: 30%; height: 80%; justify-content: space-around; background-color: rgba(45, 45, 45, 0); margin-right: 3%; bottom: 10%; top: 10%; -unity-background-scale-mode: stretch-to-fill; opacity: 1; background-image: url(&apos;/Assets/Art/Card_Template.png&apos;); align-items: stretch; flex-direction: row-reverse; flex-wrap: wrap-reverse;">
                     <ui:VisualElement name="Card-Container" style="width: 100%; height: 100%;">
                         <ui:Label text="2" display-tooltip-when-elided="true" name="Mana-Cost" style="left: 7px; top: 3px; width: 11px;" />
                         <ui:VisualElement name="Card-Art" style="width: 88px; height: 81px; left: 13%; top: 10px; background-image: url(&apos;/Assets/Art/Top Down Adventure Assets/Visuals/CHARACTERS/npc/Girl/1.png&apos;);" />
                         <ui:Label text="Heal + 6" display-tooltip-when-elided="true" name="Card-Description" style="left: 13px; width: 91px; -unity-text-align: upper-center; height: 35px; top: 20px; white-space: normal;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="Card-Slot3" style="width: 30%; height: 80%; justify-content: space-around; background-color: rgba(45, 45, 45, 0); margin-right: 3%; bottom: 10%; top: 10%; -unity-background-scale-mode: stretch-to-fill; opacity: 1; background-image: url(&apos;/Assets/Art/Card_Assets/Card_Template.png&apos;); align-items: stretch; flex-direction: row-reverse; flex-wrap: wrap-reverse;">
+                <ui:VisualElement name="Card-Slot3" style="width: 30%; height: 80%; justify-content: space-around; background-color: rgba(45, 45, 45, 0); margin-right: 3%; bottom: 10%; top: 10%; -unity-background-scale-mode: stretch-to-fill; opacity: 1; background-image: url(&apos;/Assets/Art/Card_Template.png&apos;); align-items: stretch; flex-direction: row-reverse; flex-wrap: wrap-reverse;">
                     <ui:VisualElement name="Card-Container" style="width: 100%; height: 100%;">
                         <ui:Label text="9" display-tooltip-when-elided="true" name="Mana-Cost" style="left: 7px; top: 3px; width: 12px;" />
                         <ui:VisualElement name="Card-Art" style="width: 88px; height: 81px; left: 13%; top: 10px; background-image: url(&apos;/Assets/Art/Top Down Adventure Assets/Visuals/CHARACTERS/npc/kid/1.png&apos;);" />
