@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b60ae656da6cd2b4fa8e8e1abde6bcb1
+guid: df2aff455cc998045aa3d1b82e3ca970
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -9,8 +9,7 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
   missingFiles: []
-  errors:
-  - 'Missing tileset asset: ../../../../cave.tsx'
+  errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []
