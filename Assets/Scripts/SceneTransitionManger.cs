@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionManger : MonoBehaviour
 {
     // if cameraBounds is not null, the camera already has its bounds set when the scene is loaded
-    [SerializeField] private CameraBounds cameraBounds = null;
     [SerializeField] public StringValue currentScene;
     [SerializeField] private string startScene;
     [SerializeField] private Vector3 spawn;

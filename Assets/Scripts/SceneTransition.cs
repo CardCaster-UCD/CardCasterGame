@@ -7,7 +7,6 @@ public class SceneTransition : MonoBehaviour
 {
     [SerializeField] string SceneName;
     [SerializeField] VectorValue playerPosition;
-    [SerializeField] CameraBounds cameraBounds = null;
     [SerializeField] Vector3 nextScenePosition;
     void OnTriggerEnter2D(Collider2D other)
     {
