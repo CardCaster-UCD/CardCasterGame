@@ -22,11 +22,18 @@
             "y": -16
         },
         {
-            "fileName": "valley.tmx",
-            "height": 1024,
+            "fileName": "spawn.tmx",
+            "height": 512,
             "width": 512,
             "x": 560,
-            "y": -1024
+            "y": 0
+        },
+        {
+            "fileName": "village.tmx",
+            "height": 432,
+            "width": 768,
+            "x": -768,
+            "y": -16
         }
     ],
     "onlyShowAdjacentMaps": false,

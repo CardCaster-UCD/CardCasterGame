@@ -18,8 +18,8 @@ namespace CameraControl
         void Start()
         {
             transform.position = new Vector3(
-                target.position.x,
-                target.position.y,
+                Mathf.Clamp(target.position.x, minPosition.x, maxPosition.x),
+                Mathf.Clamp(target.position.y, minPosition.y, maxPosition.y),
                 transform.position.z
             );
         }

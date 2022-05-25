@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df2aff455cc998045aa3d1b82e3ca970
+guid: 31355e6185bba2f48af9f7dcf90ff897
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -7,19 +7,16 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
-  missingFiles: []
+  script: {fileID: 11500000, guid: c6b19dac32d07094ca0a4ffc902a36c4, type: 3}
+  missingFiles:
+  - Assets/SuperTiled2Unity/Import/testWorld.tmx
+  - Assets/SuperTiled2Unity/Import/testMap.tmx
   errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []
   missingTags: []
-  importerVersion: 24
-  pixelsPerUnit: 16
+  importerVersion: 1
+  pixelsPerUnit: 100
   edgesPerEllipse: 32
   numberOfObjectsImported: 2
-  tilesAsObjects: 0
-  sortingMode: 0
-  isIsometric: 0
-  customImporterClassName: 
-  internalTilesets: []

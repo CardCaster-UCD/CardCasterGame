@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="48" height="27" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="57">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="48" height="27" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="58">
  <tileset firstgid="1" source="overworld.tsx"/>
  <layer id="1" name="background" width="48" height="27">
   <data encoding="csv">
@@ -139,6 +139,10 @@
   <object id="52" x="333.924" y="225.876" width="288.283" height="137.389"/>
   <object id="53" x="497.859" y="81.036" width="124.348" height="144.374"/>
   <object id="54" x="158.812" y="385.154" width="483.422" height="47.5039"/>
-  <object id="56" x="186.29" y="-54.4897"/>
+ </objectgroup>
+ <objectgroup id="13" name="RoomTransitionLayer">
+  <object id="57" x="766.826" y="206.13">
+   <polyline points="0,0 0.26087,35.7391"/>
+  </object>
  </objectgroup>
 </map>
