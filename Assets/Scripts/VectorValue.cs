@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class VectorValue : ScriptableObject 
 {
-    public Vector2 initialValue;
+    public Vector3 value;
 }
