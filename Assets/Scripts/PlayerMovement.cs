@@ -76,4 +76,9 @@ public class PlayerMovement : MonoBehaviour
     {
         return facing;
     }
+
+    public void ChangeSpeed(float factor)
+    {
+        speed = speed + speed * factor;
+    }
 }
