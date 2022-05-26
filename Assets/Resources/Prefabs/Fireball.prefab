@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 7289769710820424174}
   - component: {fileID: 7289769710820424173}
   - component: {fileID: 3006326302087695661}
+  - component: {fileID: -4651041429877123408}
+  - component: {fileID: 4731058865739124274}
   m_Layer: 0
   m_Name: Fireball
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7289769710820424172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.5829, y: -8.8391, z: -5}
+  m_LocalPosition: {x: 52.5829, y: -8.8391, z: 0}
   m_LocalScale: {x: 7.6649, y: 7.4568, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,4 +117,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da975de6371ee4f8b8acc97368d3ea52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
+  velocity: {x: 5, y: 0}
+--- !u!60 &-4651041429877123408
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289769710820424172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.02, y: 0.01, z: 0.02, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.039187424, y: 0.08054828}
+      - {x: -0.0615944, y: -0.013161311}
+      - {x: -0.061860915, y: -0.07369358}
+      - {x: 0.040124036, y: -0.07341925}
+      - {x: 0.061327398, y: -0.049580537}
+      - {x: 0.05892657, y: 0.038354907}
+      - {x: 0.052906245, y: 0.07576427}
+      - {x: 0.03, y: 0.08}
+--- !u!50 &4731058865739124274
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289769710820424172}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
