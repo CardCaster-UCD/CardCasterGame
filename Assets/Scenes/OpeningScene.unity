@@ -578,6 +578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpeningSceneWorld
       objectReference: {fileID: 0}
+    - target: {fileID: 7957424638515324728, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -4904446374832672195, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
 --- !u!1 &1678441082 stripped
