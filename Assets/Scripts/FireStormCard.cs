@@ -9,7 +9,7 @@ public class FireStormCard : ScriptableObject, ICard
     {
         var fireball = (GameObject)Resources.Load("Prefabs/Fireball", typeof(GameObject));
         
-        for ( int i = 0; i < toatalSpikes; i++)
+        for ( int i = 0; i < toatalFireBalls; i++)
         {
 
             var radian = i * 10 * Mathf.Deg2Rad;
