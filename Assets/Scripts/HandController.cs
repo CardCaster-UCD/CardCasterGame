@@ -25,7 +25,7 @@ public class HandController : MonoBehaviour
         //TODO reaplace this with drawing
         card1 = ScriptableObject.CreateInstance<FireballCard>();
         card2 = ScriptableObject.CreateInstance<FireStormCard>();
-        card3 = ScriptableObject.CreateInstance<FireballCard>();
+        card3 = ScriptableObject.CreateInstance<SpeedupCard>();
 
     }
     void Update()
