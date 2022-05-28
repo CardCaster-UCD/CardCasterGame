@@ -21,7 +21,7 @@ public class FireStormCard : ScriptableObject, ICard
             float xVelocity = xPos * speed;
             float yVelocity = yPos * speed;
 
-            fireball.GetComponent<FireballMovement>().SetVelocity(xVelocity, yVelocity);
+            fireball.GetComponent<SpellMovement>().SetVelocity(xVelocity, yVelocity);
 
             Destroy(Instantiate(fireball, player.transform.position, Quaternion.identity), lifetime);
 

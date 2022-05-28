@@ -25,8 +25,8 @@ public class HandController : MonoBehaviour
         //TODO reaplace this with drawing
         card1 = ScriptableObject.CreateInstance<FireballCard>();
         card2 = ScriptableObject.CreateInstance<FireStormCard>();
-        card3 = ScriptableObject.CreateInstance<SpeedupCard>();
-
+        //card3 = ScriptableObject.CreateInstance<SpeedupCard>();
+        card3 = ScriptableObject.CreateInstance<WindBlastCard>();
     }
     void Update()
     {
@@ -78,7 +78,6 @@ public class HandController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             this.card1.Execute(this.player);
-            Debug.Log("1");
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {

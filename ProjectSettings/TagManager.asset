@@ -8,6 +8,7 @@ TagManager:
   - Water
   - Fire
   - Sword
+  - Wind
   layers:
   - Default
   - TransparentFX
