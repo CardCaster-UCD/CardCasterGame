@@ -27,6 +27,8 @@ public class FireStormCard : ScriptableObject, ICard
 
         }
 
+        // Switch out card.
+        isActive = false;
     }
     public bool GetIsActive()
     {
@@ -36,5 +38,10 @@ public class FireStormCard : ScriptableObject, ICard
     {
         // TODO get a sprite for this.
         return (Texture2D)null; 
+    }
+
+    public void SetActive()
+    {
+        isActive = true;
     }
 }

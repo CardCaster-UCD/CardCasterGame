@@ -3,8 +3,8 @@ using UnityEngine.UIElements;
 
 public class HandController : MonoBehaviour
 {
-    [SerializeField] private GameObject deck;
-    [SerializeField] private GameObject discardPile;
+    //[SerializeField] private GameObject deck;
+    //[SerializeField] private GameObject discardPile;
     // Remove this later
     [SerializeField] private Texture2D c;
 
@@ -23,30 +23,20 @@ public class HandController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        //deckController = this.deck.GetComponent<DeckController>();
-        //discardController = this.discardPile.GetComponent<DiscardController>();
+        deckController = new DeckController();
+        discardController = new DiscardController();
+        deckController.Initialize(discardController);
 
-        ;
-        //TODO reaplace this with drawing
-        card1 = ScriptableObject.CreateInstance<FireballCard>();
-        card2 = ScriptableObject.CreateInstance<FireStormCard>();
-        //card3 = ScriptableObject.CreateInstance<SpeedupCard>();
-        card3 = ScriptableObject.CreateInstance<WindBlastCard>();
+        card1 = deckController.Draw();
+        card2 = deckController.Draw();
+        card3 = deckController.Draw();
 
         var rootVisualElement = GetComponent<UIDocument>().rootVisualElement;
         slot1 = rootVisualElement.Q<VisualElement>("Card-Slot1");
-        // this.SetSlot(1)
-        // Remove later
-        slot1.style.backgroundImage = c;
+        this.SetSlot(1);
         slot2 = rootVisualElement.Q<VisualElement>("Card-Slot2");
-        // this.SetSlot(2)
-        // Remove Later
-        slot2.style.backgroundImage = c;
+        this.SetSlot(2);
         slot3 = rootVisualElement.Q<VisualElement>("Card-Slot3");
-        // this.SetSlot(1)
-        // Remove Later
-        slot3.style.backgroundImage = c;
-
         this.SetSlot(3);
     }
     void Update()

@@ -11,6 +11,9 @@ public class SpeedupCard : ScriptableObject, ICard
         var modifier = player.AddComponent<SpeedModifier>() as SpeedModifier;
         var movement = player.GetComponent<PlayerMovement>();
         modifier.Setup(movement, factor, duration);
+
+        // Switch out card.
+        isActive = false;
     }
     public bool GetIsActive()
     {
@@ -20,5 +23,10 @@ public class SpeedupCard : ScriptableObject, ICard
     {
         // TODO get a sprite for this.
         return (Texture2D)null; 
+    }
+
+    public void SetActive()
+    {
+        isActive = true;
     }
 }

@@ -17,6 +17,7 @@ public class WindBlastCard : ScriptableObject, ICard
 
         Destroy(Instantiate(fireball, player.transform.position, Quaternion.identity), lifetime);
 
+        isActive = false;
     }
     public bool GetIsActive()
     {
@@ -30,5 +31,10 @@ public class WindBlastCard : ScriptableObject, ICard
         image = Resources.Load("Sprites/WindBlast") as Texture2D;
 
         return image; 
+    }
+
+    public void SetActive()
+    {
+        isActive = true;
     }
 }

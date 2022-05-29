@@ -1,17 +1,22 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class DiscardController : MonoBehaviour
+public class DiscardController
 {
-    // TODO Decided whether this should be stack or list.
-    private Stack<ICard> cards;
+    private List<ICard> cards;
+    public DiscardController()
+    {
+        cards = new List<ICard>();
+    }
     public void Add(ICard card)
     {
-        cards.Push(card);
+        cards.Add(card);
     }
 
-    public void Transfer(DeckController deckController)
-    {
-
+    public List<ICard> GetPile()
+    {        
+        // Return contents of discard pile.
+        // Will be emptied in the shuffle method.
+        return cards;
     }
 }

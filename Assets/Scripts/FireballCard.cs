@@ -17,6 +17,8 @@ public class FireballCard : ScriptableObject, ICard
 
         Destroy(Instantiate(fireball, player.transform.position, Quaternion.identity), lifetime);
 
+        // Switch out card.
+        isActive = false;
     }
     public bool GetIsActive()
     {
@@ -26,5 +28,10 @@ public class FireballCard : ScriptableObject, ICard
     {
         // TODO get a sprite for this.
         return (Texture2D)null; 
+    }
+
+    public void SetActive()
+    {
+        isActive = true;
     }
 }
