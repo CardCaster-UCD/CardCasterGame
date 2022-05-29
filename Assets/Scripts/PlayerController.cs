@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
         this.manaBarController.initFromPlayer(1);
         this.currentHealth = this.Health;
         this.rigidBody = GetComponent<Rigidbody2D>();
+        if (this.rigidBody == null)
+            Debug.LogError("no rigid body!");
     }
 
     // Update is called once per frame
@@ -70,7 +72,6 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log("hello");
         if ("Enemy" == other.tag)
         {
             float enemyDamage = other.GetComponent<EnemyController>().GetDamage();
@@ -80,7 +81,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidBody.MovePosition(rigidBody.position + change * speed * Time.fixedDeltaTime);
+        
+        this.rigidBody.MovePosition(rigidBody.position + change * speed * Time.fixedDeltaTime);
     }
 
     void UpdateAnimator()
