@@ -6,6 +6,7 @@ public class TorchController : MonoBehaviour
 {
     [SerializeField] float fadeoutTime;
     [SerializeField] float fadeinTime;
+    [SerializeField] FadeOutController torchFadeOut;
     private SpriteRenderer fireRenderer;
     private DefaultDictionary<string, bool> destroyableObjects = new DefaultDictionary<string, bool>
     {
@@ -29,29 +30,6 @@ public class TorchController : MonoBehaviour
         }
     }
 
-    IEnumerator FadeTo(float time, float targetAlpha)
-    {
-        float alpha = fireRenderer.material.color.a;
-        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / time)
-        {
-            Color newColor = fireRenderer.material.color;
-            newColor.a = Mathf.Lerp(alpha, targetAlpha, t);
-            fireRenderer.material.color = newColor;
-            yield return null;
-        }
-    }
-
-
-    void FadeOutStart()
-    {
-        StartCoroutine(FadeTo(fadeoutTime, 0));
-    }
-
-    void FadeInStart()
-    {
-        StartCoroutine(FadeTo(fadeinTime, 1));
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.gameObject.name);
@@ -59,16 +37,16 @@ public class TorchController : MonoBehaviour
         {
             case "Wind":
             case "Sword":
-                this.FadeOutStart();
+                torchFadeOut.FadeOutStart();
                 break;
             case "Fire":
-                this.FadeInStart();
+                torchFadeOut.FadeInStart();
                 break;
         }
         if (destroyableObjects[other.gameObject.tag])
         {
-            // Destroy(other.gameObject);
-        } 
+            Destroy(other.gameObject);
+        }
     }
 }
 
