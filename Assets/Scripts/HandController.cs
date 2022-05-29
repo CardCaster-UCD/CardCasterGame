@@ -46,6 +46,8 @@ public class HandController : MonoBehaviour
         // this.SetSlot(1)
         // Remove Later
         slot3.style.backgroundImage = c;
+
+        this.SetSlot(3);
     }
     void Update()
     {
@@ -101,13 +103,13 @@ public class HandController : MonoBehaviour
         switch(slot)
         {
             case 1:
-                slot1.style.backgroundImage = card1.getImage();
+                slot1.style.backgroundImage = card1.GetImage();
                 break;
             case 2:
-                slot2.style.backgroundImage = card2.getImage();
+                slot2.style.backgroundImage = card2.GetImage();
                 break;
             case 3:
-                slot3.style.backgroundImage = card3.getImage();
+                slot3.style.backgroundImage = card3.GetImage();
                 break;
         }
     }

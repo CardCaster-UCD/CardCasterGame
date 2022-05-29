@@ -32,7 +32,7 @@ public class FireStormCard : ScriptableObject, ICard
     {
         return isActive;
     }
-    public Texture2D getImage()
+    public Texture2D GetImage()
     {
         // TODO get a sprite for this.
         return (Texture2D)null; 
