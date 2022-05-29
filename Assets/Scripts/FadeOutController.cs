@@ -9,6 +9,7 @@ public class FadeOutController : MonoBehaviour
     [SerializeField] float fadeInTime;
 
 
+    // Lerp the alpha of the attached sprite renderer to the targetAlpha over the time specified
     IEnumerator FadeTo(float time, float targetAlpha)
     {
         float alpha = this.spriteRenderer.material.color.a;
@@ -20,12 +21,17 @@ public class FadeOutController : MonoBehaviour
             yield return null;
         }
     }
-    void FadeOutStart()
+
+    public void FadeToStart(float time, float targetAlpha)
+    {
+        StartCoroutine(FadeTo(time, targetAlpha));
+    }
+    public void FadeOutStart()
     {
         StartCoroutine(FadeTo(fadeOutTime, 0));
     }
 
-    void FadeInStart()
+    public void FadeInStart()
     {
         StartCoroutine(FadeTo(fadeInTime, 1));
     }
