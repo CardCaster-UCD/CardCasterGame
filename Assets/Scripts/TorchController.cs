@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class TorchController : MonoBehaviour
         {"Wind", true},
         {"Sword", false},
     };
+
+    private List<Action> subscribers = new List<Action>();
     void Start()
     {
         foreach (var child in GetComponentsInChildren<SpriteRenderer>())
@@ -28,6 +31,10 @@ public class TorchController : MonoBehaviour
                 fireRenderer.material.color = preservedColor;
             }
         }
+        torchFadeOut.spriteRenderer = fireRenderer;
+        torchFadeOut.fadeOutTime = fadeoutTime;
+        torchFadeOut.fadeInTime = fadeinTime;
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -47,6 +54,21 @@ public class TorchController : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+    }
+
+    public void Subscribe(Action action)
+    {
+        subscribers.Add(action);
+    }
+
+    public void Unsubscribe(Action action)
+    {
+        subscribers.Remove(action);
+    }
+
+    private void Notify()
+    {
+        this.subscribers.ForEach(action => action());
     }
 }
 
