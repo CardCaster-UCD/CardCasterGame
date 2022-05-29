@@ -22,9 +22,9 @@ public class WindBlastCard : ScriptableObject, ICard
     {
         return isActive;
     }
-    public Sprite GetSprite()
+    public Texture2D getImage()
     {
         // TODO get a sprite for this.
-        return (Sprite)null; 
+        return (Texture2D)null; 
     }
 }

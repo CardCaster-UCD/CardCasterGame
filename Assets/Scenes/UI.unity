@@ -459,6 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1279015354}
   - component: {fileID: 1279015355}
+  - component: {fileID: 1279015356}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -496,6 +497,21 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 284bc362fd74c1940a0d4b60aa204526, type: 3}
   m_SortingOrder: 0
+--- !u!114 &1279015356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279015353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8524b64c87105cd899e8c0478f83fd1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck: {fileID: 0}
+  discardPile: {fileID: 0}
+  c: {fileID: 2800000, guid: dab9d59e48af7014582c4b98fdf80cd6, type: 3}
 --- !u!1001 &1548133575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -710,7 +726,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1783475837}
-  - component: {fileID: 1783475838}
   m_Layer: 5
   m_Name: Hand
   m_TagString: Untagged
@@ -740,23 +755,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000011444, y: -155.2}
   m_SizeDelta: {x: 314.4051, y: 92.0172}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1783475838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783475836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8524b64c87105cd899e8c0478f83fd1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deck: {fileID: 0}
-  discardPile: {fileID: 0}
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
 --- !u!1001 &2094129293
 PrefabInstance:
   m_ObjectHideFlags: 0
