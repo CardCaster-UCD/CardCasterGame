@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
     [SerializeField] private Animator animator;
-    [SerializeField] private GameObject healthBar; // instance of the healthbar in the scene
-    [SerializeField] private GameObject manaBar;
+    public GameObject healthBar; // instance of the healthbar in the scene
+    public GameObject manaBar;
     private HealthBarController healthBarController;
     private HealthBarController manaBarController;
     private float currentHealth = 0.0f;
@@ -19,12 +19,19 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthBarController = healthBar.GetComponent<HealthBarController>();
-        manaBarController = manaBar.GetComponent<HealthBarController>();
-        this.healthBarController.initFromPlayer(1);
-        this.manaBarController.initFromPlayer(1);
+        
         this.currentHealth = this.Health;
         this.rigidBody = GetComponent<Rigidbody2D>();
+    }
+
+    public void init_bars(AsyncOperation Obj)
+    {
+        this.healthBar = GameObject.FindWithTag("HealthBar");
+        this.manaBar = GameObject.FindWithTag("ManaBar");
+        this.healthBarController = healthBar.GetComponent<HealthBarController>();
+        this.manaBarController = manaBar.GetComponent<HealthBarController>();
+        this.healthBarController.initFromPlayer(1);
+        this.manaBarController.initFromPlayer(1);
     }
 
     // Update is called once per frame

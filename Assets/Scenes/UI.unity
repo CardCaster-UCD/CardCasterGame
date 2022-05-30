@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ManaBar
       objectReference: {fileID: 0}
+    - target: {fileID: 420231765278842205, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
+      propertyPath: m_TagString
+      value: ManaBar
+      objectReference: {fileID: 0}
     - target: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -224,8 +228,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8822827162327069885, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8822827162327069885, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
+      propertyPath: surfaceObject
+      value: 
+      objectReference: {fileID: 1257907572}
     - target: {fileID: 8822827162950048625, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -243,6 +251,11 @@ PrefabInstance:
 --- !u!224 &1257907571 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
+  m_PrefabInstance: {fileID: 1257907570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1257907572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8822827162950048631, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
   m_PrefabInstance: {fileID: 1257907570}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1279015353
@@ -432,6 +445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 420231765278842205, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
+      propertyPath: m_TagString
+      value: HealthBar
+      objectReference: {fileID: 0}
     - target: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -518,12 +535,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8822827162327069885, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8822827162327069885, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
+      propertyPath: surfaceObject
+      value: 
+      objectReference: {fileID: 2094129295}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
 --- !u!224 &2094129294 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
+  m_PrefabInstance: {fileID: 2094129293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2094129295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8822827162950048631, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
   m_PrefabInstance: {fileID: 2094129293}
   m_PrefabAsset: {fileID: 0}

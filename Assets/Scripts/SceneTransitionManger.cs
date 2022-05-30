@@ -19,6 +19,10 @@ public class SceneTransitionManger : MonoBehaviour
         SceneManager.LoadSceneAsync(startScene, LoadSceneMode.Additive);
         currentScene.value = startScene;
 
-        SceneManager.LoadSceneAsync(UI, LoadSceneMode.Additive);
+        var async_op = SceneManager.LoadSceneAsync(UI, LoadSceneMode.Additive);
+
+        async_op.completed += player.GetComponent<PlayerController>().init_bars;
+
+
     }
 }

@@ -431,7 +431,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299977801}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4ce9071f6cd53b4bafc017977e6b8ea, type: 3}
   m_Name: 
@@ -1597,10 +1597,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 5da6c28b38b06ee4daae40cf414bbf5e, type: 2}
-  startScene: CaveScene
+  startScene: OpeningScene
   UI: UI
   spawn: {x: 45.9, y: -15.01, z: 0}
   player: {fileID: 299977801}
+  enemy: {fileID: 0}
 --- !u!4 &1999705153
 Transform:
   m_ObjectHideFlags: 0
