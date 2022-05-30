@@ -9,6 +9,7 @@ TagManager:
   - Fire
   - Sword
   - Wind
+  - UIDoc
   layers:
   - Default
   - TransparentFX

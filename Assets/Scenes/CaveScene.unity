@@ -584,6 +584,7 @@ MonoBehaviour:
   cameraMax: {x: 26, y: -6}
   cameraMin: {x: 9, y: -16}
   nextScenePosition: {x: 7.5, y: -7, z: -5}
+  switchHands: 1
 --- !u!1 &1768176130
 GameObject:
   m_ObjectHideFlags: 0

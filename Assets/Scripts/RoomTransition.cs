@@ -17,6 +17,8 @@ namespace CameraControl
 
         private BasicCameraController cameraController;
 
+        [SerializeField] bool switchHands;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -36,6 +38,22 @@ namespace CameraControl
                     this.playerOffset.y,
                     0
                 );
+            }
+
+            if(switchHands)
+            {
+                var UIdoc = GameObject.FindWithTag("UIDoc");
+                
+                if(UIdoc.GetComponent<HandController>().enabled)
+                {
+                    UIdoc.GetComponent<HandController>().enabled = false;
+                    UIdoc.GetComponent<PuzzleHandController>().enabled = true;
+                }
+                else
+                {
+                    UIdoc.GetComponent<PuzzleHandController>().enabled = false;
+                    UIdoc.GetComponent<HandController>().enabled = true;
+                }
             }
         }
     }

@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -256,9 +256,10 @@ GameObject:
   - component: {fileID: 1279015354}
   - component: {fileID: 1279015355}
   - component: {fileID: 1279015356}
+  - component: {fileID: 1279015357}
   m_Layer: 5
   m_Name: UIDocument
-  m_TagString: Untagged
+  m_TagString: UIDoc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,14 +301,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279015353}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8524b64c87105cd899e8c0478f83fd1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: {fileID: 0}
-  discardPile: {fileID: 0}
   c: {fileID: 2800000, guid: dab9d59e48af7014582c4b98fdf80cd6, type: 3}
+--- !u!114 &1279015357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279015353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a2a5921b605f9ce972a44a01a93e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1779424817
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8822827162327069827, guid: c03f5ddda447797468a774b2053ba07f, type: 3}
       propertyPath: m_AnchorMax.x

@@ -15,6 +15,7 @@ public class SceneTransition : MonoBehaviour
 
     [SerializeField] Vector2 cameraMin;
     [SerializeField] Vector3 nextScenePosition;
+    [SerializeField] bool switchHands;
     private bool triggered = false;
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,6 +32,22 @@ public class SceneTransition : MonoBehaviour
             SceneManager.UnloadSceneAsync(currentScene);
 
             SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Additive);
+
+            if(switchHands)
+            {
+                var UIdoc = GameObject.FindWithTag("UIDoc");
+                
+                if(UIdoc.GetComponent<HandController>().enabled)
+                {
+                    UIdoc.GetComponent<HandController>().enabled = false;
+                    UIdoc.GetComponent<PuzzleHandController>().enabled = true;
+                }
+                else
+                {
+                    UIdoc.GetComponent<PuzzleHandController>().enabled = false;
+                    UIdoc.GetComponent<HandController>().enabled = true;
+                }
+            }
         }
     }    
 }

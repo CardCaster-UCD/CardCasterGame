@@ -18,27 +18,35 @@ public class HandController : MonoBehaviour
     private ICard card2;
     private ICard card3;
     private GameObject player;
+    private bool initialized;
 
-    
-    void Start()
+    void OnEnable()
     {
-        player = GameObject.FindWithTag("Player");
-        deckController = new DeckController();
-        discardController = new DiscardController();
-        deckController.Initialize(discardController);
+        if(!initialized)
+        {
+            player = GameObject.FindWithTag("Player");
+            deckController = new DeckController();
+            discardController = new DiscardController();
+            deckController.Initialize(discardController);
 
-        card1 = deckController.Draw();
-        card2 = deckController.Draw();
-        card3 = deckController.Draw();
+            card1 = deckController.Draw();
+            card2 = deckController.Draw();
+            card3 = deckController.Draw();
 
-        var rootVisualElement = GetComponent<UIDocument>().rootVisualElement;
-        slot1 = rootVisualElement.Q<VisualElement>("Card-Slot1");
+            var rootVisualElement = GetComponent<UIDocument>().rootVisualElement;
+            slot1 = rootVisualElement.Q<VisualElement>("Card-Slot1");
+            slot2 = rootVisualElement.Q<VisualElement>("Card-Slot2");
+            slot3 = rootVisualElement.Q<VisualElement>("Card-Slot3");
+
+            initialized = true;
+        }
+
+        // Change the UI.
         this.SetSlot(1);
-        slot2 = rootVisualElement.Q<VisualElement>("Card-Slot2");
         this.SetSlot(2);
-        slot3 = rootVisualElement.Q<VisualElement>("Card-Slot3");
         this.SetSlot(3);
     }
+
     void Update()
     {
         // Check if needs to draw.

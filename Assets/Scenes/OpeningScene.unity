@@ -143,6 +143,7 @@ MonoBehaviour:
   cameraMaxPosition: {x: 58, y: -5}
   cameraMinPosition: {x: 44, y: -27}
   playerOffset: {x: 2, y: 0}
+  switchHands: 0
 --- !u!1 &172908428
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +293,7 @@ MonoBehaviour:
   cameraMax: {x: 50, y: -5}
   cameraMin: {x: 10, y: -27}
   nextScenePosition: {x: 49, y: -31, z: -5}
+  switchHands: 1
 --- !u!1 &1080458978
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +606,7 @@ MonoBehaviour:
   cameraMaxPosition: {x: 26, y: -6}
   cameraMinPosition: {x: 9, y: -16}
   playerOffset: {x: -2, y: 0}
+  switchHands: 0
 --- !u!1 &2128327364
 GameObject:
   m_ObjectHideFlags: 0
