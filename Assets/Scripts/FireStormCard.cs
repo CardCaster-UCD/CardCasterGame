@@ -36,8 +36,12 @@ public class FireStormCard : ScriptableObject, ICard
     }
     public Texture2D GetImage()
     {
-        // TODO get a sprite for this.
-        return (Texture2D)null; 
+        // Size here doesn't matter
+        // https://docs.unity3d.com/530/Documentation/ScriptReference/Texture2D.LoadImage.html
+        Texture2D image = new Texture2D(2, 2); 
+        image = Resources.Load("Sprites/FireStorm_Card") as Texture2D;
+
+        return image; 
     }
 
     public void SetActive()

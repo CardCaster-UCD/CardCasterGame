@@ -42,32 +42,41 @@ public class HandController : MonoBehaviour
     void Update()
     {
         // Check if needs to draw.
-        if (!card1.GetIsActive()) {
-            // The card is No Longer Active, so Send it to the DiscardPile.
-            discardController.Add(card1);
+        if (!card1.GetIsActive()) {       
+            // So you never draw the same card you just discarded.
+            var temp = card1;
 
             // Draw a new card from Deck.
             card1 = deckController.Draw();
             
+            // The card is No Longer Active, so Send it to the DiscardPile.
+            discardController.Add(temp);
+
             this.SetSlot(1);
         }
 
         if (!card2.GetIsActive()) {
-            // The card is No Longer Active, so Send it to the DiscardPile.
-            discardController.Add(card2);
+            // So you never draw the same card you just discarded.
+            var temp = card2;
 
             // Draw a new card from Deck.
             card2 = deckController.Draw();
 
-           this.SetSlot(2);
+            // The card is No Longer Active, so Send it to the DiscardPile.
+            discardController.Add(temp);
+
+            this.SetSlot(2);
         }
 
         if (!card3.GetIsActive()) {
-            // The card is No Longer Active, so Send it to the DiscardPile.
-            discardController.Add(card3);
+            // So you never draw the same card you just discarded.
+            var temp = card3;
 
             // Draw a new card from Deck.
             card3 = deckController.Draw();
+
+            // The card is No Longer Active, so Send it to the DiscardPile.
+            discardController.Add(temp);
 
             this.SetSlot(3);
         }
