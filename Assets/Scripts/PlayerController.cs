@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     private HealthBarController manaBarController;
     private float currentHealth = 0.0f;
     private float Health = 100.0f; // max capacity of the health bar
-
+    private float SwordDamage = 40.0f;
+    private float Absortion = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         // this.healthBarController.ChangeValue(this.currentHealth / this.Health);
         float oldHealth = this.currentHealth;
-        this.currentHealth -= damage;
+        this.currentHealth -= damage * (1-this.Absortion);
 
         if (this.currentHealth < 0.0f)
         {
@@ -85,5 +86,29 @@ public class PlayerController : MonoBehaviour
 
     }
         
+    public float IncreaseAttack(float factor)
+    {
+        var increase = factor * this.SwordDamage;
+        this.SwordDamage += increase;
+        return increase;
+    }
 
+    public void DecreaseAttack(float increase)
+    {
+
+        this.SwordDamage -= increase;
+
+    }
+
+    public void IncreaseAbsortion(float factor)
+    {
+
+        this.Absortion += factor;
+
+    }
+
+    public void DecreaseAbsortion(float factor)
+    {
+        this.Absortion -= factor;
+    }
 }

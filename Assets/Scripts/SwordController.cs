@@ -7,11 +7,13 @@ public class SwordController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float reswingDelay;
     private float reswingTimer;
+    private GameObject player;
     
     void start()
     {
         // Ensure no delay for first swing.
         reswingTimer = reswingDelay;
+        player = GameObject.FindWithTag("Player");
     }
     // Update is called once per frame
     void Update()
