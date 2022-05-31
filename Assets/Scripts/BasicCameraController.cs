@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,9 @@ namespace CameraControl
     public class BasicCameraController : MonoBehaviour
     {
         // Start is called before the first frame update
-        public class CameraBounds 
+
+        [Serializable]
+        public struct CameraBounds
         {
             public Vector2 topRight;
             public Vector2 bottomLeft;
@@ -16,11 +19,20 @@ namespace CameraControl
         [SerializeField] Transform target;
         [SerializeField] float smoothing;
 
+        [SerializeField] CameraBoundsValue DebugBounds;
         [SerializeField] public Vector2 maxPosition;
+
         [SerializeField] public Vector2 minPosition;
+
+
 
         void Start()
         {
+#if UNITY_EDITOR
+            maxPosition = DebugBounds.value.topRight;
+            minPosition = DebugBounds.value.bottomLeft;
+
+#endif
             transform.position = new Vector3(
                 Mathf.Clamp(target.position.x, minPosition.x, maxPosition.x),
                 Mathf.Clamp(target.position.y, minPosition.y, maxPosition.y),

@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e2467574f1f1b478acd02a21eaa5e5, type: 3}
   m_Name: CavePuzzle
   m_EditorClassIdentifier: 
+  value:
+    topRight: {x: 35, y: 16}
+    bottomLeft: {x: -4, y: -6}
