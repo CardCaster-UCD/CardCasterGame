@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="58" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="104">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="58" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="104">
  <tileset firstgid="1" source="cave2.tsx"/>
  <tileset firstgid="337" source="cave.tsx"/>
  <tileset firstgid="1337" source="objects.tsx"/>
@@ -149,7 +149,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="7" name="moveableRocks" width="58" height="32">
+ <layer id="7" name="moveableRocks" width="58" height="32" visible="0" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -227,7 +227,7 @@
    <polygon points="0,0 -0.666667,435.333 59.3333,434.667 60,358.667 384.667,357.333 384,434 443.333,433.333 444,358.667 785.333,359.333 788.667,406 837.333,406 838.667,103.333 838.667,107.333 439.333,106 66,106 60,106 58,-0.666667 60.6667,166 373.333,165.333 784,165.333 784.667,200 784.667,201.333 410,202.667 64.6667,202.667 60.6667,202.667 61.3333,167.333 61.3333,264 783.333,260.667 784.667,299.333 62,298.667 60.6667,264.667 58,-0.666667"/>
   </object>
  </objectgroup>
- <layer id="8" name="disappearCloud" width="58" height="32">
+ <layer id="8" name="disappearCloud" width="58" height="32" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -317,11 +317,11 @@
   <object id="20" x="802" y="482" width="127" height="29"/>
   <object id="21" x="515" y="483" width="253" height="29"/>
   <object id="22" x="449" y="216" width="64" height="39"/>
-  <object id="23" name="rightRow3Rocks" x="722" y="161" width="31" height="45"/>
-  <object id="24" name="rightRow2Rocks" x="721" y="260" width="34" height="46"/>
-  <object id="25" name="leftRow1Rocks" x="211" y="355" width="30" height="48"/>
-  <object id="26" name="leftRow2Rocks" x="207" y="255" width="36" height="51"/>
-  <object id="27" name="leftRow3Rocks" x="209" y="160" width="33" height="49"/>
+  <object id="23" name="rightRow3Rocks" x="722" y="161" width="31" height="45" visible="0"/>
+  <object id="24" name="rightRow2Rocks" x="721" y="260" width="34" height="46" visible="0"/>
+  <object id="25" name="leftRow1Rocks" x="211" y="355" width="30" height="48" visible="0"/>
+  <object id="26" name="leftRow2Rocks" x="207" y="255" width="36" height="51" visible="0"/>
+  <object id="27" name="leftRow3Rocks" x="209" y="160" width="33" height="49" visible="0"/>
   <object id="28" name="goldenEntrance" x="214" y="45.3333">
    <polyline points="0,0 11.3333,0 12,-29.3333 58.6667,-29.3333 58,2 78,2"/>
   </object>
