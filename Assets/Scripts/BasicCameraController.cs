@@ -8,7 +8,11 @@ namespace CameraControl
     public class BasicCameraController : MonoBehaviour
     {
         // Start is called before the first frame update
-
+        public class CameraBounds 
+        {
+            public Vector2 topRight;
+            public Vector2 bottomLeft;
+        }
         [SerializeField] Transform target;
         [SerializeField] float smoothing;
 
