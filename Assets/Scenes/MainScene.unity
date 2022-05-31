@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 299977809}
   smoothing: 1
+  DebugBounds: {fileID: 0}
   maxPosition: {x: 58, y: -5}
   minPosition: {x: 44, y: -27}
 --- !u!81 &76787250
@@ -424,6 +425,7 @@ MonoBehaviour:
   facing: {x: 0, y: 0}
   animator: {fileID: 299977804}
   initialPosition: {fileID: 11400000, guid: fb87a428145aea34e900255ac32525ed, type: 2}
+  limitDiagonalMovement: 0
 --- !u!114 &299977803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1597,7 +1599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 5da6c28b38b06ee4daae40cf414bbf5e, type: 2}
-  startScene: CaveScene
+  startScene: OpeningScene
   UI: UI
   spawn: {x: 45.9, y: -15.01, z: 0}
   player: {fileID: 299977801}
