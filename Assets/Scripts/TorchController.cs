@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class TorchController : MonoBehaviour
 {
     [SerializeField] float fadeoutTime;
     [SerializeField] float fadeinTime;
+    [SerializeField] FadeOutController torchFadeOut;
     private SpriteRenderer fireRenderer;
     private DefaultDictionary<string, bool> destroyableObjects = new DefaultDictionary<string, bool>
     {
@@ -13,6 +15,8 @@ public class TorchController : MonoBehaviour
         {"Wind", true},
         {"Sword", false},
     };
+
+    private List<Action> subscribers = new List<Action>();
     void Start()
     {
         foreach (var child in GetComponentsInChildren<SpriteRenderer>())
@@ -27,29 +31,10 @@ public class TorchController : MonoBehaviour
                 fireRenderer.material.color = preservedColor;
             }
         }
-    }
-
-    IEnumerator FadeTo(float time, float targetAlpha)
-    {
-        float alpha = fireRenderer.material.color.a;
-        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / time)
-        {
-            Color newColor = fireRenderer.material.color;
-            newColor.a = Mathf.Lerp(alpha, targetAlpha, t);
-            fireRenderer.material.color = newColor;
-            yield return null;
-        }
-    }
-
-
-    void FadeOutStart()
-    {
-        StartCoroutine(FadeTo(fadeoutTime, 0));
-    }
-
-    void FadeInStart()
-    {
-        StartCoroutine(FadeTo(fadeinTime, 1));
+        torchFadeOut.spriteRenderer = fireRenderer;
+        torchFadeOut.fadeOutTime = fadeoutTime;
+        torchFadeOut.fadeInTime = fadeinTime;
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -59,16 +44,31 @@ public class TorchController : MonoBehaviour
         {
             case "Wind":
             case "Sword":
-                this.FadeOutStart();
+                torchFadeOut.FadeOutStart();
                 break;
             case "Fire":
-                this.FadeInStart();
+                torchFadeOut.FadeInStart();
                 break;
         }
         if (destroyableObjects[other.gameObject.tag])
         {
-            // Destroy(other.gameObject);
-        } 
+            Destroy(other.gameObject);
+        }
+    }
+
+    public void Subscribe(Action action)
+    {
+        subscribers.Add(action);
+    }
+
+    public void Unsubscribe(Action action)
+    {
+        subscribers.Remove(action);
+    }
+
+    private void Notify()
+    {
+        this.subscribers.ForEach(action => action());
     }
 }
 
