@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 facing;
     [SerializeField] private Animator animator;
     [SerializeField] private VectorValue initialPosition;
+    [SerializeField] private bool limitDiagonalMovement = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +31,19 @@ public class PlayerMovement : MonoBehaviour
 
         change.x = Input.GetAxisRaw("Horizontal");
 
-        /*Diagonal movement limiter
-        if (change.x == 0)
+        // Diagonal movement limiter
+        if (this.limitDiagonalMovement)
+        {
+            if (change.x == 0)
+            {
+                change.y = Input.GetAxisRaw("Vertical");
+            }
+        }
+        else
         {
             change.y = Input.GetAxisRaw("Vertical");
         }
-        */
-        change.y = Input.GetAxisRaw("Vertical");
+
 
         // Don't update animator if no movement has occured.
         // This allows us to stay in the previous idle state.
