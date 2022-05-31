@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Utilities
 {
-    public static class Extensions
+    public static class VectorExtensions
     {
         public static Vector3 ToVector2(this Vector3 vector)
         {
@@ -12,6 +12,23 @@ namespace Utilities
         }
     }
 
+    public static class MonoBehaviourExtension
+    {
+        // Run n coroutines in parallel and wait for all to finish
+        public static IEnumerator RunToComplete(this MonoBehaviour mb, params IEnumerator[] ienumerators)
+        {
+            if (ienumerators != null & ienumerators.Length > 0)
+            {
+                Coroutine[] coroutines = new Coroutine[ienumerators.Length];
+                for (int i = 0; i < ienumerators.Length; i++)
+                    coroutines[i] = mb.StartCoroutine(ienumerators[i]);
+                for (int i = 0; i < coroutines.Length; i++)
+                    yield return coroutines[i];
+            }
+            else
+                yield return null;
+        }
+    }
     // Helper class to emulate a python DefaultDictionary
     // Default values are the type's default value
     // bool -> false
