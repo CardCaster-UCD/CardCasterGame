@@ -111,7 +111,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,241,0,0,241,0,0,0,0,0,0,1109,1110,1111,1112,0,0,0,0
 </data>
  </layer>
- <objectgroup id="3" name="collision" visible="0">
+ <objectgroup id="3" name="collision">
   <object id="5" x="0" y="50.6994" width="111.198" height="60.4984"/>
   <object id="6" x="66.4631" y="195.129" width="61.3505" height="59.6463"/>
   <object id="8" x="193.851" y="146.986" width="46.0129" height="156.359"/>
