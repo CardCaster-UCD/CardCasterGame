@@ -5,14 +5,9 @@ using UnityEngine;
 public class SwimController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    private bool playerInWater;
+    private bool playerInWater = false;
 
     // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -37,9 +32,11 @@ public class SwimController : MonoBehaviour
         if(collider.CompareTag("Water"))
         {
             playerInWater = true;
+            
         }
     }
 
+    // When collider exits the BoxCollider
     private void OnTriggerExit2D(Collider2D collider)
     {
         if(collider.CompareTag("Water"))
