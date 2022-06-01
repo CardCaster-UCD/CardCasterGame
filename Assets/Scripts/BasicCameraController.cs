@@ -29,9 +29,11 @@ namespace CameraControl
         void Start()
         {
 #if UNITY_EDITOR
-            maxPosition = DebugBounds.value.topRight;
-            minPosition = DebugBounds.value.bottomLeft;
-
+            if (DebugBounds != null)
+            {
+                maxPosition = DebugBounds.value.topRight;
+                minPosition = DebugBounds.value.bottomLeft;
+            }
 #endif
             transform.position = new Vector3(
                 Mathf.Clamp(target.position.x, minPosition.x, maxPosition.x),
