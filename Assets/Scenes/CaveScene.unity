@@ -605,6 +605,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7336920698036639938, guid: df2aff455cc998045aa3d1b82e3ca970, type: 3}
+      propertyPath: m_Size.y
+      value: 4.7718005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336920698036639938, guid: df2aff455cc998045aa3d1b82e3ca970, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.3015997
+      objectReference: {fileID: 0}
     - target: {fileID: 8381876047676558768, guid: df2aff455cc998045aa3d1b82e3ca970, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1577,7 +1585,7 @@ GameObject:
   - component: {fileID: 368612501}
   m_Layer: 0
   m_Name: WaterDown
-  m_TagString: Untagged
+  m_TagString: WaterPushDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1719,7 +1727,7 @@ GameObject:
   - component: {fileID: 623237602}
   m_Layer: 0
   m_Name: WaterUp
-  m_TagString: Untagged
+  m_TagString: WaterPushUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1924,7 +1932,7 @@ GameObject:
   - component: {fileID: 761786826}
   m_Layer: 0
   m_Name: WaterRight
-  m_TagString: Untagged
+  m_TagString: WaterPushRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2224,7 +2232,7 @@ GameObject:
   - component: {fileID: 1004172996}
   m_Layer: 0
   m_Name: WaterLeftBottom
-  m_TagString: Untagged
+  m_TagString: WaterPushLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3533,7 +3541,7 @@ GameObject:
   - component: {fileID: 1492647110}
   m_Layer: 0
   m_Name: WaterLeftTop
-  m_TagString: Untagged
+  m_TagString: WaterPushLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
