@@ -5,6 +5,7 @@ public class FireballCard : ScriptableObject, ICard
     private bool isActive = true;
     private const float speed = 6.0f;
     private const float lifetime = 5.0f;
+    private const float cost = 15.0f;
     public void Execute(GameObject player)
     {
         var fireball = (GameObject)Resources.Load("Prefabs/Fireball", typeof(GameObject));
@@ -40,8 +41,14 @@ public class FireballCard : ScriptableObject, ICard
         return image; 
     }
 
+    public float GetCost()
+    {
+        return cost;
+    }
+
     public void SetActive()
     {
         isActive = true;
     }
+
 }

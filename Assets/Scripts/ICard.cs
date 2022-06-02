@@ -7,4 +7,6 @@ public interface ICard
     public Texture2D GetImage();
     public void SetActive();
 
+    public float GetCost();
+
 }
