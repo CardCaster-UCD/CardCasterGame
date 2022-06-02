@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using Utilities;
 
-public class RockController : MonoBehaviour
+public class RockController : MonoBehaviour, ITorchSubscriber
 {
     private bool isTriggered = false;
     [SerializeField] float fadeInTime;
@@ -65,15 +65,8 @@ public class RockController : MonoBehaviour
         }
     }
 
-    void Update()
+    public void OnTorchStateChanged(bool isEnflamed)
     {
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Debug inputs, remove on release!");
-            ToggleRock();
-        }
-#endif
+        ToggleRock();
     }
-
 }
