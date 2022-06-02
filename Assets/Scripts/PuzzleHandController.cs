@@ -23,7 +23,8 @@ public class PuzzleHandController : MonoBehaviour
             // Cards needed to complete puzzle.
             card1 = ScriptableObject.CreateInstance<FireballCard>();
             card2 = ScriptableObject.CreateInstance<WindBlastCard>();
-            card3 = ScriptableObject.CreateInstance<ShieldCard>();
+            card3 = ScriptableObject.CreateInstance<HealUpCard>();
+            // card3 = ScriptableObject.CreateInstance<ShieldCard>();
             // card3 = ScriptableObject.CreateInstance<AttackUpCard>();
             //card3 = ScriptableObject.CreateInstance<SpeedupCard>();
             

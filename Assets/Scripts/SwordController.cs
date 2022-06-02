@@ -8,12 +8,15 @@ public class SwordController : MonoBehaviour
     [SerializeField] private float reswingDelay;
     private float reswingTimer;
     private GameObject player;
+    private float damage;
     
-    void start()
+    void Start()
     {
         // Ensure no delay for first swing.
-        reswingTimer = reswingDelay;
         player = GameObject.FindWithTag("Player");
+        damage = player.GetComponent<PlayerController>().GetSwordDamage();
+        reswingTimer = reswingDelay;
+        
     }
     // Update is called once per frame
     void Update()
@@ -24,5 +27,10 @@ public class SwordController : MonoBehaviour
             animator.SetTrigger("Swing");
             reswingTimer = 0.0f;
         }
+    }
+
+    public float GetDamage()
+    {
+        return this.damage;
     }
 }

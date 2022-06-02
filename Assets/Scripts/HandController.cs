@@ -18,6 +18,7 @@ public class HandController : MonoBehaviour
     private ICard card2;
     private ICard card3;
     private GameObject player;
+    private PlayerController player_ctrl;
     private bool initialized;
 
     void OnEnable()
@@ -25,6 +26,7 @@ public class HandController : MonoBehaviour
         if(!initialized)
         {
             player = GameObject.FindWithTag("Player");
+            player_ctrl = player.GetComponent<PlayerController>();
             deckController = new DeckController();
             discardController = new DiscardController();
             deckController.Initialize(discardController);
@@ -49,6 +51,7 @@ public class HandController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("hand");
         // Check if needs to draw.
         if (!card1.GetIsActive()) {       
             // So you never draw the same card you just discarded.
@@ -88,24 +91,30 @@ public class HandController : MonoBehaviour
 
             this.SetSlot(3);
         }
-        
+
         // Handle inputs.
         // Call execute of card if input pressed.
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (player_ctrl.GetCurMana() > 0)
         {
-            this.card1.Execute(this.player);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            this.card2.Execute(this.player);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            this.card3.Execute(this.player);
-        }
 
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                this.card1.Execute(this.player);
+                player_ctrl.SpendMana(this.card1.GetCost());
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                this.card2.Execute(this.player);
+                player_ctrl.SpendMana(this.card2.GetCost());
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                this.card3.Execute(this.player);
+                player_ctrl.SpendMana(this.card3.GetCost());
+            }
+        }
     }
-    private void SetSlot(int slot)
+    private void SetSlot(int slot) 
     {
         switch(slot)
         {

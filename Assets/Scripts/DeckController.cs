@@ -25,7 +25,10 @@ public class DeckController
             ScriptableObject.CreateInstance<FireStormCard>(),
             ScriptableObject.CreateInstance<SpeedupCard>(),
             ScriptableObject.CreateInstance<WindBlastCard>(),
-        };
+            ScriptableObject.CreateInstance<HealUpCard>(),
+            ScriptableObject.CreateInstance<ShieldCard>(),
+            ScriptableObject.CreateInstance<AttackUpCard>()
+    };
 
         Shuffle(tempCards);
     }

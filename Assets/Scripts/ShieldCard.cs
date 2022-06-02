@@ -7,6 +7,7 @@ class ShieldCard : ScriptableObject, ICard
     private bool isActive = true;
     private const float absortion = 0.3f;
     private const float lifetime = 5.0f;
+    private const float cost = 15.0f;
     public void Execute(GameObject player)
     {
         GameObject shield = (GameObject)  Resources.Load("Prefabs/Shield", typeof(GameObject));
@@ -46,6 +47,10 @@ class ShieldCard : ScriptableObject, ICard
         return image;
     }
 
+    public float GetCost()
+    {
+        return cost;
+    }
     public void SetActive()
     {
         isActive = true;
