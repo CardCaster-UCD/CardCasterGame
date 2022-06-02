@@ -1282,6 +1282,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1194955162}
     - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: enflamedOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
       propertyPath: boulders.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1572,6 +1576,23 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   fadeOutTime: 0
   fadeInTime: 0
+--- !u!114 &1241138446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241138444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a0e049c65da644d8544ffc0f833158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yellowTorch: {fileID: 1055957822}
+  purpleTorch: {fileID: 1207348849}
+  greenTorch: {fileID: 1319594646}
+  yellowRock: {fileID: 186533481}
+  blueRock: {fileID: 816644081}
 --- !u!1 &1304134465
 GameObject:
   m_ObjectHideFlags: 0

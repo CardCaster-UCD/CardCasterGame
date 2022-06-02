@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class TorchController : MonoBehaviour
     [SerializeField] float fadeoutTime;
     [SerializeField] float fadeinTime;
     [SerializeField] FadeOutController torchFadeOut;
+    [SerializeField] List<GameObject> boulders;
     private SpriteRenderer fireRenderer;
     private DefaultDictionary<string, bool> destroyableObjects = new DefaultDictionary<string, bool>
     {
@@ -16,12 +18,17 @@ public class TorchController : MonoBehaviour
         {"Sword", false},
     };
 
-    private List<Action> subscribers = new List<Action>();
+    private HashSet<Action<bool>> subscribers = new HashSet<Action<bool>>();
+    [SerializeField] private bool enflamedOnStart;
+    private bool isEnflamed;
     void Start()
     {
-        foreach (var child in GetComponentsInChildren<SpriteRenderer>())
+        Action torchSetup = () =>
         {
-            if (child.gameObject.name == "fire")
+            var childRenderers = from child in GetComponentsInChildren<SpriteRenderer>()
+                                  where "fire" == child.gameObject.name
+                                  select child;
+            childRenderers.ToList().ForEach(child =>
             {
                 fireRenderer = child;
 
@@ -29,12 +36,30 @@ public class TorchController : MonoBehaviour
                 var preservedColor = fireRenderer.material.color;
                 preservedColor.a = 0;
                 fireRenderer.material.color = preservedColor;
-            }
+            });
+            torchFadeOut.spriteRenderer = fireRenderer;
+            torchFadeOut.fadeOutTime = fadeoutTime;
+            torchFadeOut.fadeInTime = fadeinTime;
+        };
+
+        Action subscribersSetUp = () =>
+        {
+            if (null == this.boulders) throw new NullReferenceException("Torch exists without linked objects to affect");
+
+            boulders.ForEach(boulder =>
+            {
+                this.Subscribe(boulder.GetComponent<ITorchSubscriber>().OnTorchStateChanged);
+            });
+        };
+
+        torchSetup();
+        subscribersSetUp();
+        this.isEnflamed = enflamedOnStart;
+        if (enflamedOnStart)
+        {
+            torchFadeOut.FadeInStart();
+            Notify();
         }
-        torchFadeOut.spriteRenderer = fireRenderer;
-        torchFadeOut.fadeOutTime = fadeoutTime;
-        torchFadeOut.fadeInTime = fadeinTime;
-        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -56,19 +81,22 @@ public class TorchController : MonoBehaviour
         }
     }
 
-    public void Subscribe(Action action)
+    public void Subscribe(Action<bool> action)
     {
         subscribers.Add(action);
     }
 
-    public void Unsubscribe(Action action)
+    public void Unsubscribe(Action<bool> action)
     {
         subscribers.Remove(action);
     }
 
     private void Notify()
     {
-        this.subscribers.ForEach(action => action());
+        foreach(var subscriber in subscribers)
+        {
+            subscriber(isEnflamed);
+        }
     }
 }
 
