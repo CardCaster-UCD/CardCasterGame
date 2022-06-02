@@ -26,8 +26,8 @@ public class TorchController : MonoBehaviour
         Action torchSetup = () =>
         {
             var childRenderers = from child in GetComponentsInChildren<SpriteRenderer>()
-                                  where "fire" == child.gameObject.name
-                                  select child;
+                                 where "fire" == child.gameObject.name
+                                 select child;
             childRenderers.ToList().ForEach(child =>
             {
                 fireRenderer = child;
@@ -48,7 +48,8 @@ public class TorchController : MonoBehaviour
 
             boulders.ForEach(boulder =>
             {
-                this.Subscribe(boulder.GetComponent<ITorchSubscriber>().OnTorchStateChanged);
+                var controller = boulder.GetComponent<RockController>();
+                this.Subscribe(controller.OnTorchStateChanged);
             });
         };
 
@@ -69,10 +70,20 @@ public class TorchController : MonoBehaviour
         {
             case "Wind":
             case "Sword":
-                torchFadeOut.FadeOutStart();
+                if (this.isEnflamed)
+                {
+                    torchFadeOut.FadeOutStart();
+                    this.isEnflamed = false;
+                    Notify();
+                }
                 break;
             case "Fire":
-                torchFadeOut.FadeInStart();
+                if (!this.isEnflamed)
+                {
+                    torchFadeOut.FadeInStart();
+                    this.isEnflamed = true;
+                    Notify();
+                }
                 break;
         }
         if (destroyableObjects[other.gameObject.tag])
@@ -93,7 +104,7 @@ public class TorchController : MonoBehaviour
 
     private void Notify()
     {
-        foreach(var subscriber in subscribers)
+        foreach (var subscriber in subscribers)
         {
             subscriber(isEnflamed);
         }
