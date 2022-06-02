@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource cardAudioSource;
     public AudioClip fireball;
     public AudioClip fireStorm;
+    public AudioClip speedUp;
 
     // Start is called before the first frame update
     void Start()
