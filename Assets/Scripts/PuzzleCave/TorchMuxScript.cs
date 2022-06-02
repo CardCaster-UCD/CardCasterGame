@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorchMuxScript : MonoBehaviour, ITorchSubscriber
+public class TorchMuxScript : RockController 
 {
     [SerializeField] GameObject yellowTorch;
     [SerializeField] GameObject purpleTorch;
@@ -20,7 +20,7 @@ public class TorchMuxScript : MonoBehaviour, ITorchSubscriber
         if (blueRock    is null) throw new NullReferenceException("Required serialized field [blueRock] is unassigned"   );
     }
 
-    public void OnTorchStateChanged(bool isEnflamed)
+    public new void OnTorchStateChanged(bool isEnflamed)
     {
         Action<Action<bool>> yellowTorchSubscribe = yellowTorch.GetComponent<TorchController>().Subscribe;
         Action<Action<bool>> purpleTorchSubscribe = purpleTorch.GetComponent<TorchController>().Subscribe;
