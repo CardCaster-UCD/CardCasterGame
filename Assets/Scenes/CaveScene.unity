@@ -294,6 +294,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6899872068553128075, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
   m_PrefabInstance: {fileID: 186533478}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &186533481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+  m_PrefabInstance: {fileID: 186533478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &230076134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -639,6 +644,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7567687644218473063, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
   m_PrefabInstance: {fileID: 622212987}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &622212991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+  m_PrefabInstance: {fileID: 622212987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &668240899
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +880,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7567687644218473063, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
   m_PrefabInstance: {fileID: 816644077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &816644081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+  m_PrefabInstance: {fileID: 816644077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &827455772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1111,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7567687644218473063, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
   m_PrefabInstance: {fileID: 1012193420}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1012193424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+  m_PrefabInstance: {fileID: 1012193420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1047404277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1171,18 @@ PrefabInstance:
       propertyPath: torchFadeOut
       value: 
       objectReference: {fileID: 1055957823}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.data[0]
+      value: 
+      objectReference: {fileID: 186533481}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.data[1]
+      value: 
+      objectReference: {fileID: 2017518450}
     - target: {fileID: 3694942450157511993, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1249,6 +1281,14 @@ PrefabInstance:
       propertyPath: torchFadeOut
       value: 
       objectReference: {fileID: 1194955162}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.data[0]
+      value: 
+      objectReference: {fileID: 622212991}
     - target: {fileID: 3694942450157511993, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1347,6 +1387,18 @@ PrefabInstance:
       propertyPath: torchFadeOut
       value: 
       objectReference: {fileID: 1207348850}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1012193424}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.data[1]
+      value: 
+      objectReference: {fileID: 816644081}
     - target: {fileID: 3694942450157511993, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1601,6 +1653,18 @@ PrefabInstance:
       propertyPath: torchFadeOut
       value: 
       objectReference: {fileID: 1319594647}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1764552061}
+    - target: {fileID: -6101523737339623119, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: boulders.Array.data[1]
+      value: 
+      objectReference: {fileID: 816644081}
     - target: {fileID: 3694942450157511993, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
       propertyPath: m_Icon
       value: 
@@ -2363,6 +2427,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7567687644218473063, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
   m_PrefabInstance: {fileID: 1764552057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1764552061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+  m_PrefabInstance: {fileID: 1764552057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1768176130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3101,6 +3170,11 @@ GameObject:
 --- !u!1 &2017518449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7567687644218473063, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+  m_PrefabInstance: {fileID: 2017518446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2017518450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
   m_PrefabInstance: {fileID: 2017518446}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2049269546
