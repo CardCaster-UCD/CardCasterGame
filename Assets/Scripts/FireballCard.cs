@@ -18,6 +18,12 @@ public class FireballCard : ScriptableObject, ICard
 
         Destroy(Instantiate(fireball, player.transform.position, Quaternion.identity), lifetime);
 
+        // Play audio
+        var playerControllerScript = player.GetComponent<PlayerController>();
+        var fireballAudio = playerControllerScript.fireball;
+        var AudioSource = player.GetComponent<AudioSource>();
+        AudioSource.PlayOneShot(fireballAudio);
+
         // Switch out card.
         isActive = false;
     }

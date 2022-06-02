@@ -22,7 +22,7 @@ public class SwordController : MonoBehaviour
     void Update()
     {
         reswingTimer += Time.deltaTime;
-        if(Input.GetKeyDown(KeyCode.Space) && reswingTimer > reswingDelay)
+        if(Input.GetKeyDown(KeyCode.Space) && reswingTimer > reswingDelay && !animator.GetBool("Swim"))
         {
             animator.SetTrigger("Swing");
             reswingTimer = 0.0f;

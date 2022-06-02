@@ -28,6 +28,12 @@ public class FireStormCard : ScriptableObject, ICard
 
         }
 
+        // Play audio
+        var playerControllerScript = player.GetComponent<PlayerController>();
+        var fireStormAudio = playerControllerScript.fireStorm;
+        var AudioSource = player.GetComponent<AudioSource>();
+        AudioSource.PlayOneShot(fireStormAudio);
+
         // Switch out card.
         isActive = false;
     }

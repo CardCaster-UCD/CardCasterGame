@@ -14,6 +14,12 @@ public class SpeedupCard : ScriptableObject, ICard
         var movement = player.GetComponent<PlayerMovement>();
         modifier.Setup(movement, factor, duration);
 
+        // Play audio
+        var playerControllerScript = player.GetComponent<PlayerController>();
+        var speedUpAudio = playerControllerScript.speedUp;
+        var AudioSource = player.GetComponent<AudioSource>();
+        AudioSource.PlayOneShot(speedUpAudio);
+
         // Switch out card.
         isActive = false;
     }
