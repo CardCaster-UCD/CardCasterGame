@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     private float Health = 100.0f; // max capacity of the health bar
     private float SwordDamage = 40.0f;
     private float Absortion = 1.0f;
+    private AudioSource cardAudioSource;
+    public AudioClip fireball;
+    public AudioClip fireStorm;
 
     // Start is called before the first frame update
     void Start()
