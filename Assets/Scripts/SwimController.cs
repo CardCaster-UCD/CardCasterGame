@@ -23,9 +23,6 @@ public class SwimController : MonoBehaviour
             }
             if((Input.GetAxisRaw("Horizontal") == 0) && (Input.GetAxisRaw("Vertical") == 0))
             {
-                Debug.Log("enter the if statement");
-                //Vector2 velocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
-                //Debug.Log(velocity);
                 animator.SetFloat("Horizontal", horizontal);
                 animator.SetFloat("Vertical", vertical);
             }
