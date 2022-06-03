@@ -147,12 +147,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: build/WebGL- uses: game-ci/unity-builder@v2
-  env:
-    UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-    UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-    UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-  with:
-    targetPlatform: WebGL
-    name: Build
-    path: Build
+          folder: build/WebGL

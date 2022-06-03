@@ -13,16 +13,19 @@ public class PlayerController : MonoBehaviour
     private HealthBarController healthBarController;
     private HealthBarController manaBarController;
     private float currentHealth = 0.0f;
-    private float currentMana = 0.0f;
+    public float currentMana = 0.0f;
     private float Health = 100.0f; // max capacity of the health bar
-    private float Mana = 100.0f;
+    public float Mana = 100.0f;
     private float Absortion = 1.0f;
     private float SwordDamage = 40.0f;
     private AudioSource cardAudioSource;
     public AudioClip fireball;
     public AudioClip fireStorm;
     public AudioClip speedUp;
-
+    [SerializeField] private float manaRegenRate;
+    private float manaRegenTimer;
+    private float manaRegenBuffer = .05f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonUp("Fire1"))
         {
             this.Heal(40.0f);
+        }
+
+        manaRegenTimer += Time.deltaTime;
+        if(manaRegenTimer >= manaRegenBuffer)
+        {
+            RegenMana();
         }
     }
     
@@ -91,6 +100,17 @@ public class PlayerController : MonoBehaviour
 
         this.healthBarController.ChangeValue(this.currentHealth / this.Health);
 
+    }
+
+    private void RegenMana()
+    {
+        if(this.currentMana < Mana)
+        {
+            this.currentMana += manaRegenRate * manaRegenTimer;
+            this.currentMana = Mathf.Clamp(this.currentMana, 0.0f, 100.0f);
+            this.manaBarController.ChangeValue(this.currentMana / this.Mana);
+        }
+        manaRegenTimer = 0.0f;
     }
 
     public void SpendMana(float mana)
