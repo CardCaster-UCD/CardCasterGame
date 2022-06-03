@@ -12,8 +12,6 @@ public class RockController : MonoBehaviour, ITorchSubscriber
     [SerializeField] Collider2D compositeCollider;
     [SerializeField] List<GameObject> poofComposites;
     private List<Animator> poofAnimators = new List<Animator>();
-    [SerializeField] List<TorchController> linkedTorches;
-
 
     void Start()
     {
