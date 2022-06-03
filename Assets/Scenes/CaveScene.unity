@@ -3040,6 +3040,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1241138445}
     - target: {fileID: 3694942450157511993, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3694942450157511993, guid: 724bd7fc825ec214ea2f30bdd8e65a49, type: 3}
       propertyPath: m_Name
       value: GroundTorch (3)
       objectReference: {fileID: 0}
