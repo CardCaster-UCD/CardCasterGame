@@ -16,9 +16,9 @@ public class HandController : MonoBehaviour
     private PlayerController player_ctrl;
     private bool initialized;
 
-    private bool isBufferActive = false;
+    private bool isBufferActive;
     private float maxBufferTime = 0.25f;
-    private float curBufferTime = 0.0f;
+    private float curBufferTime;
 
     void OnEnable()
     {
@@ -107,35 +107,35 @@ public class HandController : MonoBehaviour
 
         // Handle inputs.
         // Call execute of card if input pressed.
-        if (player_ctrl.GetCurMana() > 0)
+        if (!isBufferActive)
         {
 
-            if (Input.GetKeyDown(KeyCode.Alpha1) && !isBufferActive)
+            if (Input.GetKeyDown(KeyCode.Alpha1) && player_ctrl.GetCurMana() > card1.GetCost())
             {
                 // Activate the Buffer.
                 isBufferActive = true;
                 // Pay the Mana for the Card.
-                player_ctrl.SpendMana(this.card1.GetCost());
+                player_ctrl.SpendMana(card1.GetCost());
                 // Activate the Card.
-                this.card1.Execute(this.player);
+                card1.Execute(this.player);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2) && !isBufferActive)
+            if (Input.GetKeyDown(KeyCode.Alpha2) && player_ctrl.GetCurMana() > card1.GetCost())
             {
                 // Activate the Buffer.
                 isBufferActive = true;
                 // Pay the Mana for the Card.
-                player_ctrl.SpendMana(this.card2.GetCost());
+                player_ctrl.SpendMana(card2.GetCost());
                 // Activate the Card.              
-                this.card2.Execute(this.player);
+                card2.Execute(this.player);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3) && !isBufferActive)
+            if (Input.GetKeyDown(KeyCode.Alpha3) && player_ctrl.GetCurMana() > card1.GetCost())
             {
                 // Activate the Buffer.
                 isBufferActive = true;
                 // Pay the Mana for the Card.
-                player_ctrl.SpendMana(this.card3.GetCost());
+                player_ctrl.SpendMana(card3.GetCost());
                 // Activate the Card.
-                this.card3.Execute(this.player);
+                card3.Execute(this.player);
             }
         }
 
