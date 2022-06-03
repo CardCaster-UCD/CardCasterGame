@@ -17,10 +17,7 @@ public class RockController : MonoBehaviour, ITorchSubscriber
     {
 
         poofComposites.ForEach(poof => poofAnimators.Add(poof.GetComponent<Animator>()));
-        var query = from renderer in GetComponentsInChildren<SpriteRenderer>()
-                    where "RockLayer" == renderer.transform.parent.name
-                    select renderer;
-        
+        this.compositeCollider.enabled = false;       
         StartCoroutine(AnimateRock(1f, FadeOutController.TRANSPARENT));
     }
 
