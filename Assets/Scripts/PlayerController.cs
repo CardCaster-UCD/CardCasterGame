@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
     private HealthBarController healthBarController;
     private HealthBarController manaBarController;
     private float currentHealth = 0.0f;
-    public float currentMana = 0.0f;
+    private float currentMana = 0.0f;
     private float Health = 100.0f; // max capacity of the health bar
-    public float Mana = 100.0f;
+    private float Mana = 100.0f;
     private float Absortion = 1.0f;
     private float SwordDamage = 40.0f;
     private AudioSource cardAudioSource;
