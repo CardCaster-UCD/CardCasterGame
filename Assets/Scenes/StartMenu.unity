@@ -369,7 +369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 249, y: -20.321}
+  m_AnchoredPosition: {x: 209, y: -16.661}
   m_SizeDelta: {x: 171.9019, y: 66.6788}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442275816
@@ -893,7 +893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -175, y: 94}
+  m_AnchoredPosition: {x: -159, y: 96}
   m_SizeDelta: {x: 377.08, y: 69.358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1109494556
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cardventure '
+  m_text: Card Caster
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1198,7 +1198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 249, y: -87}
+  m_AnchoredPosition: {x: 209, y: -83.34}
   m_SizeDelta: {x: 171.9019, y: 66.6788}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815958488
@@ -1329,8 +1329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -135, y: -45.025116}
-  m_SizeDelta: {x: 457.07, y: 173.3358}
+  m_AnchoredPosition: {x: -159, y: -86.668}
+  m_SizeDelta: {x: 336.7378, y: 173.3358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867669899
 MonoBehaviour:
@@ -1352,10 +1352,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Narrative placeholder
-
-    Explore the forest, locate the cave, defeat
-    enemies, and find the treasure. '
+  m_text: "Explore the forest, \nlocate the cave, \ndefeat enemies, \nand find the
+    treasure. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
