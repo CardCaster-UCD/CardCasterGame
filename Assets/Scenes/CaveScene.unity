@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovableRock
       objectReference: {fileID: 0}
+    - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_TagString
+      value: MoveableRock
+      objectReference: {fileID: 0}
     - target: {fileID: 2963534992848210203, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: fadeInTime
       value: 1
@@ -1765,7 +1769,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.094536364}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1776,7 +1780,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.8109273}
   m_EdgeRadius: 0
 --- !u!4 &623237604
 Transform:
@@ -2007,6 +2011,10 @@ PrefabInstance:
     - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: m_Name
       value: MovableRock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_TagString
+      value: MoveableRock
       objectReference: {fileID: 0}
     - target: {fileID: 2963534992848210203, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: fadeInTime
@@ -2307,6 +2315,18 @@ PrefabInstance:
     - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: m_Name
       value: MovableRock (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_TagString
+      value: MoveableRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417844633296725223, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_Size.y
+      value: 3.4459534
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417844633296725223, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.2229767
       objectReference: {fileID: 0}
     - target: {fileID: 2963534992848210203, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: fadeInTime
@@ -3309,6 +3329,9 @@ MonoBehaviour:
   animator: {fileID: 1394636855}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
+  fireball: {fileID: 0}
+  fireStorm: {fileID: 0}
+  speedUp: {fileID: 0}
 --- !u!95 &1394636855
 Animator:
   serializedVersion: 3
@@ -3579,7 +3602,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03856562}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3590,7 +3613,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.0771312}
   m_EdgeRadius: 0
 --- !u!4 &1492647112
 Transform:
@@ -3714,6 +3737,18 @@ PrefabInstance:
     - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: m_Name
       value: MovableRock (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_TagString
+      value: MoveableRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417844633296725223, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_Size.y
+      value: 3.30124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417844633296725223, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.15062
       objectReference: {fileID: 0}
     - target: {fileID: 2963534992848210203, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: fadeInTime
@@ -4371,6 +4406,18 @@ PrefabInstance:
     - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: m_Name
       value: MovableRock (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 218549444045313522, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_TagString
+      value: MoveableRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417844633296725223, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_Size.y
+      value: 3.3614883
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417844633296725223, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.1807442
       objectReference: {fileID: 0}
     - target: {fileID: 2963534992848210203, guid: 8dd6daa0eb3296a4b9a36201d5244d4c, type: 3}
       propertyPath: fadeInTime
