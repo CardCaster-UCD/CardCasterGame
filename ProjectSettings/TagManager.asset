@@ -16,6 +16,7 @@ TagManager:
   - WaterPushDown
   - WaterPushRight
   - WaterPushLeft
+  - MoveableRock
   layers:
   - Default
   - TransparentFX

@@ -3,11 +3,6 @@ using UnityEngine.UIElements;
 
 public class HandController : MonoBehaviour
 {
-    //[SerializeField] private GameObject deck;
-    //[SerializeField] private GameObject discardPile;
-    // Remove this later
-    [SerializeField] private Texture2D c;
-
     private VisualElement slot1;
     private VisualElement slot2;
     private VisualElement slot3;
@@ -20,6 +15,10 @@ public class HandController : MonoBehaviour
     private GameObject player;
     private PlayerController player_ctrl;
     private bool initialized;
+
+    private bool isBufferActive = false;
+    private float maxBufferTime = 0.25f;
+    private float curBufferTime = 0.0f;
 
     void OnEnable()
     {
@@ -51,7 +50,6 @@ public class HandController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("hand");
         // Check if needs to draw.
         if (!card1.GetIsActive()) {       
             // So you never draw the same card you just discarded.
@@ -63,6 +61,7 @@ public class HandController : MonoBehaviour
             // The card is No Longer Active, so Send it to the DiscardPile.
             discardController.Add(temp);
 
+            // Update the UI with the appropriate Card Art
             this.SetSlot(1);
         }
 
@@ -76,6 +75,7 @@ public class HandController : MonoBehaviour
             // The card is No Longer Active, so Send it to the DiscardPile.
             discardController.Add(temp);
 
+            // Update the UI with the appropriate Card Art
             this.SetSlot(2);
         }
 
@@ -89,7 +89,20 @@ public class HandController : MonoBehaviour
             // The card is No Longer Active, so Send it to the DiscardPile.
             discardController.Add(temp);
 
+            // Update the UI with the appropriate Card Art
             this.SetSlot(3);
+        }
+
+        if (isBufferActive)
+        {
+            // Increment the amount of time the buffer has been active.
+            curBufferTime += Time.deltaTime;
+            if(curBufferTime >= maxBufferTime) {
+                // Deactivate the buffer.
+                isBufferActive = false;
+                // Reset Buffer time.
+                curBufferTime = 0.0f;
+            }
         }
 
         // Handle inputs.
@@ -97,34 +110,50 @@ public class HandController : MonoBehaviour
         if (player_ctrl.GetCurMana() > 0)
         {
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) && !isBufferActive)
             {
-                this.card1.Execute(this.player);
+                // Activate the Buffer.
+                isBufferActive = true;
+                // Pay the Mana for the Card.
                 player_ctrl.SpendMana(this.card1.GetCost());
+                // Activate the Card.
+                this.card1.Execute(this.player);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2) && !isBufferActive)
             {
-                this.card2.Execute(this.player);
+                // Activate the Buffer.
+                isBufferActive = true;
+                // Pay the Mana for the Card.
                 player_ctrl.SpendMana(this.card2.GetCost());
+                // Activate the Card.              
+                this.card2.Execute(this.player);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha3) && !isBufferActive)
             {
-                this.card3.Execute(this.player);
+                // Activate the Buffer.
+                isBufferActive = true;
+                // Pay the Mana for the Card.
                 player_ctrl.SpendMana(this.card3.GetCost());
+                // Activate the Card.
+                this.card3.Execute(this.player);
             }
         }
+
     }
     private void SetSlot(int slot) 
     {
         switch(slot)
         {
             case 1:
+                // Update the UI for card slot 1.
                 slot1.style.backgroundImage = card1.GetImage();
                 break;
             case 2:
+                // Update the UI for card slot 2.
                 slot2.style.backgroundImage = card2.GetImage();
                 break;
             case 3:
+                // Update the UI for card slot 3.
                 slot3.style.backgroundImage = card3.GetImage();
                 break;
         }
