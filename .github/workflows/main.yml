@@ -36,7 +36,10 @@ jobs:
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
-      
+
+  deploy:
+    name: Deploy webgl  
+    steps:
       - uses: actions/download-artifact@v2
         with:
           name: Build-WebGL
