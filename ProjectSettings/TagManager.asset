@@ -12,6 +12,10 @@ TagManager:
   - UIDoc
   - HealthBar
   - ManaBar
+  - WaterPushUp
+  - WaterPushDown
+  - WaterPushRight
+  - WaterPushLeft
   layers:
   - Default
   - TransparentFX

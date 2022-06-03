@@ -6,6 +6,7 @@ public class FireStormCard : ScriptableObject, ICard
     private const float speed = 5.0f;
     private const int totalFireBalls = 36;
     private const float lifetime = 5.0f;
+    private const float cost = 15.0f;
     public void Execute(GameObject player)
     {
         var fireball = (GameObject)Resources.Load("Prefabs/Fireball", typeof(GameObject));
@@ -27,6 +28,12 @@ public class FireStormCard : ScriptableObject, ICard
 
         }
 
+        // Play audio
+        var playerControllerScript = player.GetComponent<PlayerController>();
+        var fireStormAudio = playerControllerScript.fireStorm;
+        var AudioSource = player.GetComponent<AudioSource>();
+        AudioSource.PlayOneShot(fireStormAudio);
+
         // Switch out card.
         isActive = false;
     }
@@ -44,6 +51,10 @@ public class FireStormCard : ScriptableObject, ICard
         return image; 
     }
 
+    public float GetCost()
+    {
+        return cost;
+    }
     public void SetActive()
     {
         isActive = true;

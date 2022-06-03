@@ -13,14 +13,22 @@ public class PlayerController : MonoBehaviour
     private HealthBarController healthBarController;
     private HealthBarController manaBarController;
     private float currentHealth = 0.0f;
+    private float currentMana = 0.0f;
     private float Health = 100.0f; // max capacity of the health bar
-
+    private float Mana = 100.0f;
+    private float Absortion = 1.0f;
+    private float SwordDamage = 40.0f;
+    private AudioSource cardAudioSource;
+    public AudioClip fireball;
+    public AudioClip fireStorm;
+    public AudioClip speedUp;
 
     // Start is called before the first frame update
     void Start()
     {
         
         this.currentHealth = this.Health;
+        this.currentMana = this.Mana;
         this.rigidBody = GetComponent<Rigidbody2D>();
     }
 
@@ -54,7 +62,7 @@ public class PlayerController : MonoBehaviour
         }
     }
  
-    void Heal(float health)
+    public void Heal(float health)
     {
         
         this.currentHealth += health;
@@ -66,7 +74,7 @@ public class PlayerController : MonoBehaviour
     {
         // this.healthBarController.ChangeValue(this.currentHealth / this.Health);
         float oldHealth = this.currentHealth;
-        this.currentHealth -= damage;
+        this.currentHealth -= damage * (1-this.Absortion);
 
         if (this.currentHealth < 0.0f)
         {
@@ -84,6 +92,63 @@ public class PlayerController : MonoBehaviour
         this.healthBarController.ChangeValue(this.currentHealth / this.Health);
 
     }
-        
 
+    public void SpendMana(float mana)
+    {
+        Debug.Log("here!!!");
+        float oldMana = this.currentMana;
+        this.currentMana -= mana;
+
+        if (this.currentMana < 0.0f)
+        {
+            this.currentMana = 0.0f;
+        }
+        if (this.currentMana <= 0.0f && oldMana > 0)
+        {
+            // TODO: out of mana sound
+        }
+        else if (this.currentMana > 0)
+        {
+            // TODO: mana spent sound
+        }
+
+        this.manaBarController.ChangeValue(this.currentMana / this.Mana);
+    }
+
+    public float GetCurMana()
+    {
+        return currentMana;
+    }
+
+
+    public float IncreaseAttack(float factor)
+    {
+        var increase = factor * this.SwordDamage;
+        this.SwordDamage += increase;
+        return increase;
+    }
+
+    public void DecreaseAttack(float increase)
+    {
+
+        this.SwordDamage -= increase;
+
+    }
+
+    public void IncreaseAbsortion(float factor)
+    {
+
+        this.Absortion += factor;
+
+    }
+
+    public void DecreaseAbsortion(float factor)
+    {
+        this.Absortion -= factor;
+    }
+
+    public float GetSwordDamage()
+    {
+        return this.SwordDamage;
+    }
 }

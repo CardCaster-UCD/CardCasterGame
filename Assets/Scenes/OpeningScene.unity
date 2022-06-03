@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 937052385}
   - component: {fileID: 937052384}
   - component: {fileID: 937052383}
+  - component: {fileID: 937052391}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -331,6 +332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 30
   initialPosition: {fileID: 11400000, guid: 93294ff6f4307134980b03f6650eea6e, type: 2}
+  health: 100
+  animator: {fileID: 937052391}
 --- !u!114 &937052384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +364,7 @@ MonoBehaviour:
   radius: 0.6
   height: 2
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 3
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -483,7 +486,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3125, y: 1.4375}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1.3125, y: 1.4375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -525,8 +528,27 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &937052391
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937052382}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bade4797ec0a6ea48965168034b0200e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1185369470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -556,7 +578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3872064006018385305, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3872064006018385305, guid: 31355e6185bba2f48af9f7dcf90ff897, type: 3}
       propertyPath: m_LocalPosition.x
@@ -681,7 +703,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
