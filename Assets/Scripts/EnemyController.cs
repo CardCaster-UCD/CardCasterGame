@@ -13,6 +13,8 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D rigidBody;
     private float damageTimer;
     private float damageBuffer = 0.5f;
+    private float selfDamageTimer;
+    private float selfDamageBuffer = 0.5f;
 
     private void Start()
     {
@@ -25,6 +27,8 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         damageTimer += Time.deltaTime;
+        selfDamageTimer += Time.deltaTime;
+
         if (this.health <= 0.0f)
         {
             //TODO: play death sound effect
@@ -61,14 +65,16 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ("Sword" == other.tag)
+        
+        if ("Sword" == other.tag && selfDamageTimer > selfDamageBuffer)
         {
             var sword_ctrl = player.GetComponent<SwordController>();
             var damage = sword_ctrl.GetDamage();
+            
             TakeDamage(damage);
         }
 
-        if ("Fire" == other.tag)
+        if ("Fire" == other.tag && selfDamageTimer > selfDamageBuffer)
         {
             var fire_damage = other.GetComponent<SpellAttr>().GetDamage();
             TakeDamage(damage);
@@ -86,9 +92,10 @@ public class EnemyController : MonoBehaviour
 
     void TakeDamage(float damage)
     {
-        Debug.Log("Taking damage");
+        selfDamageTimer = 0.0f;
+        //Debug.Log("Taking damage");
         health -= damage;
-        Debug.Log("cur enemy health: " + health.ToString());
+        //Debug.Log("cur enemy health: " + health.ToString());
     }
 
 }
