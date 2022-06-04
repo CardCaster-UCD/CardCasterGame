@@ -18,6 +18,8 @@ namespace CameraControl
         private BasicCameraController cameraController;
 
         [SerializeField] bool switchHands;
+        private float buffer = 0.5f;
+        private float timer;
 
         // Start is called before the first frame update
         void Start()
@@ -25,12 +27,20 @@ namespace CameraControl
             this.cameraController = Camera.main.GetComponent<BasicCameraController>();
         }
 
+        // Update is called once per frame
+        void Update()
+        {
+            timer += Time.deltaTime;
+        }
+
         // On colliding with a player object
         // Update the camera to the new limits of the room
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag == "Player")
+            Debug.Log(playerOffset);
+            if (other.tag == "Player" && timer > buffer)
             {
+                timer = 0.0f;
                 this.cameraController.maxPosition = this.cameraMaxPosition;
                 this.cameraController.minPosition = this.cameraMinPosition;
                 other.transform.position += new Vector3(
@@ -38,10 +48,9 @@ namespace CameraControl
                     this.playerOffset.y,
                     0
                 );
-            }
-
-            if(switchHands)
-            {
+            
+                if(switchHands)
+                {
                 var UIdoc = GameObject.FindWithTag("UIDoc");
                 
                 if(UIdoc.GetComponent<HandController>().enabled)
@@ -53,6 +62,7 @@ namespace CameraControl
                 {
                     UIdoc.GetComponent<PuzzleHandController>().enabled = false;
                     UIdoc.GetComponent<HandController>().enabled = true;
+                }
                 }
             }
         }
