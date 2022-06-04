@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private AudioSource audio;
+    private AudioSource audioSource;
     private Rigidbody2D rigidBody;
     [SerializeField] private Animator animator;
     public GameObject healthBar; // instance of the healthbar in the scene
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.audio = GameObject.FindWithTag("Player").GetComponent<AudioSource>();
+        this.audioSource = GameObject.FindWithTag("Player").GetComponent<AudioSource>();
         this.currentHealth = this.Health;
         this.currentMana = this.Mana;
         this.rigidBody = GetComponent<Rigidbody2D>();
@@ -62,10 +62,9 @@ public class PlayerController : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        Debug.Log("Hit");
         if ("Enemy" == other.tag)
         {
+            Debug.Log("Hit");
             float enemyDamage = other.GetComponent<EnemyController>().GetDamage();
             this.TakeDamage(enemyDamage);
         }
@@ -95,7 +94,7 @@ public class PlayerController : MonoBehaviour
         else if (this.currentHealth > 0)
         {
             // Play damage sound at half volume
-            audio.PlayOneShot(grunt, 0.5f);
+            audioSource.PlayOneShot(grunt, 0.5f);
         }
 
         this.healthBarController.ChangeValue(this.currentHealth / this.Health);
