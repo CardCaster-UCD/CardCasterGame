@@ -48,11 +48,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonUp("Fire1"))
-        {
-            this.Heal(40.0f);
-        }
-
         manaRegenTimer += Time.deltaTime;
         if(manaRegenTimer >= manaRegenBuffer)
         {
