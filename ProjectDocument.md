@@ -8,6 +8,7 @@
 
 **In this section, explain how the game should be played. Treat this as a manual within a game. It is encouraged to explain the button mappings and the most optimal gameplay strategy.**
 
+The player can move around the map using the arrow keys, swing the sword using the space bar, and cast the spells on the cards using the 1, 2, 3 keys. 
 
 **If you did work that should be factored in to your grade that does not fit easily into the proscribed roles, add it here! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
@@ -24,6 +25,29 @@ Here is an example:
 
 You should replay any **bold text** with your relevant information. Liberally use the template when necessary and appropriate.
 
+## Combat Team
+
+
+## World Team
+
+Tilemaps
+
+Sources: https://www.mapeditor.org/, https://seanba.com/supertiled2unity.html
+Maps: 
+
+StartMenu \
+Background image credit: Milksoft Games \
+Source: https://milksoftgames.itch.io/grassy-field \
+[scene](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scenes/StartMenu.unity) \
+[script](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scripts/Menu.cs) 
+
+
+
+
+## Puzzle Team
+
+
+--- original roles ---
 ## User Interface
 
 **Describe your user interface and how it relates to gameplay. This can be done via the template.**
@@ -51,12 +75,41 @@ You should replay any **bold text** with your relevant information. Liberally us
 # Sub-Roles
 
 ## Audio
-
 **List your assets including their sources and licenses.**
 
 **Describe the implementation of your audio system.**
 
 **Document the sound style.** 
+
+Emily:
+### OpeningScene audio:  
+Source: Enchanted by Keys of Moon | https://soundcloud.com/keysofmoon
+Music promoted by https://www.chosic.com/free-music/all/
+
+License: Creative Commons CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+
+### Fireball spell audio:
+Source: https://soundbible.com/1356-Flame-Arrow.html
+
+License: Attribution 3.0
+
+### FireBlast spell audio:
+Source: https://soundbible.com/1135-Torch.html
+
+License: Attribution 3.0
+
+### WindBlast spell audio:
+Source: https://soundbible.com/1247-Wind.html
+
+License: Attribution 3.0
+
+### Speedup spell audio:
+Source: https://soundbible.com/1636-Power-Up-Ray.html
+
+License: Attribution 3.0
+
+
 
 ## Gameplay Testing
 
