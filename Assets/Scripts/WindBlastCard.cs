@@ -1,10 +1,12 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class WindBlastCard : ScriptableObject, ICard
 {
     private bool isActive = true;
     private const float speed = 6.0f;
     private const float lifetime = 5.0f;
+    private const float cost = 10.0f;
+
     public void Execute(GameObject player)
     {
         var fireball = (GameObject)Resources.Load("Prefabs/Wind", typeof(GameObject));
@@ -23,6 +25,12 @@ public class WindBlastCard : ScriptableObject, ICard
     {
         return isActive;
     }
+
+    public float GetCost()
+    {
+        return cost;
+    }
+
     public Texture2D GetImage()
     {
         // Size here doesn't matter

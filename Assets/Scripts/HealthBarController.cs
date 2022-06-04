@@ -21,8 +21,7 @@ class HealthBarController : MonoBehaviour
         this.value = initHealth;
         this.ratioAtStart = initHealth;
         this.valueSurface = surfaceObject.GetComponent<RectTransform>();
-        Debug.Log("rect width: "  + valueSurface.rect.width .ToString());
-        Debug.Log("rect x: " + valueSurface.rect.x.ToString());
+     
     }
 
     public void ChangeValue(float targetRatio)
@@ -31,8 +30,6 @@ class HealthBarController : MonoBehaviour
         this.transitionStartTime = Time.time;
         this.ratioAtStart = this.currentRatio;
         this.value = targetRatio;
-        Debug.Log("ratio at start: " + this.currentRatio);
-        Debug.Log("target value: " + this.value);
 
     }
 

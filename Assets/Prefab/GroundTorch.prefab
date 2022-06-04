@@ -130,6 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeoutTime: 0.1
   fadeinTime: 0.1
+  torchFadeOut: {fileID: 0}
+  boulders: []
+  enflamedOnStart: 0
 --- !u!61 &8074542320079610974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +143,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.046127826, y: 0.5041112}

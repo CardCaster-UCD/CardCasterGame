@@ -1,0 +1,17 @@
+{
+    "name": "UIToolkit",
+    "rootNamespace": "",
+    "references": [
+        "UnityEngine.UIElementsModule",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

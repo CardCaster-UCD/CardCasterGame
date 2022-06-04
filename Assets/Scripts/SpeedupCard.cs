@@ -6,11 +6,19 @@ public class SpeedupCard : ScriptableObject, ICard
     // Increase speed by 50% if set to 0.5f.
     private const float factor = 0.5f;
     private const float duration = 10;
+    private const float cost = 15.0f;
+
     public void Execute(GameObject player)
     {
         var modifier = player.AddComponent<SpeedModifier>() as SpeedModifier;
         var movement = player.GetComponent<PlayerMovement>();
         modifier.Setup(movement, factor, duration);
+
+        // Play audio
+        var playerControllerScript = player.GetComponent<PlayerController>();
+        var speedUpAudio = playerControllerScript.speedUp;
+        var AudioSource = player.GetComponent<AudioSource>();
+        AudioSource.PlayOneShot(speedUpAudio);
 
         // Switch out card.
         isActive = false;
@@ -29,6 +37,10 @@ public class SpeedupCard : ScriptableObject, ICard
         return image; 
     }
 
+    public float GetCost()
+    {
+        return cost;
+    }
     public void SetActive()
     {
         isActive = true;
