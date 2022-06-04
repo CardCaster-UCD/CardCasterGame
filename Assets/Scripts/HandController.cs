@@ -119,7 +119,7 @@ public class HandController : MonoBehaviour
                 // Activate the Card.
                 card1.Execute(this.player);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2) && player_ctrl.GetCurMana() > card1.GetCost())
+            if (Input.GetKeyDown(KeyCode.Alpha2) && player_ctrl.GetCurMana() > card2.GetCost())
             {
                 // Activate the Buffer.
                 isBufferActive = true;
@@ -128,7 +128,7 @@ public class HandController : MonoBehaviour
                 // Activate the Card.              
                 card2.Execute(this.player);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3) && player_ctrl.GetCurMana() > card1.GetCost())
+            if (Input.GetKeyDown(KeyCode.Alpha3) && player_ctrl.GetCurMana() > card3.GetCost())
             {
                 // Activate the Buffer.
                 isBufferActive = true;

@@ -3,8 +3,8 @@ class HealUpCard : ScriptableObject, ICard
 {
     private bool isActive = true;
     private const float Health = 20.0f;
-    private float duration = 0.75f; // from the healthBarController
-    private const float cost = 15.0f;
+    private float duration = 0.75f;
+    private const float cost = 10.0f;
     public void Execute(GameObject player)
     {
         var healing = (GameObject)Resources.Load("Prefabs/Healing", typeof(GameObject));
