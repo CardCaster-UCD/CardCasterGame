@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    private AudioSource audio;
     private Rigidbody2D rigidBody;
     [SerializeField] private Animator animator;
     public GameObject healthBar; // instance of the healthbar in the scene
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip fireball;
     public AudioClip fireStorm;
     public AudioClip speedUp;
+    public AudioClip grunt;
     [SerializeField] private float manaRegenRate;
     private float manaRegenTimer;
     private float manaRegenBuffer = .05f;
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.audio = GameObject.FindWithTag("Player").GetComponent<AudioSource>();
         this.currentHealth = this.Health;
         this.currentMana = this.Mana;
         this.rigidBody = GetComponent<Rigidbody2D>();
@@ -79,7 +81,6 @@ public class PlayerController : MonoBehaviour
 
     void TakeDamage(float damage)
     {
-        // this.healthBarController.ChangeValue(this.currentHealth / this.Health);
         this.currentHealth -= damage * (1-this.Absortion);
 
         if (this.currentHealth < 0.0f)
@@ -93,7 +94,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (this.currentHealth > 0)
         {
-            // TODO: damage taken sound
+            audio.PlayOneShot(grunt, 0.5f);
         }
 
         this.healthBarController.ChangeValue(this.currentHealth / this.Health);
@@ -118,21 +119,12 @@ public class PlayerController : MonoBehaviour
 
     public void SpendMana(float mana)
     {
-        Debug.Log("here!!!");
         float oldMana = this.currentMana;
         this.currentMana -= mana;
 
         if (this.currentMana < 0.0f)
         {
             this.currentMana = 0.0f;
-        }
-        if (this.currentMana <= 0.0f && oldMana > 0)
-        {
-            // TODO: out of mana sound
-        }
-        else if (this.currentMana > 0)
-        {
-            // TODO: mana spent sound
         }
 
         this.manaBarController.ChangeValue(this.currentMana / this.Mana);
