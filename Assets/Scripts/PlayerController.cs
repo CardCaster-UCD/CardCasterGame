@@ -1,8 +1,10 @@
 // [Ref] https://www.youtube.com/watch?v=--N5IgSUQWI&list=PL4vbr3u7UKWp0iM1WIfRjCDTI03u43Zfu&index=3
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float manaRegenRate;
     private float manaRegenTimer;
     private float manaRegenBuffer = .05f;
+    private bool alive = true;
     
     // Start is called before the first frame update
     void Start()
@@ -77,16 +80,16 @@ public class PlayerController : MonoBehaviour
     void TakeDamage(float damage)
     {
         // this.healthBarController.ChangeValue(this.currentHealth / this.Health);
-        float oldHealth = this.currentHealth;
         this.currentHealth -= damage * (1-this.Absortion);
 
         if (this.currentHealth < 0.0f)
         {
             this.currentHealth = 0.0f;
         }
-        if (this.currentHealth <= 0.0f && oldHealth > 0)
+        if (this.currentHealth <= 0.0f && alive)
         { 
-            // TODO: die sound effect or action
+            alive = false;
+            RestartGame();
         }
         else if (this.currentHealth > 0)
         {
@@ -95,6 +98,11 @@ public class PlayerController : MonoBehaviour
 
         this.healthBarController.ChangeValue(this.currentHealth / this.Health);
 
+    }
+
+    private void RestartGame()
+    {
+        SceneManager.LoadSceneAsync("StartMenu", LoadSceneMode.Single);
     }
 
     private void RegenMana()
