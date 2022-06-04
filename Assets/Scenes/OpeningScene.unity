@@ -383,7 +383,7 @@ MonoBehaviour:
   nextScene: OpeningScene2
   cameraMax: {x: 26, y: -6}
   cameraMin: {x: 9, y: -16}
-  nextScenePosition: {x: 34.5, y: -13, z: 0}
+  nextScenePosition: {x: 33.5, y: -13, z: 0}
   switchHands: 0
 --- !u!1001 &1679751215
 PrefabInstance:
