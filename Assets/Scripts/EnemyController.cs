@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 { 
     [SerializeField] private float damage = 10.0f;
-    [SerializeField] private VectorValue initialPosition;
+    //[SerializeField] private VectorValue initialPosition;
     [SerializeField] private float health = 100.0f;
     [SerializeField] private Animator animator;
     private Vector2 cur_pos;
@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     {
         this.rigidBody = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
-        this.transform.position = this.initialPosition.value;
+        //this.transform.position = this.initialPosition.value;
         this.cur_pos = this.transform.position;
     }
 
