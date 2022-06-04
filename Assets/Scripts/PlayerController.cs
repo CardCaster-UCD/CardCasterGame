@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (this.currentHealth > 0)
         {
+            // Play damage sound at half volume
             audio.PlayOneShot(grunt, 0.5f);
         }
 
