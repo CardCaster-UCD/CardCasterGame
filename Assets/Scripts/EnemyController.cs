@@ -11,6 +11,8 @@ public class EnemyController : MonoBehaviour
     private Vector2 change;
     private GameObject player;
     private Rigidbody2D rigidBody;
+    private float damageTimer;
+    private float damageBuffer = 0.5f;
 
     private void Start()
     {
@@ -22,6 +24,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        damageTimer += Time.deltaTime;
         if (this.health <= 0.0f)
         {
             //TODO: play death sound effect
@@ -72,8 +75,9 @@ public class EnemyController : MonoBehaviour
             other.GetComponent<SpellAttr>()._destroy();
         }
 
-        if ("Player" == other.tag)
+        if ("Player" == other.tag && damageTimer > damageBuffer)
         {
+            damageTimer = 0.0f;
             float enemyDamage = GetDamage();
             other.GetComponent<PlayerController>().TakeDamage(enemyDamage);
         }
