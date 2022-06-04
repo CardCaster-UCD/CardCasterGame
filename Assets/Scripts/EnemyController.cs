@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     private float damageBuffer = 0.5f;
     private float selfDamageTimer;
     private float selfDamageBuffer = 0.5f;
+    private GameObject whirlwind;
 
     private void Start()
     {
@@ -35,21 +36,30 @@ public class EnemyController : MonoBehaviour
             GameObject.Destroy(this.gameObject);
         }
 
-        Vector2 old_pos = cur_pos;
-        cur_pos = new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y);
-        change = old_pos - cur_pos;
-
-        if (change != Vector2.zero)
+        if(!whirlwind)
         {
-            animator.SetBool("wakeup", true);
-            UpdateAnimator(change);
+            Vector2 old_pos = cur_pos;
+            cur_pos = new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+            change = old_pos - cur_pos;
 
+            if (change != Vector2.zero)
+            {
+                animator.SetBool("wakeup", true);
+                UpdateAnimator(change);
+
+            }
+            else
+            {
+                animator.SetBool("wakeup", false);
+            }
         }
-        else
+        else if(whirlwind)
         {
-            animator.SetBool("wakeup", false);
+            this.transform.position = whirlwind.transform.position;
         }
+
     }
+
 
     void UpdateAnimator(Vector2 change)
     {
@@ -86,6 +96,11 @@ public class EnemyController : MonoBehaviour
             damageTimer = 0.0f;
             float enemyDamage = GetDamage();
             other.GetComponent<PlayerController>().TakeDamage(enemyDamage);
+        }
+
+        if ("Wind" == other.tag)
+        {
+            whirlwind = other.gameObject;
         }
         
     }
