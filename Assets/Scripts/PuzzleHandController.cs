@@ -30,7 +30,7 @@ public class PuzzleHandController : MonoBehaviour
             card2 = ScriptableObject.CreateInstance<WindBlastCard>();
             
             // Third slot could be anything for this puzzle.
-            card3 = ScriptableObject.CreateInstance<FireStormCard>();
+            card3 = ScriptableObject.CreateInstance<ShieldCard>();
             
             slot1 = rootVisualElement.Q<VisualElement>("Card-Slot1");
             slot2 = rootVisualElement.Q<VisualElement>("Card-Slot2");
