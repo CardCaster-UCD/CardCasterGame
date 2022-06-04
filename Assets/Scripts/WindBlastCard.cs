@@ -5,7 +5,7 @@ public class WindBlastCard : ScriptableObject, ICard
     private bool isActive = true;
     private const float speed = 6.0f;
     private const float lifetime = 5.0f;
-    private const float cost = 15.0f;
+    private const float cost = 10.0f;
 
     public void Execute(GameObject player)
     {

@@ -6,7 +6,7 @@ public class FireStormCard : ScriptableObject, ICard
     private const float speed = 5.0f;
     private const int totalFireBalls = 36;
     private const float lifetime = 5.0f;
-    private const float cost = 15.0f;
+    private const float cost = 40.0f;
     public void Execute(GameObject player)
     {
         var fireball = (GameObject)Resources.Load("Prefabs/Fireball", typeof(GameObject));
