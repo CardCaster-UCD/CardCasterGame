@@ -5,7 +5,7 @@ class ShieldCard : ScriptableObject, ICard
 {
 
     private bool isActive = true;
-    private const float absortion = 0.3f;
+    private const float absortion = 0.8f;
     private const float lifetime = 5.0f;
     private const float cost = 5.0f;
     public void Execute(GameObject player)
