@@ -59,16 +59,6 @@ public class PlayerController : MonoBehaviour
             RegenMana();
         }
     }
-    
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if ("Enemy" == other.tag)
-        {
-            Debug.Log("Hit");
-            float enemyDamage = other.GetComponent<EnemyController>().GetDamage();
-            this.TakeDamage(enemyDamage);
-        }
-    }
  
     public void Heal(float health)
     {
@@ -78,7 +68,7 @@ public class PlayerController : MonoBehaviour
         this.healthBarController.ChangeValue(this.currentHealth / this.Health);
     }
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         this.currentHealth -= damage * (1-this.Absortion);
 

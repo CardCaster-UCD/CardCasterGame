@@ -71,6 +71,12 @@ public class EnemyController : MonoBehaviour
             TakeDamage(damage);
             other.GetComponent<SpellAttr>()._destroy();
         }
+
+        if ("Player" == other.tag)
+        {
+            float enemyDamage = GetDamage();
+            other.GetComponent<PlayerController>().TakeDamage(enemyDamage);
+        }
         
     }
 
