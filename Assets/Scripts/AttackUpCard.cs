@@ -7,7 +7,7 @@ public class AttackUpCard : ScriptableObject, ICard
     private bool isActive = true;
     private const float factor = 0.35f;
     private const float duration = 5.0f;
-    private const float cost = 20;
+    private const float cost = 20.0f;
 
     // Start is called before the first frame update
     public void Execute(GameObject player)
