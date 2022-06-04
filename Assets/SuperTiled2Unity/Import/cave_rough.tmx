@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="28">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="41">
  <tileset firstgid="1" source="caveTilesWithGradient.tsx"/>
  <tileset firstgid="1001" source="cave2.tsx"/>
  <tileset firstgid="1337" source="overworld.tsx"/>
@@ -129,5 +129,14 @@
   <object id="24" x="271.817" y="31.9534" width="15.7637" height="15.7637"/>
   <object id="25" x="240.29" y="16.1897" width="15.7637" height="14.9116"/>
   <object id="26" x="307.605" y="0" width="204.076" height="92.8779"/>
+  <object id="31" x="0" y="415.333" width="2.66667" height="96.6667"/>
+  <object id="32" x="2.66667" y="508.667" width="221.667" height="3.33333"/>
+  <object id="33" x="289.333" y="508.667" width="96.3333" height="3.33333"/>
+  <object id="34" x="448" y="509.333" width="63.6667" height="2.33333"/>
+  <object id="35" x="510" y="336" width="1.66667" height="172.667"/>
+  <object id="37" x="509.667" y="93.3333" width="2.33333" height="181"/>
+  <object id="38" x="0.333333" y="0" width="307.333" height="3.66667"/>
+  <object id="39" x="0" y="3.66667" width="3" height="46.6667"/>
+  <object id="40" x="0" y="111.333" width="3.33333" height="243.333"/>
  </objectgroup>
 </map>
