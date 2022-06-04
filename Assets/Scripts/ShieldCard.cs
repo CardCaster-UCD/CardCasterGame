@@ -24,7 +24,7 @@ class ShieldCard : ScriptableObject, ICard
         // setup shield position
         var shield_trans = shield_ins.transform;
         var new_pos = shield_trans.position;
-        new_pos.x += 0.3f;
+        new_pos.x -= 0.3f;
         new_pos.y -= 0.3f;
         shield_ins.transform.position = new_pos;
 
