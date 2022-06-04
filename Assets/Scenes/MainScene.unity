@@ -442,8 +442,6 @@ MonoBehaviour:
   animator: {fileID: 299977804}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
-  currentMana: 0
-  Mana: 100
   fireball: {fileID: 8300000, guid: a4e1af03a170ab5498fa1013a62e0f33, type: 3}
   fireStorm: {fileID: 8300000, guid: 4370c696b199c1f45bbe54e50f009c65, type: 3}
   speedUp: {fileID: 8300000, guid: d1e1f7cfe1fa70a46a9e2d7069dfaf72, type: 3}

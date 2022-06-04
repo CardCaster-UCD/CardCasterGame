@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private float currentMana = 0.0f;
     private float Health = 100.0f; // max capacity of the health bar
     private float Mana = 100.0f;
-    private float Absortion = 1.0f;
+    private float Absortion;
     private float SwordDamage = 40.0f;
     private AudioSource cardAudioSource;
     public AudioClip fireball;
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        //Debug.Log("Hit");
+        Debug.Log("Hit");
         if ("Enemy" == other.tag)
         {
             float enemyDamage = other.GetComponent<EnemyController>().GetDamage();
