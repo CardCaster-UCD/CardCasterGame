@@ -14,14 +14,9 @@ The player can move around the map using the arrow keys, swing the sword using t
 
 # Main Roles #
 
-Your goal is to relate the work of your role and sub-role in terms of the content of the course. Please look at the role sections below for specific instructions for each role.
-
-Below is a template for you to highlight items of your work. These provide the evidence needed for your work to be evaluated. Try to have at least 4 such descriptions. They will be assessed on the quality of the underlying system and how they are linked to course content. 
-
-*Short Description* - Long description of your work item that includes how it is relevant to topics discussed in class. [link to evidence in your repository](https://github.com/dr-jam/ECS189L/edit/project-description/ProjectDocumentTemplate.md)
-
-Here is an example:  
-*Procedural Terrain* - The background of the game consists of procedurally-generated terrain that is produced with Perlin noise. This terrain can be modified by the game at run-time via a call to its script methods. The intent is to allow the player to modify the terrain. This system is based on the component design pattern and the procedural content generation portions of the course. [The PCG terrain generation script](https://github.com/dr-jam/CameraControlExercise/blob/513b927e87fc686fe627bf7d4ff6ff841cf34e9f/Obscura/Assets/Scripts/TerrainGenerator.cs#L6).
+* Puzzle : Grant Gilson, Alexis
+* World  : Jeehoon Kim, Emily Liu
+* Combat : Elios Sgouros, Julio Flores, Gian Carlo Lambert
 
 You should replay any **bold text** with your relevant information. Liberally use the template when necessary and appropriate.
 
@@ -45,7 +40,24 @@ Source: https://milksoftgames.itch.io/grassy-field \
 
 
 ## Puzzle Team
+The main focus of the puzzle team was to coordinate between world and combat teams to create implement features in the world for players to interact with. This keep kept us integrated in many aspect of the game's design like movement/physics and animation/visuals through interactables like:
+* vector effector plates (river tiles)
+* torches
 
+
+Our main puzzle map layout is 2 vertical and 3 horizontal river streams. These streams apply force to the player when entering the stream to move the player down stream in the direction of the current. The currents' speed is set to mvoe the player at a speed where they should not be able to reach the other side without something to block their path. Interactable torches are placed around the map to toggle the elevation of rocks that will block the player's path as they flow downstream. 
+![](./Docs/images/cave.png)
+
+The river streams are implemented as Unity effectors tieing these gameplay elements tightly to the standard physics engine of Unity. These effectors apply a velocty vector to objects that collide with them.
+
+![](./Docs/images/swimming.gif)
+
+The interactable torches are ignited when hit by any fire type spell and extinguished when hit by a wind type spell. These torches implement a [Publisher/Subscriber](https://github.com/CardCaster-UCD/CardCasterGame/blob/ea08a3673cb4325d2029ab6905b16ba98688e8a3/Assets/Scripts/TorchController.cs#L95) pattern similiar to the Pikimi assignment in week 4. In the case of the example gif, the subscriber is the fade in/out animation of a rock sprite in the river. These torches were implemented with this pattern in mind for future resuse of scripts and prefabs in later areas of the map.
+![](./Docs/images/torch.gif)
+
+**Ref**
+* [torches assets](https://asymmetric.itch.io/mideval-2d-16x16-torch-sprite-pack-with-animations)
+* 
 
 --- original roles ---
 ## User Interface
@@ -55,7 +67,6 @@ Source: https://milksoftgames.itch.io/grassy-field \
 ## Movement/Physics
 
 **Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
-
 ## Animation and Visuals
 
 **List your assets including their sources and licenses.**
