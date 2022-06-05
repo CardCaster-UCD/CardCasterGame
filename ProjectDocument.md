@@ -49,6 +49,8 @@ The main focus of the puzzle team was to coordinate between world and combat tea
 Our main puzzle map layout is 2 vertical and 3 horizontal river streams. These streams apply force to the player when entering the stream to move the player down stream in the direction of the current. The currents' speed is set to mvoe the player at a speed where they should not be able to reach the other side without something to block their path. Interactable torches are placed around the map to toggle the elevation of rocks that will block the player's path as they flow downstream. 
 ![](./Docs/images/cave.png)
 
+![](./Docs/images/path.png)
+
 The river streams are implemented as Unity effectors tieing these gameplay elements tightly to the standard physics engine of Unity. These effectors apply a velocty vector to objects that collide with them.
 
 ![](./Docs/images/swimming.gif)
