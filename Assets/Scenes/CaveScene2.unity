@@ -8106,7 +8106,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You found the treasure!
+  m_Text: "You found the treasure. \nYou have Won!\nFeel free to roam around."
 --- !u!222 &1978418394
 CanvasRenderer:
   m_ObjectHideFlags: 0
