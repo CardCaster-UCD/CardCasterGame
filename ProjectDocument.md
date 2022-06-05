@@ -22,6 +22,14 @@ The player can move around the map using the arrow keys, swing the sword using t
 You should replay any **bold text** with your relevant information. Liberally use the template when necessary and appropriate.
 
 ## Combat Team
+Combat team's goal was to build a combat system based on a sword and card based spells.
+
+## Elios Sgouros
+My main contributions to the combat system were the sword system, the card-hand-deck-discard system, and three of the spell cards.
+
+Sword System-
+
+The main difficulty in implementing the sword system was the animation. [I used this tutorial as a guide](https://youtu.be/p6Klz_NZpEQ). The way it works is that the sword controller [sets a trigger in the animator](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/SwordController.cs#L27) whenever the spacebar is pressed. The animator uses a finite state machine, and knows which way to swing the sword based on the [values set in the player movement script](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/PlayerMovement.cs#L69). The hitboxes on the sword have box colliders that are turned on and off during the animation. I got the idea to do this from the video tutorial, except I modified it so instead of one big hitbox there's smaller, finer boxes that closely follow the animation. I used a longer sword than the one that came in the default sprite sheet, found in YouTube comment by user Enderesting at [this link](https://imgur.com/a/6lxX3FI)
 
 
 ## World Team
