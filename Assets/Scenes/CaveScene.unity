@@ -4952,7 +4952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: CaveScene
-  nextScene: OpeningScene
+  nextScene: OpeningScene2
   cameraMax: {x: 26, y: -6}
   cameraMin: {x: 9, y: -16}
   nextScenePosition: {x: 7.5, y: -7, z: -5}
