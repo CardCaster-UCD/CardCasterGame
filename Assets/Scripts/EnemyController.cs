@@ -79,15 +79,15 @@ public class EnemyController : MonoBehaviour
         if ("Sword" == other.tag && selfDamageTimer > selfDamageBuffer)
         {
             var sword_ctrl = player.GetComponent<SwordController>();
-            var damage = sword_ctrl.GetDamage();
+            var sword_damage = sword_ctrl.GetDamage();
             
-            TakeDamage(damage);
+            TakeDamage(sword_damage);
         }
 
         if ("Fire" == other.tag && selfDamageTimer > selfDamageBuffer)
         {
             var fire_damage = other.GetComponent<SpellAttr>().GetDamage();
-            TakeDamage(damage);
+            TakeDamage(fire_damage);
             other.GetComponent<SpellAttr>()._destroy();
         }
 
