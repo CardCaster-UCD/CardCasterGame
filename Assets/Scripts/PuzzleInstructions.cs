@@ -12,7 +12,7 @@ public class PuzzleInstructions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dialog = "Go for a swim, and allow the river streams to guide you to your destination. It could be good, bad, or both! Be sure to use the rocks as support as the current is very strong! You may find it helpful to practice with this torch here on the side. Each torch controls a set of rocks. Good luck!";
+        dialog = "Don't be afraid to swim. Let the river stream guide you.\nTorches control the rocks. Set them on fire, or turn them off.\nThe rocks will rearrangeto support you from the river streams.";
     }
 
     // Update is called once per frame
