@@ -124,10 +124,28 @@ License: Attribution 3.0
 
 
 ## Gameplay Testing
+Elios:
+[The full results of playtesting can be found here](https://docs.google.com/document/d/1vXDP8wf9D1IZHY487q3VIt1LhpFTRH3xeQe1n0OzLWA/edit?usp=sharing)
 
-**Add a link to the full results of your gameplay tests.**
+I found that the criticisms fell into the three categories of usability, difficulty, and bugs.
 
-**Summarize the key findings from your gameplay tests.**
+Usability- 
+Every player had issues with usability. It wasn't always clear what the objectives were or what options you had. Players often didn't know where they were trying to go.
+Another common usability complaint was information given to the player. There was no way to tell when you hurt enemies. It wasn't clear from the numbers how much of your mana spells would actually cost, and the mana numbers were confusing because sometimes they were in the same range as the button numbers. Players wanted timers to indicate how long it would take for a spell to wear off.
+Some players found the basic concept of spells switching when you use them confusing, though some thought it was an interesting mechanic. I think all would agree however that it should have been better explained, and it would be better to know what was in your deck.
+Players found it clunky that the sword didn't push back the enemies, because they were used to that in other similar games.
+
+Difficulty-
+Most players found the combat to be too difficult. It took several hits to kill the enemies, and the enemies were fast enough that they could easily swarm you. However, not every player found the combat difficult, so perhaps being able to adjust the difficulty would be ideal.
+
+Bugs- 
+There were two major bugs that kept being found in playtesting. It was possible to trigger a bug that caused the player to be invincible, though I was never able to see exactly how it was triggered. It was also possible to bypass the puzzle if the player was persistent enough at trying to get out of the river at the right spot. The only other bugs the players discovered were graphical.
+
+The elements that the players most commonly enjoyed were the graphics and sound. They had a retro feel to them that players, especially Zelda players, really seemed to resonate with. Players were most often satisfied when they completed the puzzle. Some of the players liked fighting the enemies.
+
+The most common suggestions for what players wanted added were  more information, more rewards, and more content.
+
+Players thought this game would be suitable for all ages, and would recommend it to retro Zelda fans.
 
 ## Narrative Design
 
