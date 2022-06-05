@@ -12,7 +12,7 @@ public class PuzzleInstructions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dialog = "Don't be afraid to swim. Let the river stream guide you.\nTorches control the rocks. Set them on fire, or turn them off.\nThe rocks will rearrangeto support you from the river streams.";
+        dialog = "Don't be afraid to swim. Let the river stream guide you.\nTorches control the rocks. Set them on fire, or turn them off.\nThe rocks will rearrange to support you from the river streams.";
     }
 
     // Update is called once per frame
