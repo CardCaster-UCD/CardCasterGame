@@ -12,6 +12,7 @@ The player can move around the map using the arrow keys, swing the sword using t
 
 **If you did work that should be factored in to your grade that does not fit easily into the proscribed roles, add it here! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
+
 # Main Roles #
 
 * Puzzle : Grant Gilson, Alexis
@@ -148,3 +149,14 @@ Builds are generated automitically on push events to the Card Caster repository 
 ## Game Feel
 
 **Document what you added to and how you tweaked your game to improve its game feel.**
+
+
+# Roll Agnogstic Tasks
+## Grant Gilson
+* Camera Controller
+  * Heavily referenced from [Mister Taft Creates](https://www.youtube.com/watch?v=OWJa6lcFTXk)
+  * This simple camera controller smoothly lerps to the player. When entering a room the camera recieves new min and max boundaries. When the camera position approaches one of these limits the camera from following the player outside of the camera bounds.
+  * ![](./Docs/images/cameraController.gif)
+* Scene Transition Controller
+  * Our game is composed of multiple composite scenes. As the player moves to another area the scene transition colliders specifies which scene to next load and unloads the current scene. This is done to safe processing time as enemies in other rooms that are still loaded in the scene may continue to following 
+  * ![](./Docs/images/sceneTransition.gif) 
