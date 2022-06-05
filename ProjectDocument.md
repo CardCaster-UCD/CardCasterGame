@@ -126,7 +126,8 @@ License: Attribution 3.0
 
 
 ## Gameplay Testing
-Elios:
+Elios-
+
 [The full results of playtesting can be found here](https://docs.google.com/document/d/1vXDP8wf9D1IZHY487q3VIt1LhpFTRH3xeQe1n0OzLWA/edit?usp=sharing)
 
 I found that the criticisms fell into the three categories of usability, difficulty, and bugs.
