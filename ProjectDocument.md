@@ -139,6 +139,11 @@ License: Attribution 3.0
 **Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
 
 
+## Cross-Platform
+Card caster currently builds for Window/MacOS/Linux in standalone executables and WebGL. Consideration was made for user controls for Android and iOS builds of the game but due to time constraints, direct mappings of the touch interface to controlls are not availiable to the mobile versions of the game at this time. However, builds of the game do exists for iOS and Android, but without the aid of a keyboard, will be unplayable. 
+
+Builds are generated automitically on push events to the Card Caster repository through the [Game.ci](https://game.ci/) project.
+
 
 ## Game Feel
 
