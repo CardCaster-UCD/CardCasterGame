@@ -150,18 +150,22 @@ Sprites:
 Map made using tileset:
 
 ![image](https://github.com/CardCaster-UCD/CardCasterGame/blob/master/Docs/images/village.png)
+
 (Village map which was not used)
 
 ![image](https://user-images.githubusercontent.com/67398594/172093430-a7da2648-9f86-4224-a889-bc68b8628c7e.png)
+
 (Valley section that leads to the puzzle cave)
 
 [link to source for additional Tileset used for caves](https://opengameart.org/content/cave-tileset-0)
 License: Attribution 3.0 Unported, GNU General Public License, version 2
 
 ![image](https://user-images.githubusercontent.com/67398594/172093746-81a912b8-0d8d-4a48-83dc-c7c707594953.png)
+
 (Combat room that can be entered inside the puzzle cave)
 
 ![image](https://user-images.githubusercontent.com/67398594/172093794-ff9ea8f6-cd22-45ac-be2e-cc26912f2630.png)
+
 (Treasure room that can be reached when all of the puzzle and combat are cleared)
 
 
