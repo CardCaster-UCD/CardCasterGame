@@ -23,7 +23,7 @@ The main quest guide:
 
 # Main Roles #
 
-Instead of using the standard roles, we split the game up into three teams and divided the responsibilities within those teams. The teams were Puzzle, World, and Combat.
+Instead of using the standard roles, we split the game up into three teams and divided the responsibilities within those teams. The teams were Combat, World, and Puzzle.
 
 * Combat : Elios Sgouros, Julio Flores, Gian Carlo Lambert
 * World  : Jeehoon Kim, Emily Liu
