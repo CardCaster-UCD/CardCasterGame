@@ -214,31 +214,6 @@ The interactable torches are ignited when hit by any fire type spell and extingu
 * [torches assets](https://asymmetric.itch.io/mideval-2d-16x16-torch-sprite-pack-with-animations)
 * 
 
---- original roles ---
-## User Interface
-
-**Describe your user interface and how it relates to gameplay. This can be done via the template.**
-
-## Movement/Physics
-
-**Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
-## Animation and Visuals
-
-**List your assets including their sources and licenses.**
-
-**Describe how your work intersects with game feel, graphic design, and world-building. Include your visual style guide if one exists.**
-
-## Input
-
-**Describe the default input configuration.**
-
-**Add an entry for each platform or input style your project supports.**
-
-## Game Logic
-
-**Document what game states and game data you managed and what design patterns you used to complete your task.**
-
-# Sub-Roles
 
 ## Audio
 **List your assets including their sources and licenses.**
@@ -337,9 +312,6 @@ The most common suggestions for what players wanted added were  more information
 
 Players thought this game would be suitable for all ages, and would recommend it to retro Zelda fans.
 
-## Narrative Design
-
-**Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
 ## Press Kit and Trailer
 
@@ -358,10 +330,6 @@ Card caster currently builds for Window/MacOS/Linux in standalone executables an
 
 Builds are generated automitically on push events to the Card Caster repository through the [Game.ci](https://game.ci/) project.
 
-
-## Game Feel
-
-**Document what you added to and how you tweaked your game to improve its game feel.**
 
 ## Integration
 
