@@ -272,7 +272,7 @@ License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/a
 ## Gameplay Testing
 Elios-
 
-[The full results of playtesting can be found here](https://docs.google.com/document/d/1vXDP8wf9D1IZHY487q3VIt1LhpFTRH3xeQe1n0OzLWA/edit?usp=sharing)
+[The full results of playtesting can be found here](https://github.com/CardCaster-UCD/CardCasterGame/blob/c10460a0c0b56e9a0d94a74d8b56e7e77523c23e/Docs/PlaytesterFeedback.pdf).
 
 I found that the criticisms fell into the three categories of usability, difficulty, and bugs.
 
