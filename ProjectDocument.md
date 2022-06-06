@@ -6,8 +6,6 @@ Our game is heavily inspired by older, top-down Legend of Zelda games. The twist
 
 ## Gameplay Explanation ##
 
-**In this section, explain how the game should be played. Treat this as a manual within a game. It is encouraged to explain the button mappings and the most optimal gameplay strategy.**
-
 The player can move around the map using the arrow keys, swing the sword using the space bar, and cast the spells on the cards using the 1, 2, 3 keys. The cards switch out every time they're used, so the player has to keep track of what cards they have tied to each button. The player's goal is to find the cave and locate the treasure within. Monsters and puzzles stand in the player's way.
 
 The main quest guide:
@@ -22,10 +20,6 @@ The main quest guide:
 9. The player exits the combat room and follows the river stream. A rock will support the player to enter the treasure room.
 10. Enter the treasure room and find the treasure.
 11. You have Won!
-
-
-**If you did work that should be factored in to your grade that does not fit easily into the proscribed roles, add it here! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
-
 
 # Main Roles #
 
@@ -180,12 +174,12 @@ License: Attribution 3.0 Unported, GNU General Public License, version 2
 
 
 ## Puzzle Team
-The main focus of the puzzle team was to coordinate between world and combat teams to create implement features in the world for players to interact with. This keep kept us integrated in many aspect of the game's design like movement/physics and animation/visuals through interactables like:
+The main focus of the puzzle team was to coordinate between world and combat teams to create and implement features in the world for players to interact with. This kept us integrated in many aspect of the game's design like movement/physics and animation/visuals through interactables like:
 * vector effector plates (river tiles) - Alexis 
 * torches and moveable rocks - Grant
 
 
-Our main puzzle map layout is 2 vertical and 3 horizontal river streams. These streams apply force to the player when entering the stream to move the player down stream in the direction of the current. The currents' speed is set to mvoe the player at a speed where they should not be able to reach the other side without something to block their path. Interactable torches are placed around the map to toggle the elevation of rocks that will block the player's path as they flow downstream. 
+Our main puzzle map layout is 2 vertical and 3 horizontal river streams. These streams apply force to the player when entering the stream to move the player down stream in the direction of the current. The currents' speed is set to move the player at a speed where they should not be able to reach the other side without something to block their path. Interactable torches are placed around the map to toggle the elevation of rocks that will block the player's path as they flow downstream. 
 ![](./Docs/images/cave.png)
 
 ![](./Docs/images/path.png)
@@ -222,16 +216,15 @@ The interactable torches are ignited when hit by any fire type spell and extingu
 
 **Ref**
 * [torches assets](https://asymmetric.itch.io/mideval-2d-16x16-torch-sprite-pack-with-animations)
+* [cave tileset 1](https://opengameart.org/content/cave-tileset-0)
+  * License: Attribution 3.0 Unported (CC BY 3.0) and GNU General Public License, version 2
+* [cave tileset 2](https://opengameart.org/content/zelda-like-tilesets-and-sprites) 
+  * License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication 
 
 
 ## Subroles
 
 ## Audio
-**List your assets including their sources and licenses.**
-
-**Describe the implementation of your audio system.**
-
-**Document the sound style.** 
 
 ### Emily Liu:
 
@@ -350,7 +343,7 @@ My subrole consisted of making sure that the game was appealing to the general p
 
 For instance, when the team was first coming up with the game, there were numerous visions for the game. Each member of team had their own ideas, heavily influenced by their gaming preference and experience. If this diversity is not channeled properly, the game could become unappealing to new players.
 
-My contribution was listening to the ideas provided by everyone and making there were no conflictive mechanics. This is specially hard in this project due to the ambitious number of genres integrated into the game. Our game mixes the puzzle, accion, and turn-based genres into one game. Initially, some people wanted to have the game be more like Pokemon or other card games, while some other members wanted a more open-world game with puzzles embedded into the map. It was my job to take the essence of each idea and bring into the game in a seamless way.
+My contribution was listening to the ideas provided by everyone and making sure there were no conflictive mechanics. This is specially hard in this project due to the ambitious number of genres integrated into the game. Our game mixes the puzzle, accion, and turn-based genres into one game. Initially, some people wanted to have the game be more like Pokemon or other card games, while some other members wanted a more open-world game with puzzles embedded into the map. It was my job to take the essence of each idea and bring into the game in a seamless way.
 
 In practice, this worked perfectly. The cards and deck component from turn-based games was successfully integrated with the accion-packed combat system. The cards also blended in with the puzzles on the map, where using cards correctly is key to solving the puzzles. All of this while still having the player wander around the map as in other open-world games.
 
