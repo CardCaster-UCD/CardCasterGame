@@ -38,7 +38,6 @@ class HealthBarController : MonoBehaviour
         // if transition time has not been met yet
         if ((Time.time - this.transitionStartTime) < this.valueTransitionTime)
         {
-            //Debug.Log(this.value.ToString() + " <- " + this.ratioAtStart.ToString());
             if (this.value > this.ratioAtStart)
             {
                 //bar fills
@@ -59,7 +58,6 @@ class HealthBarController : MonoBehaviour
                 var growRange = this.ratioAtStart - this.value;
                 var ratioOfTimeDone = ((Time.time - this.transitionStartTime) / this.valueTransitionTime);
                 var ratioOfTransition = growRange * this.valueTransitionCurve.Evaluate(ratioOfTimeDone);
-                // Debug.Log("setting slider to: " + (this.ratioAtStart + ratioOfTransition).ToString());
                 this.SetLocalScaleX(this.ratioAtStart - ratioOfTransition);
                 this.currentRatio = this.ratioAtStart - ratioOfTransition;
             }

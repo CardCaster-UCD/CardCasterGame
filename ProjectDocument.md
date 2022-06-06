@@ -146,7 +146,9 @@ As we were integrating the combat section with the puzzle section, we thought of
 (Rearranging the puzzle inside the combat room)
 
 
-[link to source for Tileset used for overworld and Sprites](https://opengameart.org/content/zelda-like-tilesets-and-sprites)
+[link to source for Tileset mainly used for the world](https://opengameart.org/content/zelda-like-tilesets-and-sprites)
+
+License: CC0 1.0 Universal
 
 Sprites:
 
@@ -157,16 +159,23 @@ Sprites:
 Map made using tileset:
 
 ![image](https://github.com/CardCaster-UCD/CardCasterGame/blob/master/Docs/images/village.png)
+
 (Village map which was not used)
 
 ![image](https://user-images.githubusercontent.com/67398594/172093430-a7da2648-9f86-4224-a889-bc68b8628c7e.png)
+
 (Valley section that leads to the puzzle cave)
 
-[link to source for Tileset used for caves](https://opengameart.org/content/cave-tileset-0)
+[link to source for additional Tileset used for caves](https://opengameart.org/content/cave-tileset-0)
+
+License: Attribution 3.0 Unported, GNU General Public License, version 2
+
 ![image](https://user-images.githubusercontent.com/67398594/172093746-81a912b8-0d8d-4a48-83dc-c7c707594953.png)
+
 (Combat room that can be entered inside the puzzle cave)
 
 ![image](https://user-images.githubusercontent.com/67398594/172093794-ff9ea8f6-cd22-45ac-be2e-cc26912f2630.png)
+
 (Treasure room that can be reached when all of the puzzle and combat are cleared)
 
 
@@ -205,39 +214,17 @@ The most difficult part of my parts of the puzzle was implementing the vectors. 
 ![](./Docs/images/swimming.gif)
 
 ### Grant
-The interactable torches are ignited when hit by any fire type spell and extinguished when hit by a wind type spell. These torches implement a [Publisher/Subscriber](https://github.com/CardCaster-UCD/CardCasterGame/blob/ea08a3673cb4325d2029ab6905b16ba98688e8a3/Assets/Scripts/TorchController.cs#L95) pattern similiar to the Pikimi assignment in week 4. In the case of the example gif, the subscriber is the fade in/out animation of a rock sprite in the river. These torches were implemented with this pattern in mind for future resuse of scripts and prefabs in later areas of the map.
+The interactable torches are ignited when hit by any fire type spell and extinguished when hit by a wind type spell. These torches implement a [Publisher/Subscriber](https://github.com/CardCaster-UCD/CardCasterGame/blob/ea08a3673cb4325d2029ab6905b16ba98688e8a3/Assets/Scripts/TorchController.cs#L95) pattern similiar to the Pikimi assignment in week 4. In the case of the example gif, the subscriber is the fade in/out animation of a rock sprite in the river. These torches were implemented with this pattern in mind for future resuse of scripts and prefabs in later areas of the map. Examples of subscribers in the project are:
+* [RockController Script](./Assets/Scripts/RockController.cs)
+* [Torch Mux Script](./Assets/Scripts/PuzzleCave/TorchMuxScript.cs) (unused in current release)
 
 ![](./Docs/images/torch.gif)
 
 **Ref**
 * [torches assets](https://asymmetric.itch.io/mideval-2d-16x16-torch-sprite-pack-with-animations)
-* 
 
---- original roles ---
-## User Interface
 
-**Describe your user interface and how it relates to gameplay. This can be done via the template.**
-
-## Movement/Physics
-
-**Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
-## Animation and Visuals
-
-**List your assets including their sources and licenses.**
-
-**Describe how your work intersects with game feel, graphic design, and world-building. Include your visual style guide if one exists.**
-
-## Input
-
-**Describe the default input configuration.**
-
-**Add an entry for each platform or input style your project supports.**
-
-## Game Logic
-
-**Document what game states and game data you managed and what design patterns you used to complete your task.**
-
-# Sub-Roles
+## Subroles
 
 ## Audio
 **List your assets including their sources and licenses.**
@@ -300,12 +287,15 @@ Source: https://assetstore.unity.com/packages/audio/music/action-rpg-music-free-
 
 License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/as_terms)
 
+Epic, fantasy-like music for the start menu.
+
 
 ### Puzzle Cave & Combat Room audio:
 Source: https://assetstore.unity.com/packages/audio/music/action-rpg-music-free-85434
 
 License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/as_terms)
 
+Mysterious, somewhat dark music for the puzzle and the combat which takes place inside a cave.
 
 
 ## Gameplay Testing
@@ -333,9 +323,6 @@ The most common suggestions for what players wanted added were  more information
 
 Players thought this game would be suitable for all ages, and would recommend it to retro Zelda fans.
 
-## Narrative Design
-
-**Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
 ## Press Kit and Trailer
 
@@ -353,7 +340,9 @@ Similar to how in the trailer I chose clips, I chose the images because I though
 Card caster currently builds for Window/MacOS/Linux in standalone executables and WebGL. Consideration was made for user controls for Android and iOS builds of the game but due to time constraints, direct mappings of the touch interface to controlls are not availiable to the mobile versions of the game at this time. However, builds of the game do exists for iOS and Android, but without the aid of a keyboard, will be unplayable. 
 
 Builds are generated automitically on push events to the Card Caster repository through the [Game.ci](https://game.ci/) project.
+Latest builds are availiable under the actaions page of our [Github](https://github.com/CardCaster-UCD/CardCasterGame/actions)
 
+![](./Docs/images/githubactions.png)
 
 ## Game Feel
 Gian Carlo-
@@ -381,9 +370,13 @@ After we added the final treasure room and ran through the game, I realized that
 
 # Roll Agnogstic Tasks
 ## Grant Gilson
+* Player Movement Controller 
+   * Heavily referenced from [Mister Taft Creates](https://www.youtube.com/watch?v=Vfq13LRggwk&t=289s)
+   * Created simple player movement controller. In development we were using the traditional kinematic physics system (eg.`transform.position = new Vec3(...)`) to move the player. This proved to be a design challenge early on with the effector plates which reply on the Unity physics engine. Having these two movement systems caused graphical stuttering. Moving the player towards a dynamic rigid body simplified the logic for player movement, but has tradeoffs in future extensions to the player controller script in its current state. Player inputs is recieved through the unity input system through WASD/←↑→↓. This input is recieved as a unit vector which is applied to the speed factor in field of the player controller. Diagonal movement can be disabled to emulate a more traditional 2D top down game.
+   * ![](./Docs/images/walking.gif) ![](./Docs/images/walking_diag.gif)
 * Camera Controller
   * Heavily referenced from [Mister Taft Creates](https://www.youtube.com/watch?v=OWJa6lcFTXk)
-  * This simple camera controller smoothly lerps to the player. When entering a room the camera recieves new min and max boundaries. When the camera position approaches one of these limits the camera from following the player outside of the camera bounds.
+  * This simple camera controller smoothly lerps to the player. When entering a room the camera recieves new min and max boundaries. When the camera position approaches one of these limits the camera detaches from the player, preventing it from moving outside of the camera bounds.
   * ![](./Docs/images/cameraController.gif)
 * Scene Transition Controller
   * Our game is composed of multiple composite scenes. As the player moves to another area the scene transition colliders specifies which scene to next load and unloads the current scene. This is done to safe processing time as enemies in other rooms that are still loaded in the scene may continue to following 

@@ -38,9 +38,7 @@ public class DeckController
         while(newCards.Count > 0)
         {
             var cardIndex = Random.Range(0, newCards.Count);
-            
-            //Debug.Log(cardIndex);
-            //Debug.Log(newCards[cardIndex]);
+
 
             // Reactivate card before putting it back in draw pile.
             newCards[cardIndex].SetActive();

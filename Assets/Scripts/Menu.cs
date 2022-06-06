@@ -12,7 +12,6 @@ public class Menu : MonoBehaviour
 
     public void PressQuit ()
     {
-        Debug.Log("QUIT");
         Application.Quit();
     }
 }
