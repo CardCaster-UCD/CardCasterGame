@@ -120,7 +120,7 @@ Our main puzzle map layout is 2 vertical and 3 horizontal river streams. These s
 
 ![](./Docs/images/path.png)
 
-# Alexis
+### Alexis
 For the puzzle team, the main contributions I made were creating the puzzle in a [tiled map editor](https://www.mapeditor.org/), adding player animations for swimming, creating a tutorial sign, and implementing the physics of the vectors in the river streams.  
 
 For the tiled map named [puzzle-cave](https://github.com/CardCaster-UCD/CardCasterGame/blob/79465cb8f83c120cf164bac725d92e4353a9b360/Assets/SuperTiled2Unity/Import/puzzle-cave.tmx#L1), I used these cave tilesets [1](https://opengameart.org/content/cave-tileset-0) and [2](https://opengameart.org/content/zelda-like-tilesets-and-sprites). Grant designed the puzzle and gave me a quick mockup of what to build. In order to add visual cues to the player of which direction the stream was going, I decided to animate some of the tiles in the water to make them look like arrows. The main difficulty I had in doing this was being able to match the tiles to the ground we already had set in the cave. I ended up going into a pixel editor called [pixilart](https://www.pixilart.com/)and created some custom tiles to be able to utilize the ground we liked with the water tiles we liked, since they were from two different tilesets. I did a custom dithering between the two tiles to achieve a nice gradient effect that blended the two pieces together well. While this didn’t affect the gameplay or actual functionality of the puzzle, I believe it added meaningful visuals and aesthetics that were more pleasing to the eye. Below are images of the custom tiles I made and the tiles that they were made from. I also included an image of where I used them.
@@ -136,7 +136,7 @@ For the tutorial sign, I simply added an extra collider to the sign as a trigger
 The most difficult part of my parts of the puzzle was implementing the vectors. I ended up creating objects around each row of arrows inside the tilemap editor. I also made objects for each full stream of water. In order to implement the pushing of the stream on the player, I attached an Area Effector to each row of arrows as well as each stream. I referenced this [video](https://youtu.be/p0n6EFR1M8c) by Brackeys in order to implement the area effectors. These basically apply a force to whatever object enters it, and the force is a serialized value in the unity editor. It took a bit of trial and error to get the forces to where the player could not swim backwards, but eventually I found a value for the row of vectors and the streams that seemed to work well. It added a nice effect too by having essentially more force where there was a row of water, making it feel like it was a big wave of water pushing you. The next complicated part was figuring out a way so the player couldn’t get out of the water without using the rocks to hold you against the stream. In order to do this, I created a lot of small box colliders surrounding all the ground edges that were touching the water, and only left small gaps where the player could get out if they were using the rock to help them. These gaps were made pretty small to try to keep the player from exiting “illegally”. I also had to adjust the force on the water at this point to make the player go fast enough (but not too fast) so they couldn’t easily enter these small gaps without using the rocks.
 ![](./Docs/images/swimming.gif)
 
-# Grant
+### Grant
 The interactable torches are ignited when hit by any fire type spell and extinguished when hit by a wind type spell. These torches implement a [Publisher/Subscriber](https://github.com/CardCaster-UCD/CardCasterGame/blob/ea08a3673cb4325d2029ab6905b16ba98688e8a3/Assets/Scripts/TorchController.cs#L95) pattern similiar to the Pikimi assignment in week 4. In the case of the example gif, the subscriber is the fade in/out animation of a rock sprite in the river. These torches were implemented with this pattern in mind for future resuse of scripts and prefabs in later areas of the map.
 
 ![](./Docs/images/torch.gif)
@@ -291,7 +291,9 @@ Builds are generated automitically on push events to the Card Caster repository 
 
 **Document what you added to and how you tweaked your game to improve its game feel.**
 
-## Integration - Alexis
+## Integration
+
+Alexis-
 My subrole was centered around being sure that everything was integrated well and that our game felt like a unified and consistent game. My team did a very good job of doing this themselves, but throughout the development I gave some suggestions in order to improve the integration of our game as a whole.
 
 
