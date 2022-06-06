@@ -233,7 +233,9 @@ Builds are generated automitically on push events to the Card Caster repository 
 
 ## Emily Liu
 StartMenu \
+![image](https://user-images.githubusercontent.com/67398594/172092477-58a5edfd-472b-4328-86e7-90d2a126b2fc.png)
 Background image credit: Milksoft Games \
 Source: https://milksoftgames.itch.io/grassy-field \
-[scene](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scenes/StartMenu.unity) \
-[script](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scripts/Menu.cs) 
+[link to scene in Github repository](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scenes/StartMenu.unity) \
+[link to script in Github repository](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scripts/Menu.cs) \
+To implement this, I created a separate scene for the Start menu and added a background image. I found a background image that matched the tilemaps of the overworld. The background image has a forest with a path. I wanted the image to feel adventurous yet peaceful. There are also buttons for PLAY and QUIT over the background image. The script includes a function to load the next scene, which is called the MainScene and starts the game. The other function quits the game. I then connected the buttons for PLAY and QUIT to these functions in the script. 
