@@ -8,7 +8,7 @@ Our game is heavily inspired by older, top-down Legend of Zelda games. The twist
 
 **In this section, explain how the game should be played. Treat this as a manual within a game. It is encouraged to explain the button mappings and the most optimal gameplay strategy.**
 
-The player can move around the map using the arrow keys, swing the sword using the space bar, and cast the spells on the cards using the 1, 2, 3 keys. 
+The player can move around the map using the arrow keys, swing the sword using the space bar, and cast the spells on the cards using the 1, 2, 3 keys. The cards switch out every time they're used, so the player has to keep track of what cards they have tied to each button. The player's goal is to find the cave and locate the treasure within. Monsters and puzzles stand in the player's way.
 
 **If you did work that should be factored in to your grade that does not fit easily into the proscribed roles, add it here! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
@@ -57,6 +57,8 @@ Fireball was the first spell implemented, so while making this one I learned som
 
 The WindBlast spell was very similar to the FireBall spell. Only major difference was the animation and how it affects enemies. I made it so if the whirldwind hits one of the enemies, [it attaches to the enemey](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/EnemyController.cs#L101) and [carries the enemy with it through the life of the whirlwind](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/EnemyController.cs#L58). [I made the animation by slicing up a spritesheet posted by Spring Spring on Open Game Art](https://opengameart.org/content/whirlwind)
 
+The [SpeedUp spell](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/SpeedupCard.cs#L3) Works by attaching a [SpeedModifer script](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/SpeedModifier.cs#L3) to the player. The speed modifier [increases the player's speed by a factor during setup](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/SpeedModifier.cs#L23), then [decreases it by whatever it was increased by after a certain number of seconds](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/SpeedModifier.cs#L19). For the card I implemented the factor was 50% and the duration was 10 seconds.
+
 ## Julio Flores
 My main contributions to the combat system was creating the UI for the cards, the art for 5 spells, a buffer system for the spells, and programming one of the spell cards.
 
@@ -71,9 +73,17 @@ The Hand UI is fairly simple. I created a UI document and made three visual elem
 
 ## World Team
 
-For this game we decided on a fantasy theme and setting, and the design of the world consists of a valley with surrounding forest, that leads to and includes a cave entrance. We chose to have a valley bordered by forests on 2 sides, because we needed the player movement to be linear and guide them towards the cave. The cave is where the puzzle portion of the game is. The puzzle room of the cave includes 2 other entrances that lead deeper into the cave. The golden entrance leads to a cave room with the treasure box, and the dark entrance leads to a bigger cave room where there are enemies for the player to fight. 
+Tilemaps
 
-Tilemaps for the world were made using the Tiled map editor. [link to source for Tiled map editor](https://www.mapeditor.org/) The outside world consists of a valley with a surrounding forest as well as a waterfall. The waterfall is connected to a lake, which has a bridge that the player needs to cross in order to get to the cave. Tilemaps were ported into Unity using SuperTiled2Unity for the player to move around on. [link to source for SuperTiled2Unity](https://seanba.com/supertiled2unity.html)
+Sources: https://www.mapeditor.org/, https://seanba.com/supertiled2unity.html
+Maps: 
+
+StartMenu \
+Background image credit: Milksoft Games \
+Source: https://milksoftgames.itch.io/grassy-field \
+[scene](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scenes/StartMenu.unity) \
+[script](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scripts/Menu.cs) 
+
 
 
 
@@ -227,12 +237,3 @@ Builds are generated automitically on push events to the Card Caster repository 
 * Scene Transition Controller
   * Our game is composed of multiple composite scenes. As the player moves to another area the scene transition colliders specifies which scene to next load and unloads the current scene. This is done to safe processing time as enemies in other rooms that are still loaded in the scene may continue to following 
   * ![](./Docs/images/sceneTransition.gif) 
-
-
-## Emily Liu
-StartMenu \
-Background image credit: Milksoft Games \
-Source: https://milksoftgames.itch.io/grassy-field \
-[scene](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scenes/StartMenu.unity) \
-[script](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scripts/Menu.cs) 
-
