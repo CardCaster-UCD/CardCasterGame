@@ -301,12 +301,15 @@ Source: https://assetstore.unity.com/packages/audio/music/action-rpg-music-free-
 
 License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/as_terms)
 
+Epic, fantasy-like music for the start menu.
+
 
 ### Puzzle Cave & Combat Room audio:
 Source: https://assetstore.unity.com/packages/audio/music/action-rpg-music-free-85434
 
 License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/as_terms)
 
+Mysterious, somewhat dark music for the puzzle and the combat which takes place inside a cave.
 
 
 ## Gameplay Testing
