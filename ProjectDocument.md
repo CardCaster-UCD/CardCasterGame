@@ -2,7 +2,7 @@
 
 ## Summary ##
 
-**A paragraph-length pitch for your game.**
+Our game is heavily inspired by older, top-down Legend of Zelda games. The twist we put on it is that you have a set of spellcards that you draw from a deck. Whenever you use a spellcard you have to draw a new one from the deck. This introduces a randomness of your possible moves that requires you to keep on your toes, and makes it so even a short version of this game is different every time.
 
 ## Gameplay Explanation ##
 
