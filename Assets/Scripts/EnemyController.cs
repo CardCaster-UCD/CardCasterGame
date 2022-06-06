@@ -75,12 +75,12 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
+
         if ("Sword" == other.tag && selfDamageTimer > selfDamageBuffer)
         {
             var sword_ctrl = player.GetComponent<SwordController>();
             var sword_damage = sword_ctrl.GetDamage();
-            
+
             TakeDamage(sword_damage);
         }
 
@@ -102,15 +102,13 @@ public class EnemyController : MonoBehaviour
         {
             whirlwind = other.gameObject;
         }
-        
+
     }
 
     void TakeDamage(float damage)
     {
         selfDamageTimer = 0.0f;
-        //Debug.Log("Taking damage");
         health -= damage;
-        //Debug.Log("cur enemy health: " + health.ToString());
     }
 
 }

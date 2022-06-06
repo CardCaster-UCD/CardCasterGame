@@ -37,7 +37,6 @@ namespace CameraControl
         // Update the camera to the new limits of the room
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log(playerOffset);
             if (other.tag == "Player" && timer > buffer)
             {
                 timer = 0.0f;
