@@ -48,6 +48,16 @@ The [discard pile](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427
 
 The puzzle hand is just like the regular hand, except it doesn't switch out any cards. It always has the two cards used in the puzzle, [Fireball and WindBlast, and a third inconsequential card](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427be1399cdf105a495f8aaa034b2c2e6557/Assets/Scripts/PuzzleHandController.cs#L29).
 
+Spells-
+
+The three spell cards I implemented were [Fireball](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/FireballCard.cs#L3), [WindBlast](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/WindBlastCard.cs#L3), and Speedup.
+
+Fireball was the first spell implemented, so while making this one I learned some things about how we should make spells. I made it, and future spells, ScriptableObjects because I ran into issues instantiating prefabs from MonoBehaviors. It works by loading the [fireball prefab](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Resources/Prefabs/Fireball.prefab) using Resources.Load, which requires the prefab to be in the Resources folder. [It gets the direction that the player is facing, and sets the velocity in the x and y directions based on that](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/FireballCard.cs#L14). The velocity is set on the [spell movement script](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/SpellMovement.cs#L5) attached to the fireball object. It instantiates the fireball, [with a lifetime which is currently set to 2.5 seconds](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/WindBlastCard.cs#L3). Gian handled the effect of these fireballs on enemies, and Grant handled the effect on torches. I created the animation using sprites found in the [Top Down Adventure Assets](https://assetstore.unity.com/packages/2d/environments/top-down-adventure-assets-173199#description).
+
+
+
+The WindBlast spell 
+
 ## Julio Flores
 My main contributions to the combat system was creating the UI for the cards, the art for 5 spells, a buffer system for the spells, and programming one of the spell cards.
 
