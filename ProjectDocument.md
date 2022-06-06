@@ -192,10 +192,15 @@ Players thought this game would be suitable for all ages, and would recommend it
 
 ## Press Kit and Trailer
 
-**Include links to your presskit materials and trailer.**
+### Trailer
 
-**Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
+I ended up spending a lot of time making the trailer because it was my first time editing a video. I wanted to have a way to introduce the game's title, but we did not have an logo for the title, and I did not have time to make one, so I decided to have the text be masked with some of the gameplay to make introducing the games title seem a little more interesting. I chose the clips I used because I thought they showed off the core game play. I initially wanted to show off more of the cards in action while fighting enemies, but at the time I was recording the clips we had a lot of bugs in the code so a lot of things did not work properly making it difficult to get clips that looked good. For example the build I was running at the time had a bug where the player could not take damage so I had to avoid getting close to enemies in fear of getting hit and not taking any damage. I chose to end the trailer with comming soon because I did not know how to end the trailer without it looking odd. Themusic that was being played was the one we had for the start menue of the game I thought I sounded good for the trailer an just went ahead and used the same song.  
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=KH3d2Mrxtos" target="_blank"><img src="http://img.youtube.com/vi/KH3d2Mrxtos/0.jpg" alt="Trailer" /></a>
+
+The Presskit can be found [here](https://github.com/CardCaster-UCD/CardCasterGame/blob/master/Presskit.md)
+
+Similar to how in the trailer I chose clips, I chose the images because I thought they reflected core elements of the game. I did have some diffuculty getting a few screenshots due to the fact I could not pause the game so I was limited in what I could screenshot. For the description I decided to give some explanation about the core mechanics using some lore from the game. We did not have time to put narative elements into the game so I thought it would be a good Idea to include a generic Narrative for the game. The games main character was named Casper in the making of the presskit and trailer because I thought that giving him a name would make the game a little more memeroble.
 
 ## Cross-Platform
 Card caster currently builds for Window/MacOS/Linux in standalone executables and WebGL. Consideration was made for user controls for Android and iOS builds of the game but due to time constraints, direct mappings of the touch interface to controlls are not availiable to the mobile versions of the game at this time. However, builds of the game do exists for iOS and Android, but without the aid of a keyboard, will be unplayable. 
