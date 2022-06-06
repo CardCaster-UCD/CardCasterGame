@@ -138,7 +138,8 @@ As we were integrating the combat section with the puzzle section, we thought of
 (Rearranging the puzzle inside the combat room)
 
 
-[link to source for Tileset used for overworld and Sprites](https://opengameart.org/content/zelda-like-tilesets-and-sprites)
+[link to source for Tileset mainly used for the world](https://opengameart.org/content/zelda-like-tilesets-and-sprites)
+License: CC0 1.0 Universal
 
 Sprites:
 
@@ -154,7 +155,9 @@ Map made using tileset:
 ![image](https://user-images.githubusercontent.com/67398594/172093430-a7da2648-9f86-4224-a889-bc68b8628c7e.png)
 (Valley section that leads to the puzzle cave)
 
-[link to source for Tileset used for caves](https://opengameart.org/content/cave-tileset-0)
+[link to source for additional Tileset used for caves](https://opengameart.org/content/cave-tileset-0)
+License: Attribution 3.0 Unported, GNU General Public License, version 2
+
 ![image](https://user-images.githubusercontent.com/67398594/172093746-81a912b8-0d8d-4a48-83dc-c7c707594953.png)
 (Combat room that can be entered inside the puzzle cave)
 
