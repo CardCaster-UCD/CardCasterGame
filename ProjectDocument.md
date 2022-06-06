@@ -75,7 +75,11 @@ The Hand UI is fairly simple. I created a UI document and made three visual elem
 
 Emily Liu, Jeehoon Kim
 
+The world team focuses on choosing the theme of the game, building maps according to the theme, integrating the combat with the puzzle, and getting the appropriate audio source for the game.
+
 For this game we decided on a fantasy theme and setting, and the design of the world consists of a valley with surrounding forest, that leads to and includes a cave entrance. We chose to have a valley bordered by forests on 2 sides, because we needed the player movement to be linear and guide them towards the cave. The cave is where the puzzle portion of the game is. The puzzle room of the cave includes 2 other entrances that lead deeper into the cave. The golden entrance leads to a cave room with the treasure box, and the dark entrance leads to a bigger cave room where there are enemies for the player to fight. 
+
+The world team focuses on building appr
 
 Tilemaps for the world were made using the Tiled map editor. [link to source for Tiled map editor](https://www.mapeditor.org/) The outside world consists of a valley with a surrounding forest as well as a waterfall. The waterfall is connected to a lake, which has a bridge that the player needs to cross in order to get to the cave. Tilemaps were ported into Unity using SuperTiled2Unity for the player to move around on. [link to source for SuperTiled2Unity](https://seanba.com/supertiled2unity.html)
 
