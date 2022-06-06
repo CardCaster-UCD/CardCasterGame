@@ -214,6 +214,7 @@ The interactable torches are ignited when hit by any fire type spell and extingu
 * [torches assets](https://asymmetric.itch.io/mideval-2d-16x16-torch-sprite-pack-with-animations)
 * 
 
+## Subroles
 
 ## Audio
 **List your assets including their sources and licenses.**
