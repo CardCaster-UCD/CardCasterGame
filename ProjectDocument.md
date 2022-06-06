@@ -111,8 +111,8 @@ Map made using tileset:
 
 ## Puzzle Team
 The main focus of the puzzle team was to coordinate between world and combat teams to create implement features in the world for players to interact with. This keep kept us integrated in many aspect of the game's design like movement/physics and animation/visuals through interactables like:
-* vector effector plates (river tiles)
-* torches
+* vector effector plates (river tiles) - Alexis 
+* torches and moveable rocks - Grant
 
 
 Our main puzzle map layout is 2 vertical and 3 horizontal river streams. These streams apply force to the player when entering the stream to move the player down stream in the direction of the current. The currents' speed is set to mvoe the player at a speed where they should not be able to reach the other side without something to block their path. Interactable torches are placed around the map to toggle the elevation of rocks that will block the player's path as they flow downstream. 
@@ -120,11 +120,25 @@ Our main puzzle map layout is 2 vertical and 3 horizontal river streams. These s
 
 ![](./Docs/images/path.png)
 
-The river streams are implemented as Unity effectors tieing these gameplay elements tightly to the standard physics engine of Unity. These effectors apply a velocty vector to objects that collide with them.
+# Alexis
+For the puzzle team, the main contributions I made were creating the puzzle in a [tiled map editor](https://www.mapeditor.org/), adding player animations for swimming, creating a tutorial sign, and implementing the physics of the vectors in the river streams.  
 
+For the tiled map named [puzzle-cave](https://github.com/CardCaster-UCD/CardCasterGame/blob/79465cb8f83c120cf164bac725d92e4353a9b360/Assets/SuperTiled2Unity/Import/puzzle-cave.tmx#L1), I used these cave tilesets [1](https://opengameart.org/content/cave-tileset-0) [2](https://opengameart.org/content/zelda-like-tilesets-and-sprites). Grant designed the puzzle and gave me a quick mockup of what to build. In order to add visual cues to the player of which direction the stream was going, I decided to animate some of the tiles in the water to make them look like arrows. The main difficulty I had in doing this was being able to match the tiles to the ground we already had set in the cave. I ended up going into a pixel editor called [pixilart](https://www.pixilart.com/)and created some custom tiles to be able to utilize the ground we liked with the water tiles we liked, since they were from two different tilesets. I did a custom dithering between the two tiles to achieve a nice gradient effect that blended the two pieces together well. While this didn’t affect the gameplay or actual functionality of the puzzle, I believe it added meaningful visuals and aesthetics that were more pleasing to the eye. Below are images of the custom tiles I made and the tiles that they were made from. I also included an image of where I used them.
+
+In the tilemap, I also made a simple poof animation that is played with the rocks when they disappear. 
+
+In regards to the player animations, I didn’t like that the player was going to just be walking on the water - it didn’t feel right. I used the unity animation system to add a custom animation using the sprites we already had. However, the sprites I wanted to use were only facing one direction, so again I used the pixel editor to be able to flip the sprites around into the directions I wanted. From there it was a simple animation for SwimUp, SwimDown, SwimLeft, and SwimRight. I then hooked these up to a blend tree called Swim that was attached as a transition from any state on the player’s animation. I then created this small [SwimController.cs](https://github.com/CardCaster-UCD/CardCasterGame/blob/79465cb8f83c120cf164bac725d92e4353a9b360/Assets/Scripts/SwimController.cs#L5) script that checked to see if the player was touching the water. If they where it would transition the Animation state to “Swim”. I believe this added needed game feel to see that the player was swimming. 
+
+
+For the tutorial sign, I simply added an extra collider to the sign as a trigger to show the message. The message was implemented using a canvas and a sprite text box image from the tilesets I listed above. The text is simply displayed as the player triggers the collider and taken down when the player exits the collider. The script [here](https://github.com/CardCaster-UCD/CardCasterGame/blob/79465cb8f83c120cf164bac725d92e4353a9b360/Assets/Scripts/PuzzleInstructions.cs#L6) is attached to the sign.  
+
+
+The most difficult part of my parts of the puzzle was implementing the vectors. I ended up creating objects around each row of arrows inside the tilemap editor. I also made objects for each full stream of water. In order to implement the pushing of the stream on the player, I attached an Area Effector to each row of arrows as well as each stream. I referenced this [video](https://youtu.be/p0n6EFR1M8c) by Brackeys in order to implement the area effectors. These basically apply a force to whatever object enters it, and the force is a serialized value in the unity editor. It took a bit of trial and error to get the forces to where the player could not swim backwards, but eventually I found a value for the row of vectors and the streams that seemed to work well. It added a nice effect too by having essentially more force where there was a row of water, making it feel like it was a big wave of water pushing you. The next complicated part was figuring out a way so the player couldn’t get out of the water without using the rocks to hold you against the stream. In order to do this, I created a lot of small box colliders surrounding all the ground edges that were touching the water, and only left small gaps where the player could get out if they were using the rock to help them. These gaps were made pretty small to try to keep the player from exiting “illegally”. I also had to adjust the force on the water at this point to make the player go fast enough (but not too fast) so they couldn’t easily enter these small gaps without using the rocks.
 ![](./Docs/images/swimming.gif)
 
+# Grant
 The interactable torches are ignited when hit by any fire type spell and extinguished when hit by a wind type spell. These torches implement a [Publisher/Subscriber](https://github.com/CardCaster-UCD/CardCasterGame/blob/ea08a3673cb4325d2029ab6905b16ba98688e8a3/Assets/Scripts/TorchController.cs#L95) pattern similiar to the Pikimi assignment in week 4. In the case of the example gif, the subscriber is the fade in/out animation of a rock sprite in the river. These torches were implemented with this pattern in mind for future resuse of scripts and prefabs in later areas of the map.
+
 ![](./Docs/images/torch.gif)
 
 **Ref**
