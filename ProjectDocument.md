@@ -77,6 +77,10 @@ For this game we decided on a fantasy theme and setting, and the design of the w
 
 Tilemaps for the world were made using the Tiled map editor. [link to source for Tiled map editor](https://www.mapeditor.org/) The outside world consists of a valley with a surrounding forest as well as a waterfall. The waterfall is connected to a lake, which has a bridge that the player needs to cross in order to get to the cave. Tilemaps were ported into Unity using SuperTiled2Unity for the player to move around on. [link to source for SuperTiled2Unity](https://seanba.com/supertiled2unity.html)
 
+As we were integrating the combat section with the puzzle section, we thought of ways to make the puzzle section and the combat section complement each other. As a result, we decided that it would be better to move the final obstacle of the puzzle section inside the combat room. (At first, the cave puzzle was designed in a way that it was possible to skip the combat room entirely.) By doing this, we were able to guide the player to the combat room at the mid-point of the puzzle section. When the player enters the combat room, the exit gets blocked to show the player that they have to do something to get out. This forces the player to fight the enemies inside the combat room as well as finish the last sequence of the puzzle, which destroys the rock that blocks the exit. Then, the player is naturally led to the treasure room at the end. Overall, this change lets the player go through all of the content inside the game.
+![image](https://github.com/CardCaster-UCD/CardCasterGame/blob/master/Docs/images/quest%20design2.PNG)
+(Rearranging the puzzle inside the combat room)
+
 
 [link to source for Tileset used for overworld and Sprites](https://opengameart.org/content/zelda-like-tilesets-and-sprites)
 
@@ -88,13 +92,14 @@ Sprites:
 
 Map made using tileset:
 
+![image](https://github.com/CardCaster-UCD/CardCasterGame/blob/master/Docs/images/village.png)
+(Village map which was not used)
+
 ![image](https://user-images.githubusercontent.com/67398594/172093430-a7da2648-9f86-4224-a889-bc68b8628c7e.png)
 
-[link to source for Tileset used for caves]()
+[link to source for Tileset used for caves](https://opengameart.org/content/cave-tileset-0)
 ![image](https://user-images.githubusercontent.com/67398594/172093746-81a912b8-0d8d-4a48-83dc-c7c707594953.png)
 ![image](https://user-images.githubusercontent.com/67398594/172093794-ff9ea8f6-cd22-45ac-be2e-cc26912f2630.png)
-
-
 
 
 ## Puzzle Team
