@@ -78,7 +78,15 @@ For this game we decided on a fantasy theme and setting, and the design of the w
 Tilemaps for the world were made using the Tiled map editor. [link to source for Tiled map editor](https://www.mapeditor.org/) The outside world consists of a valley with a surrounding forest as well as a waterfall. The waterfall is connected to a lake, which has a bridge that the player needs to cross in order to get to the cave. Tilemaps were ported into Unity using SuperTiled2Unity for the player to move around on. [link to source for SuperTiled2Unity](https://seanba.com/supertiled2unity.html)
 
 
-[link to source for Tileset used for overworld](https://opengameart.org/content/zelda-like-tilesets-and-sprites)
+[link to source for Tileset and Sprites used for overworld](https://opengameart.org/content/zelda-like-tilesets-and-sprites)
+
+Sprites:
+![image](https://user-images.githubusercontent.com/67398594/172097618-55304ab2-1c42-4afe-976c-e6c53dc9a14f.png)
+![image](https://user-images.githubusercontent.com/67398594/172097643-6d2108ad-d4b8-4488-a26a-3f3b1cee25d3.png)
+
+
+Map made using tileset:
+
 ![image](https://user-images.githubusercontent.com/67398594/172093430-a7da2648-9f86-4224-a889-bc68b8628c7e.png)
 
 [link to source for Tileset used for caves]()
