@@ -258,7 +258,7 @@ Builds are generated automitically on push events to the Card Caster repository 
 
 
 ## Emily Liu
-StartMenu \
+Start Menu \
 ![image](https://user-images.githubusercontent.com/67398594/172092477-58a5edfd-472b-4328-86e7-90d2a126b2fc.png)
 
 Background image credit: Milksoft Games \
