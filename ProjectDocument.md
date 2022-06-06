@@ -10,6 +10,20 @@ Our game is heavily inspired by older, top-down Legend of Zelda games. The twist
 
 The player can move around the map using the arrow keys, swing the sword using the space bar, and cast the spells on the cards using the 1, 2, 3 keys. The cards switch out every time they're used, so the player has to keep track of what cards they have tied to each button. The player's goal is to find the cave and locate the treasure within. Monsters and puzzles stand in the player's way.
 
+The main quest guide:
+1. Locate the cave which is to the west.
+2. Fight monsters as you reach the cave. (Tip: fireball deals big damage to tree monsters)
+3. Carefully read the signpost inside the cave that tells you how to solve the puzzle.
+4. Solve the puzzle by walking and swimming to the right spot and lighting the torches that trigger the rocks inside the river to rise.
+5. The rocks will support the player from the river streams, helping the player to advance.
+6. If two of the torches on the left are lit, there will be enough rocks in the river that supports the player to reach the combat room.
+7. When the player enters the combat room, the exit gets blocked by a rock, so the player needs to fight the enemies.
+8. When the enemies are cleared, the player can light the last torch that destroys the rock that blocks the exit. This torch will also trigger the last rock that supports the player from the river streams.
+9. The player exits the combat room and follows the river stream. A rock will support the player to enter the treasure room.
+10. Enter the treasure room and find the treasure.
+11. You have Won!
+
+
 **If you did work that should be factored in to your grade that does not fit easily into the proscribed roles, add it here! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
 
