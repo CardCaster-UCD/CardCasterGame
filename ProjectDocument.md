@@ -48,6 +48,18 @@ The [discard pile](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427
 
 The puzzle hand is just like the regular hand, except it doesn't switch out any cards. It always has the two cards used in the puzzle, [Fireball and WindBlast, and a third inconsequential card](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427be1399cdf105a495f8aaa034b2c2e6557/Assets/Scripts/PuzzleHandController.cs#L29).
 
+## Julio Flores
+My main contributions to the combat system was creating the UI for the cards, the art for 5 spells, a buffer system for the spells, and programming one of the spell cards.
+
+The art for the cards I designed were mainly obtained from [here.](https://cafedraw.itch.io/fantasy-card-assets) I used those assets to build the card template that was used to design all the cards. Then Using the template I made I would piece together the design for the [Attack UP,](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427be1399cdf105a495f8aaa034b2c2e6557/Assets/Resources/Sprites/Attack_UP_Card.png) [Shield,](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427be1399cdf105a495f8aaa034b2c2e6557/Assets/Resources/Sprites/Shield_Card.png) [Speed UP,](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427be1399cdf105a495f8aaa034b2c2e6557/Assets/Resources/Sprites/Speed_UP_Card.png) [Fireball,](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427be1399cdf105a495f8aaa034b2c2e6557/Assets/Resources/Sprites/FireBall_Card.png) and [Firestorm](https://github.com/CardCaster-UCD/CardCasterGame/blob/0bb9427be1399cdf105a495f8aaa034b2c2e6557/Assets/Resources/Sprites/FireStorm_Card.png) cards.
+
+The Firestorm spell was fairly easy to make because at the time Elios just finished making the fireball spell, so I was able to repurpose what he wrote for fireball making it so that firestorm shot a fireball in every direction. Originally FireStorm was supposed to have a different name and throw a different object, but after seeing the spell in action with the fireball we decided to keep it. The original spell for fireball was scraped due to not being able to find an asset to match my original idea.
+
+The buffer system I wrote made it so that the player would have to wait a quarter of a second before the being able to use another spell this made it so that the player can not press 1,2, or 3 simutaneously so that they could activate all their spells at once.
+
+The Hand UI is fairly simple. I created a UI document and made three visual elements to store the card's art. When the player would draw a card I made it so that the appropriate card art would apear on the screen allowing the player to know what card was drawn and which key it should be binded to. If the card apeared on the left most slot then 1 needed to be presed, 2 for the middle, and 3 for the right most card. Initially the card was supposed to be dynamically made so that the player could hover over specific part of the card so that they could get an explination of what that element of the card indicated. However When I made the initial document I assumed it would work for all the resolutions, but I was wrong. The dynamic building of the cards only worked for one resolution and would be improperly made if anyother resolution was used. Due to time constraints I was unable to find a proper solution and had to use the simpler method of just loding an image. 
+
+
 ## World Team
 
 Tilemaps
