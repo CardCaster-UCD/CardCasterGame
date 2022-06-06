@@ -206,13 +206,15 @@ The most difficult part of my parts of the puzzle was implementing the vectors. 
 ![](./Docs/images/swimming.gif)
 
 ### Grant
-The interactable torches are ignited when hit by any fire type spell and extinguished when hit by a wind type spell. These torches implement a [Publisher/Subscriber](https://github.com/CardCaster-UCD/CardCasterGame/blob/ea08a3673cb4325d2029ab6905b16ba98688e8a3/Assets/Scripts/TorchController.cs#L95) pattern similiar to the Pikimi assignment in week 4. In the case of the example gif, the subscriber is the fade in/out animation of a rock sprite in the river. These torches were implemented with this pattern in mind for future resuse of scripts and prefabs in later areas of the map.
+The interactable torches are ignited when hit by any fire type spell and extinguished when hit by a wind type spell. These torches implement a [Publisher/Subscriber](https://github.com/CardCaster-UCD/CardCasterGame/blob/ea08a3673cb4325d2029ab6905b16ba98688e8a3/Assets/Scripts/TorchController.cs#L95) pattern similiar to the Pikimi assignment in week 4. In the case of the example gif, the subscriber is the fade in/out animation of a rock sprite in the river. These torches were implemented with this pattern in mind for future resuse of scripts and prefabs in later areas of the map. Examples of subscribers in the project are:
+* [RockController Script](./Assets/Scripts/RockController.cs)
+* [Torch Mux Script](./Assets/Scripts/PuzzleCave/TorchMuxScript.cs) (unused in current release)
 
 ![](./Docs/images/torch.gif)
 
 **Ref**
 * [torches assets](https://asymmetric.itch.io/mideval-2d-16x16-torch-sprite-pack-with-animations)
-* 
+
 
 ## Subroles
 
@@ -330,6 +332,9 @@ Similar to how in the trailer I chose clips, I chose the images because I though
 Card caster currently builds for Window/MacOS/Linux in standalone executables and WebGL. Consideration was made for user controls for Android and iOS builds of the game but due to time constraints, direct mappings of the touch interface to controlls are not availiable to the mobile versions of the game at this time. However, builds of the game do exists for iOS and Android, but without the aid of a keyboard, will be unplayable. 
 
 Builds are generated automitically on push events to the Card Caster repository through the [Game.ci](https://game.ci/) project.
+Latest builds are availiable under the actaions page of our [Github](https://github.com/CardCaster-UCD/CardCasterGame/actions)
+
+![](./Docs/images/githubactions.png)
 
 
 ## Integration
@@ -348,9 +353,13 @@ After we added the final treasure room and ran through the game, I realized that
 
 # Roll Agnogstic Tasks
 ## Grant Gilson
+* Player Movement Controller 
+   * Heavily referenced from [Mister Taft Creates](https://www.youtube.com/watch?v=Vfq13LRggwk&t=289s)
+   * Created simple player movement controller. In development we were using the traditional kinematic physics system (eg.`transform.position = new Vec3(...)`) to move the player. This proved to be a design challenge early on with the effector plates which reply on the Unity physics engine. Having these two movement systems caused graphical stuttering. Moving the player towards a dynamic rigid body simplified the logic for player movement, but has tradeoffs in future extensions to the player controller script in its current state. Player inputs is recieved through the unity input system through WASD/←↑→↓. This input is recieved as a unit vector which is applied to the speed factor in field of the player controller. Diagonal movement can be disabled to emulate a more traditional 2D top down game.
+   * ![](./Docs/images/walking.gif) ![](./Docs/images/walking_diag.gif)
 * Camera Controller
   * Heavily referenced from [Mister Taft Creates](https://www.youtube.com/watch?v=OWJa6lcFTXk)
-  * This simple camera controller smoothly lerps to the player. When entering a room the camera recieves new min and max boundaries. When the camera position approaches one of these limits the camera from following the player outside of the camera bounds.
+  * This simple camera controller smoothly lerps to the player. When entering a room the camera recieves new min and max boundaries. When the camera position approaches one of these limits the camera detaches from the player, preventing it from moving outside of the camera bounds.
   * ![](./Docs/images/cameraController.gif)
 * Scene Transition Controller
   * Our game is composed of multiple composite scenes. As the player moves to another area the scene transition colliders specifies which scene to next load and unloads the current scene. This is done to safe processing time as enemies in other rooms that are still loaded in the scene may continue to following 
