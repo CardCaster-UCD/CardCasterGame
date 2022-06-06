@@ -206,6 +206,17 @@ License: Attribution 3.0
 
 ### Jeehoon Kim:
 
+### Start Menu audio:
+Source: https://assetstore.unity.com/packages/audio/music/action-rpg-music-free-85434
+
+License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/as_terms)
+
+
+### Puzzle Cave & Combat Room audio:
+Source: https://assetstore.unity.com/packages/audio/music/action-rpg-music-free-85434
+
+License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/as_terms)
+
 
 
 ## Gameplay Testing
