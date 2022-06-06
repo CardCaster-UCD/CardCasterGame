@@ -107,14 +107,22 @@ The Hand UI is fairly simple. I created a UI document and made three visual elem
 
 My main contribution to the combat team were the addition of enemies, three cards, and health and mana indictors.
 
-The enemies were implemented with the help of the [A* Pathfinding project](https://arongranberg.com/astar/). [I used this tutorial as a guide.](https://www.youtube.com/watch?v=jvtFUfJ6CP8&ab_channel=Brackeys) The way the package works is by including a the pathfinder component, which can be placed in a gameobject at the top of the scene hierarchy. Then, it can be configured as a 2D grid for games like ours. The component then automatically scans the area to look for obstacles or other colliders. In our case, our tilemaps worked seamlesly with the package. Then the enemy included two other components, the seeker and distination setter scripts from the A* package. The destination setter was hooked up to the player instance. The enemy also features a finite state machine. When the enemy controller senses movement, [the animation transitions.](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/EnemyController.cs#L47). The state machine has a sleep state, wakeup state, and walking state.
-The enemy controller also features a collider that listenes for collitions against every projectile. This is done through the tags on each [kind of projectile](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/EnemyController.cs#L79). The enemy controller also has a damage buffer which makes sure that the player cannot spam attacks. Everytime the enemy receives damage, the [buffer timer](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/EnemyController.cs#L110) gets reset. 
+![](./Docs/images/health_mana_cards.png)
+
+The enemies were implemented with the help of the [A* Pathfinding project](https://arongranberg.com/astar/). [I used this tutorial as a guide.](https://www.youtube.com/watch?v=jvtFUfJ6CP8&ab_channel=Brackeys) The way the package works is by including a the pathfinder component, which can be placed in a gameobject at the top of the scene hierarchy. Then, it can be configured as a 2D grid. The component then automatically scans the area to look for obstacles or other colliders. In our case, our tilemaps worked seamlesly with the package. Then the enemy included two other components, the seeker and distination setter scripts from the A* package. The destination setter was hooked up to the player instance. With this setup, the enemy chases the player through the shortest path possible, accounting for obstacles.
+The enemy also features a finite state machine. When the enemy controller senses movement, [the animation transitions.](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/EnemyController.cs#L47). 
+
+![](./Docs/images/enemy_statemachine.png)
+
+The state machine has a sleep state, wakeup state, and walking state. The waling state has 4 different animations depending on the direction of the enemy, whether it is walking up, down, left, or right.
+The enemy controller also features a collider that listenes for collitions against every projectile. This is done through the tags on each [kind of projectile](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/EnemyController.cs#L79). The enemy controller also has a damage buffer which makes sure that the player cannot spam attacks. 
+Everytime the enemy receives damage, the [buffer timer](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/EnemyController.cs#L110) gets reset. This feature was mainly implementrd by Elios.
 
 The three cards I made were attack up, healup, and shield. The attack up card was designed by Julio. I implemented the script [AttackModifier](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/AttackModifier.cs#L4) and [AttackUpCard](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/AttackUpCard.cs#L5). When the attack up card is used by the player, the attackModifier is attached to the player. During the lifetime of this component, the [sword damage of the player gets increased](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/PlayerController.cs#L129). Also, the card produces an [aura of power](https://github.com/CardCaster-UCD/CardCasterGame/blob/master/Assets/Resources/Prefabs/power_up.prefab) around the player. I drew and animated the sprite for this aura by hand.
 The same procedure happens when the shield card is activated. however, the sprite for the shield gets generated. Also, the absortion property is increased, instead of the health. The absortion is affected through the [health modifier script](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/HealthModifier.cs#L3).
-The heal up spell directly calls the player Heal method and creates the sprite.
+The heal up spell directly calls the player Heal method and creates the sprite. The sprite for this spell is part of the [Warped Shooting Fx sprites pack](https://ansimuz.itch.io/warped-shooting-fx). One of the sprites was just rotated 90 degress on the z-axis to give it the appearance of an aura.
 
-The health and bar indicators was initially influenced by the health bar in exercise 4. However, the bars live inside of the UIdocument gameobject instead.The value child object is rescalled accoding to the current health of the player. The main challenge with the implementation was learning the API for the UI components. The sprites were borrowed from a [guide on youtube](https://www.youtube.com/watch?v=BLfNP4Sc_iA&t=1018s&ab_channel=Brackeys).
+The health and bar indicators were initially influenced by the health bar in exercise 4. However, the bars live inside of the UIdocument gameobject instead.The value child object is rescalled according to the current health of the player. The main challenge with the implementation was learning the API for the UI components. The sprites were borrowed from a [guide on youtube](https://www.youtube.com/watch?v=BLfNP4Sc_iA&t=1018s&ab_channel=Brackeys). The health bar is affected through the collider component on the player. When an enemy collides with the player, the player takes damage by updating the health property on player and calling the "ChangeValue" method on the healthBarController.
 
 ## World Team
 
@@ -348,8 +356,14 @@ Builds are generated automitically on push events to the Card Caster repository 
 
 
 ## Game Feel
+Gian Carlo-
+My subrole consisted of making sure that the game was appealing to the general public. From the beginning the team had to make decisions that directly impacted the feel of the game. During the forming stage of the project, I gave suggestions that stirred the direction of development and game feel.
 
-**Document what you added to and how you tweaked your game to improve its game feel.**
+For instance, when the team was first coming up with the game, there were numerous visions for the game. Each member of team had their own ideas, heavily influenced by their gaming preference and experience. If this diversity is not channeled properly, the game could become unappealing to new players.
+
+My contribution was listening to the ideas provided by everyone and making there were no conflictive mechanics. This is specially hard in this project due to the ambitious number of genres integrated into the game. Our game mixes the puzzle, accion, and turn-based genres into one game. Initially, some people wanted to have the game be more like Pokemon or other card games, while some other members wanted a more open-world game with puzzles embedded into the map. It was my job to take the essence of each idea and bring into the game in a seamless way.
+
+In practice, this worked perfectly. The cards and deck component from turn-based games was successfully integrated with the accion-packed combat system. The cards also blended in with the puzzles on the map, where using cards correctly is key to solving the puzzles. All of this while still having the player wander around the map as in other open-world games.
 
 ## Integration
 
