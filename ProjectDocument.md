@@ -143,13 +143,30 @@ The interactable torches are ignited when hit by any fire type spell and extingu
 
 **Document the sound style.** 
 
-Emily:
+Emily Liu:
+
 ### OpeningScene audio:  
 Source: Enchanted by Keys of Moon | https://soundcloud.com/keysofmoon
-Music promoted by https://www.chosic.com/free-music/all/
+Music promoted by https://www.chosic.com/free-music/all/ 
+
+Scene specific audio was implemented by adding an Audio Source under the scene hierarchy. 
+The sound style for this is fantasy-like, magical, and peaceful when the player is exploring the forest area.
 
 License: Creative Commons CC BY 4.0
 https://creativecommons.org/licenses/by/4.0/
+
+### WindBlast spell audio:
+Source: https://soundbible.com/1247-Wind.html
+
+License: Attribution 3.0
+
+This audio was tied to the instantiation of a prefab, so for the implementation, I added this audio source as a component of the Wind prefab. 
+
+For Fireball and FireBlast, they are both tied to the Fireball prefab but FireBlast created many Fireballs so I couldn't simply add the audio source as a component of the prefab or else the FireBlast audio would be very loud and garbled. Instead, I made an audio source on the playerController script and passed in the needed audios as fields of the playerController script, and used `PlayOneShot()` to play the audio when the action was executed. 
+
+[link to code in playerController script](https://github.com/CardCaster-UCD/CardCasterGame/blob/a957a9dd52c12c7b03821def52426d829c0eb7ed/Assets/Scripts/PlayerController.cs#L24)
+
+Example: [link to FireBlast audio code](https://github.com/CardCaster-UCD/CardCasterGame/blob/a957a9dd52c12c7b03821def52426d829c0eb7ed/Assets/Scripts/FireStormCard.cs#L31)
 
 ### Fireball spell audio:
 Source: https://soundbible.com/1356-Flame-Arrow.html
@@ -158,11 +175,6 @@ License: Attribution 3.0
 
 ### FireBlast spell audio:
 Source: https://soundbible.com/1135-Torch.html
-
-License: Attribution 3.0
-
-### WindBlast spell audio:
-Source: https://soundbible.com/1247-Wind.html
 
 License: Attribution 3.0
 
@@ -176,6 +188,8 @@ Source: https://opengameart.org/content/grunt-2
 
 License: Attribution 3.0
 
+
+Jeehoon:
 
 ## Gameplay Testing
 Elios-
@@ -243,6 +257,7 @@ Builds are generated automitically on push events to the Card Caster repository 
 ## Emily Liu
 StartMenu \
 ![image](https://user-images.githubusercontent.com/67398594/172092477-58a5edfd-472b-4328-86e7-90d2a126b2fc.png)
+
 Background image credit: Milksoft Games \
 Source: https://milksoftgames.itch.io/grassy-field \
 [link to scene in Github repository](https://github.com/GMGilsonECS-UCD/ECS189L/blob/master/Assets/Scenes/StartMenu.unity) \
