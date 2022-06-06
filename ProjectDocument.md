@@ -25,9 +25,9 @@ The main quest guide:
 
 Instead of using the standard roles, we split the game up into three teams and divided the responsibilities within those teams. The teams were Puzzle, World, and Combat.
 
-* Puzzle : Grant Gilson, Alexis
-* World  : Jeehoon Kim, Emily Liu
 * Combat : Elios Sgouros, Julio Flores, Gian Carlo Lambert
+* World  : Jeehoon Kim, Emily Liu
+* Puzzle : Grant Gilson, Alexis
 
 ## Combat Team
 Combat team's goal was to build a combat system based on a sword and card based spells.
