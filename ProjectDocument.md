@@ -43,7 +43,18 @@ My main contributions to the combat system were the sword system, the card-hand-
 
 Sword System-
 
-The main difficulty in implementing the sword system was the animation. [I used this tutorial as a guide](https://youtu.be/p6Klz_NZpEQ). The way it works is that the sword controller [sets a trigger in the animator](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/SwordController.cs#L27) whenever the spacebar is pressed. The animator uses a finite state machine, and knows which way to swing the sword based on the [values set in the player movement script](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/PlayerMovement.cs#L69). The hitboxes on the sword have box colliders that are turned on and off during the animation. I got the idea to do this from the video tutorial, except I modified it so instead of one big hitbox there's smaller, finer boxes that closely follow the animation. I used a longer sword than the one that came in the default sprite sheet, found in YouTube comment by user Enderesting at [this link](https://imgur.com/a/6lxX3FI)
+The main difficulty in implementing the sword system was the animation. [I used this tutorial as a guide](https://youtu.be/p6Klz_NZpEQ). The way it works is that the sword controller [sets a trigger in the animator](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/SwordController.cs#L27) whenever the spacebar is pressed. The animator uses a finite state machine, and knows which way to swing the sword based on the [values set in the player movement script](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/PlayerMovement.cs#L69).
+
+![](./Docs/images/SwordBlendTree.png) ![](./Docs/images/Sword.gif) 
+
+The hitboxes on the sword have box colliders that are turned on and off during the animation. I got the idea to do this from the before mentioned video tutorial, except I modified it so instead of one big hitbox there's smaller, finer boxes that closely follow the animation. 
+
+
+
+I used a longer sword than the one that came in the default sprite sheet, found in YouTube comment by user Enderesting at [this link](https://imgur.com/a/6lxX3FI)
+
+
+
 
 Card System-
 
@@ -68,8 +79,11 @@ The three spell cards I implemented were [Fireball](https://github.com/CardCaste
 
 Fireball was the first spell implemented, so while making this one I learned some things about how we should make spells. I made it, and future spells, ScriptableObjects because I ran into issues instantiating prefabs from MonoBehaviors. It works by loading the [fireball prefab](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Resources/Prefabs/Fireball.prefab) using Resources.Load, which requires the prefab to be in the Resources folder. [It gets the direction that the player is facing, and sets the velocity in the x and y directions based on that](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/FireballCard.cs#L14). The velocity is set on the [spell movement script](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/SpellMovement.cs#L5) attached to the fireball object. It instantiates the fireball, [with a lifetime which is currently set to 2.5 seconds](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/WindBlastCard.cs#L3). Gian handled the damage effect of these fireballs on enemies, and Grant handled the effect of lighting torches. I created the animation using sprites found in the [Top Down Adventure Assets](https://assetstore.unity.com/packages/2d/environments/top-down-adventure-assets-173199#description).
 
+![](./Docs/images/Fireball.gif)
 
 The WindBlast spell was very similar to the FireBall spell. Only major difference was the animation and how it affects enemies. I made it so if the whirldwind hits one of the enemies, [it attaches to the enemey](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/EnemyController.cs#L101) and [carries the enemy with it through the life of the whirlwind](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/EnemyController.cs#L58). [I made the animation by slicing up a spritesheet posted by Spring Spring on Open Game Art](https://opengameart.org/content/whirlwind)
+
+![](./Docs/images/WindBlast.gif)
 
 The [SpeedUp spell](https://github.com/CardCaster-UCD/CardCasterGame/blob/9528914bf36446d0e72e71c630e13477a702ae64/Assets/Scripts/SpeedupCard.cs#L3) Works by attaching a [SpeedModifer script](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/SpeedModifier.cs#L3) to the player. The speed modifier [increases the player's speed by a factor during setup](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/SpeedModifier.cs#L23), then [decreases it by whatever it was increased by after a certain number of seconds](https://github.com/CardCaster-UCD/CardCasterGame/blob/6c5c93cce11076e3f765c4d1f17bc82bd7f26138/Assets/Scripts/SpeedModifier.cs#L19). For the card I implemented the factor was 50% and the duration was 10 seconds.
 
