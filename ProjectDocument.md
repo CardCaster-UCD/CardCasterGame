@@ -143,7 +143,7 @@ The interactable torches are ignited when hit by any fire type spell and extingu
 
 **Document the sound style.** 
 
-Emily Liu:
+### Emily Liu:
 
 ### OpeningScene audio:  
 Source: Enchanted by Keys of Moon | https://soundcloud.com/keysofmoon
@@ -190,7 +190,7 @@ Source: https://opengameart.org/content/grunt-2
 License: Attribution 3.0
 
 
-Jeehoon Kim:
+### Jeehoon Kim:
 
 
 
