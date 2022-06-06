@@ -163,6 +163,7 @@ License: Attribution 3.0
 This audio was tied to the instantiation of a prefab, so for the implementation, I added this audio source as a component of the Wind prefab. 
 
 For Fireball and FireBlast, they are both tied to the Fireball prefab but FireBlast created many Fireballs so I couldn't simply add the audio source as a component of the prefab or else the FireBlast audio would be very loud and garbled. Instead, I made an audio source on the playerController script and passed in the needed audios as fields of the playerController script, and used `PlayOneShot()` to play the audio when the action was executed. 
+This method is used for Speedup and Grunt as well.
 
 [link to code in playerController script](https://github.com/CardCaster-UCD/CardCasterGame/blob/a957a9dd52c12c7b03821def52426d829c0eb7ed/Assets/Scripts/PlayerController.cs#L24)
 
@@ -189,7 +190,9 @@ Source: https://opengameart.org/content/grunt-2
 License: Attribution 3.0
 
 
-Jeehoon:
+Jeehoon Kim:
+
+
 
 ## Gameplay Testing
 Elios-
