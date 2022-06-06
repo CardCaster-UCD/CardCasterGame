@@ -136,7 +136,7 @@ In regards to the player animations, I didn’t like that the player was going t
 ![](./Docs/images/blendTreeSwim.png)
 
 
-For the tutorial sign, I simply added an extra collider to the sign as a trigger to show the message. The message was implemented using a canvas and a sprite text box image from the tilesets I listed above. The text is simply displayed as the player triggers the collider and taken down when the player exits the collider. The script [here](https://github.com/CardCaster-UCD/CardCasterGame/blob/79465cb8f83c120cf164bac725d92e4353a9b360/Assets/Scripts/PuzzleInstructions.cs#L6) is attached to the sign.
+For the tutorial sign, I simply added an extra collider to the sign as a trigger to show the message. The message was implemented using a canvas and a sprite text box image from the tilesets I listed above. The text is simply displayed as the player triggers the collider and taken down when the player exits the collider. The script [here](https://github.com/CardCaster-UCD/CardCasterGame/blob/79465cb8f83c120cf164bac725d92e4353a9b360/Assets/Scripts/PuzzleInstructions.cs#L6) is attached to the sign.  
 ![](./Docs/images/signVideo.gif)
 
 
