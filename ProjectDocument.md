@@ -29,11 +29,11 @@ The main quest guide:
 
 # Main Roles #
 
+Instead of using the standard roles, we split the game up into three teams and divided the responsibilities within those teams. The teams were Puzzle, World, and Combat.
+
 * Puzzle : Grant Gilson, Alexis
 * World  : Jeehoon Kim, Emily Liu
 * Combat : Elios Sgouros, Julio Flores, Gian Carlo Lambert
-
-You should replay any **bold text** with your relevant information. Liberally use the template when necessary and appropriate.
 
 ## Combat Team
 Combat team's goal was to build a combat system based on a sword and card based spells.
@@ -43,7 +43,7 @@ My main contributions to the combat system were the sword system, the card-hand-
 
 Sword System-
 
-The main difficulty in implementing the sword system was the animation. [I used this tutorial as a guide](https://youtu.be/p6Klz_NZpEQ). The way it works is that the sword controller [sets a trigger in the animator](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/SwordController.cs#L27) whenever the spacebar is pressed. The animator uses a finite state machine, and knows which way to swing the sword based on the [values set in the player movement script](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/PlayerMovement.cs#L69).
+The main difficulty in implementing the sword system was the animation. [I used this tutorial as a guide](https://youtu.be/p6Klz_NZpEQ). The way it works is that the sword controller [sets a trigger in the animator](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/SwordController.cs#L27) whenever the spacebar is pressed. The animator uses a finite state machine, and knows which way to swing the sword based on the [values set in the player movement script](https://github.com/CardCaster-UCD/CardCasterGame/blob/bae8ab721019fed36fdb5d32186be88897abcc13/Assets/Scripts/PlayerMovement.cs#L69). I also implemented idly facing in each direction to get this working, [using an example from the same tutorial series](https://youtu.be/Vfq13LRggwk).
 
 ![](./Docs/images/SwordBlendTree.png) ![](./Docs/images/Sword.gif) 
 
