@@ -299,12 +299,16 @@ License: Attribution 3.0
 ### Start Menu audio:
 Source: https://assetstore.unity.com/packages/audio/music/action-rpg-music-free-85434
 
+Style: Fantasy adventure-like. Epic feel.
+An epic music for the start menu.
 License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/as_terms)
 
 
 ### Puzzle Cave & Combat Room audio:
 Source: https://assetstore.unity.com/packages/audio/music/action-rpg-music-free-85434
 
+Style: Mysterious.
+A Mysterious feeling music for the puzzle and the combat room that takes place in a dark cave.
 License agreement: [Standard Unity Asset Store EULA](https://unity3d.com/legal/as_terms)
 
 
