@@ -168,6 +168,10 @@ Source: https://soundbible.com/1636-Power-Up-Ray.html
 
 License: Attribution 3.0
 
+### Character Grunt audio:
+Source: https://opengameart.org/content/grunt-2
+
+License: Attribution 3.0
 
 
 ## Gameplay Testing
